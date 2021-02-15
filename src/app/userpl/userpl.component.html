@@ -1,0 +1,172 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+<div class="main_container" id="sticky">
+    <style>
+.mark-back:hover{background: #4cebdc !important;}
+.mark-lay:hover{background: #c6f6f2 !important;}
+.mark-back{background: #7CC4F7 !important;}
+.mark-lay{background: #FCA4B7 !important;}
+</style>
+<div class="right_col" role="main" style="min-height: 790px;">
+<div class="col-md-12">
+<div class="title_new_at"> User's PL 
+<div class="pull-right"><button class="btn btn-xs btn-primary" onclick="goBack()" style="margin-right:2px">Back</button></div>
+</div>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="clearfix data-background">
+<form method="get" class="form-horizontal form-label-left input_mask userpl" id="filtrdata">	
+     <div class="popup_col_2">
+        <input type="text"
+        class="form-control"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        #dp="bsDatepicker"
+        bsDatepicker [(bsValue)]="myDateValue">
+    </div>
+    <div class="popup_col_2">
+        <input type="text"
+        class="form-control"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        #dp="bsDatepicker"
+        bsDatepicker [(bsValue)]="myDateValue">
+    </div>
+
+    <div class="popup_col_1">
+        <select name="filter_sport" class="form-control">
+            <option value="cricket">Cricket</option>
+            <option value="tennis">Tennis</option>
+            <option value="soccer">Soccer</option>
+            <option value="teenpatti">Teenpatti</option>
+            <option value="fancy" selected="">Fancy</option>
+        </select>
+    </div>
+    <div class="popup_col_1">
+        <select name="filter_order" class="form-control">
+            <option value="desc" selected="">Top</option>
+            <option value="asc">Bottom</option>
+        </select>
+    </div>
+    <div class="popup_col_1">
+        <select name="filter_value" class="form-control">
+            <option value="10">10</option>
+            <option value="25" selected="">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+    <div class="block_2 buttonacount">
+        <button type="button" id="frmsbmt" class="blue_button"><i class="fa fa-filter"></i> Filter</button>
+        <a href="http://newlotusbook.com/report/userpl" class="red_button"><i class="fa fa-eraser"></i> Clear</a>
+
+    </div>
+   </form>		 </div> 
+                          
+    <div class="popup_col_12">
+    <div class="tab_bets">
+        <div class="nav nav-pills match-lists">	
+            <li><a href="javascript:void(0);" class="clsFilterdate " val="m">Last Month</a></li>
+            <li><a href="javascript:void(0);" class=" clsFilterdate " val="w">Last Week</a></li>
+            <li><a href="javascript:void(0);" class=" clsFilterdate " val="y">Yesterday</a></li>
+            <li><a href="javascript:void(0);" class=" clsFilterdate active" val="t">Today</a></li>
+            <input type="hidden" id="inputFilterDate" name="Filterdate" value="t">
+        </div>
+    </div>		 
+    </div>		 
+
+<div id="divLoading"> </div><!--Loading class -->
+<h5>Filter criteria : From 2021-02-12 00:00:00 To 2021-02-12 23:59:59, 25 records in order of  fancy desc</h5>
+<div class="table-scroll">
+    <table class="table table-striped jambo_table bulk_action full-table-clint">
+        <thead>	
+        <tr class="headings">
+        <th width="5%">S.No.</th>				
+        <th>Username</th>
+        <th>Cricket</th>
+        <th>Tennis</th>
+        <th>Soccer</th>
+        <th>Teenpatti</th>
+        <th>Fancy</th>
+        </tr>				
+        </thead>
+        <tbody>
+                                    <tr><td colspan="6">No record found.</td></tr>
+                            </tbody>
+                    </table>
+
+    <div class="col-md-12" id="data-pagination">
+        <p>
+                        </p>
+    </div>
+</div>
+</div>
+<link href="http://newlotusbook.com/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<script src="http://newlotusbook.com/assets/js/moment.min2.js"></script> 
+<script src="http://newlotusbook.com/assets/js/bootstrap-datetimepicker.min.js"></script>
+<script>
+$( document ).ready(function() {
+$(document).on("click", "#frmsbmt", function(){
+    $('#filtrdata').submit();
+});
+$(document).on("click", ".clsFilterdate", function(){
+    $('#inputFilterDate').val($(this).attr('val'));
+    $('#filtrdata').submit();
+});
+$('.total-amoumt-loader').hide();
+$(document).on("click", ".getTotalUserPl", function(){
+    $('.total-amoumt').hide();
+    $('.total-amoumt-loader').show();
+    $.ajax({
+          type: "post",
+          url: 'http://newlotusbook.com/totalUserPl',
+          data:{Filterdate:"",compute:Cookies.get('_compute')},
+          cache: false,
+          success: function(output){
+              $('.total-amoumt-loader').hide();
+              $('.total-amoumt').show();   
+            $('.total-amoumt').html(output);
+          }
+      });
+});
+$(".datetimepicker").datetimepicker({
+    format: 'YYYY-MM-DD HH:mm:ss',			
+    widgetPositioning: {
+        horizontal: "auto",
+        vertical: "auto"
+    }
+}).on('dp.change', function (e) {
+    $(".match-buttons a").siblings().removeClass('active');
+    $('#inputFilterDate').val('c');
+});
+});
+
+</script>
+    
+
+<!--commanpopup-->
+<div id="commonpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+ <div class="popup_form">
+    <div class="title_popup">
+       <span>Title Popup</span>
+       <button type="button" class="close" data-dismiss="modal">
+          <div class="close_new"><i class="fa fa-times-circle"></i></div>
+       </button>
+    </div>
+    <div class="content_popup">
+       <div class="popup_form_row">
+          <div class="modal-body"></div>
+       </div>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+<!--commanpopup-->         </div>
+</div>

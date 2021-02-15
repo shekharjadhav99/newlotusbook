@@ -1,0 +1,154 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+<div class="main_container" id="sticky">
+            
+    <div id="userModal" class="modal fade" role="dialog">
+       <div class="modal-dialog">
+          <div class="modal-content">
+          </div>
+       </div>
+    </div>
+    <div class="right_col" role="main">
+       <div class="col-md-12">
+          <div class="title_new_at">
+             <span class="lable-user-name">
+             Admin Listing
+             </span>
+             <select class="user-select" style="color:black" onchange="perPageGetUserData(this.value)">
+                <option value="10" selected="">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+             </select>
+             <form class="usersech user-mobile" id="userListForm">
+                <input type="hidden" name="formSubmit" value="1">
+                <input type="hidden" name="perpage" id="perpage" value="10">
+                <input type="text" name="mstruserid" id="mstruserid" placeholder="Search here" value="">
+                <button class="fa fa-search"></button>
+             </form>
+             <select class="user-mobile custom-user-select" id="useraction" style="color:black">
+                <option value="">Select Action</option>
+                <option value="lgnusrlckbtng-0">Lock Betting</option>
+                <option value="lgnusrlckbtng-1">Open Betting</option>
+                <option value="mstrlock-0">Lock User</option>
+                <option value="mstrlock-1">Unlock User</option>
+                <option value="lgnusrCloseAc-0">Close User Account</option>
+                         </select>
+             <button class="btn btn-warning btn-xs" onclick="setAction()" style="padding:4px 5px;">
+             ACTION
+             </button>
+                      <button class="btn btn-warning btn-xs" onclick="addUser(1,1)" style="padding:4px 5px;">
+             ADD USER
+             </button>
+                            </div>
+       </div>
+       <div class="clearfix"></div>
+       <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="divLoading"></div>
+    
+                   <div class="table-scroll" id="contentreplace">
+                      <table class="table table-striped jambo_table bulk_action" id="datatabless">
+                         <thead>
+                            <tr class="headings">
+                               <th>S.No.</th>
+                               <th>User ID <a href="http://newlotusbook.com/userList/0/1?sort=asc&amp;type=userId" class="glyphicon glyphicon-arrow-up"> </a>
+                                  <a href="http://newlotusbook.com/userList/0/1?sort=desc&amp;type=userId" class="glyphicon glyphicon-arrow-down"></a>
+                               </th>
+                               <th>Website</th>
+                               <th>Credit Limit</th><th>Credit given</th>        
+                               <th>Balance <a href="http://newlotusbook.com/userList/0/1?sort=asc&amp;type=bal" class="glyphicon glyphicon-arrow-up"> </a>
+                                  <a href="http://newlotusbook.com/userList/0/1?sort=desc&amp;type=bal" class="glyphicon glyphicon-arrow-down"></a>
+                               </th>
+                               <th>Partnership <a href="http://newlotusbook.com/userList/0/1?sort=asc&amp;type=par" class="glyphicon glyphicon-arrow-up"> </a>
+                                  <a href="http://newlotusbook.com/userList/0/1?sort=desc&amp;type=par" class="glyphicon glyphicon-arrow-down"></a>
+                               </th>
+                               <th>Partnership Cacino <a href="http://newlotusbook.com/userList/0/1?sort=asc&amp;type=par" class="glyphicon glyphicon-arrow-up"> </a>
+                                  <a href="http://newlotusbook.com/userList/0/1?sort=desc&amp;type=par" class="glyphicon glyphicon-arrow-down"></a>
+                               </th>
+                               
+                               <th>Partnership TeenPatti<a href="http://newlotusbook.com/userList/0/1?sort=asc&amp;type=par" class="glyphicon glyphicon-arrow-up"> </a>
+                                  <a href="http://newlotusbook.com/userList/0/1?sort=desc&amp;type=par" class="glyphicon glyphicon-arrow-down"></a>
+                               </th>
+                               
+                               
+                               
+                                <th>M.comm</th> <th>S.comm</th>                                                      <th>
+                                    View More
+                               </th>
+                             
+                                                       </tr>
+                         </thead>
+                         <tbody>
+                                                    <tr id="user_row_1">
+                               <td>1                              <input type="checkbox" value="1" class="select-users">
+                               </td>
+                               <td class=" " style="padding-bottom: 0px;">
+                                  <span class="m-bg">
+                                            <a routerLink="/childlist" title="View Child">  
+                                                                          admin(admin)</a>
+                                                                </span>
+                               </td>
+                               <td>newlotusbook.com</td>
+                               <td>2200000000.00</td><td>1600000000.00</td><td class=" ">599193303.67</td><td class=" ">100%</td><td class=" ">%</td><td class=" ">%</td><td class=" ">2.00</td><td class=" ">0.00</td>                                              <td class="last">
+                                <span class="dropdown">
+                                  <a href="#" class="dropdown-toggle btn btn-xs btn-success" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View More <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li>
+                                                                     <a class="" href="javascript:;" onclick="addUser(1,1)"><span>Add User</span></a>
+                                                                     </li>
+                                    <li> <a class="" href=" http://newlotusbook.com/report/ac_statement?user_id=1">
+                                     <span>Statement</span> </a></li>
+                                    <li><a class="" href=" http://newlotusbook.com/report/profitloss?user_id=1">
+                                     <span>Profit Loss</span> </a></li>
+                                    <li>
+                                      
+                                     <a class="" href="javascript:;" title="View Account Info" onclick="view_account('1');"><span>View Info</span></a>
+                                      
+                                    </li>
+                                    <li>
+                                        <a class="" href="javascript:;" title="Update Partnership" onclick="partnership('1');"><span>Partnerhsip</span></a>
+                                    </li>
+                                    <li> <a class="" href="javascript:;" title="Change Password" onclick="view_change_passs('1');"><span>Change Password</span></a></li>
+                                    <li> <a class="" href="javascript:;" title="Free Chip In Out" onclick="free_chips_in_out('1','D');"><span>Free Chip Deposit</span></a></li>
+                                    <li>
+                                         <a class="" href="javascript:;" title="Free Chip In Out" onclick="free_chips_in_out('1','W');"><span>Free Chip Withdrawal</span></a>
+                                    </li>
+                                  </ul>
+                                </span>
+                               </td>
+                                                       </tr>
+                                                 </tbody>
+                      </table>
+                      <p>Showing 1 to 1 of 1 entries </p>
+                      <form class="usersech" id="userListForm">
+                         <p class="pagination-row dataTables_paginate paging_simple_numbers"></p>
+                         <input type="hidden" name="formSubmit" value="1">
+                                              <input type="text" name="selpage" id="selpage" placeholder="Page NO." value="">
+                         <button class="fa fa-search"> Go</button>
+                      </form>
+                   </div>
+          </div>
+       </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.last').each(function () {
+                var $dropdown = $(this);
+                $(".icon-mobile", $dropdown).click(function (e) {
+                    e.preventDefault();
+                    $div = $(".topnav", $dropdown);
+                    $div.toggle();
+                    $(".topnav").not($div).hide();
+                    return false;
+                });
+            });
+            $('html').click(function () {
+                $(".topnav").hide();
+            });
+        });
+    </script>            0

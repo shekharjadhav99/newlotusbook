@@ -1,0 +1,44 @@
+<body class="bg_login" style="background-image:url('assets/images/loginback.jpg')">
+
+   <div id="wrapper">
+      <div class="logo">
+         <img src="/assets/images/lotuslogo.jpg" alt=" ">
+     
+
+   <div id="login" class="form">
+      <section class="login_content">
+         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="compute" value=" ">
+            <div>
+               <label>Username</label>
+               <div class="linput">
+                  <input type="text" name="email" formControlName="userName" value class="form-control" placeholder="Enter Username" required="1">
+               </div>
+            </div>
+            <div>
+               <label>Password</label>
+               <input type="password" name="password" formControlName="password" value class="form-control" placeholder="Password" required="1">
+            </div>
+            <div>
+               <input type="password" name="captcha" formControlName="captcha" value class="form-control" placeholder="Captcha" required="1">
+               <img id="captchaImg" src="" alt="">
+            </div>
+            <div class="checkbox">
+               <label>
+                  <input type="checkbox" name="remember" id="remember">
+                  "Remember me"
+               </label>
+               <div>
+                  <input type="hidden" value=" " name="submitted">
+                  <button type="submit" class="btn btn.default submit">Log in</button>
+               </div>
+               <div class="clearfix"></div>
+               
+            </div>
+         </form>
+      </section>
+   </div>
+</div>
+</div>
+   
+                                           

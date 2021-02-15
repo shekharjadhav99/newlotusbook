@@ -1,0 +1,157 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+
+
+<div class="main_container" id="sticky">
+    <div class="right_col" role="main" style="min-height: 790px;">
+<div class="col-md-12">
+    <div class="title_new_at">   Profit Loss Listing<select style="color:black" onchange="perPage(this.value)">
+    <option value="10" selected="">10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    </select>
+    </div> 
+</div>
+<div class="col-md-12">			
+<div class="filter_page data-background">
+    <form method="get" id="profitlossform" class="form-horizontal form-label-left input_mask"> 
+    <div class="col-md-3 col-xs-6">
+            <input type="hidden" name="user_id" value="">
+            <input type="hidden" name="perpage" id="perpage" value="10">
+            <select class="form-control" name="sportid">
+                <option value="5">All</option>
+                <option value="4">Cricket</option>
+                <option value="1">Soccer</option>
+                <option value="2">Tennis</option>
+                <option value="7" selected="">Horse Riding</option>
+                <option value="0">Fancy</option>
+            </select>
+    </div>
+
+    <div class="col-md-2 col-xs-6">
+        <input type="text"
+        class="form-control"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        #dp="bsDatepicker"
+        bsDatepicker [(bsValue)]="myDateValue">  
+    </div>
+    
+    
+    <div class="col-md-2 col-xs-6">
+        <input type="text"
+        class="form-control"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        #dp="bsDatepicker"
+        bsDatepicker [(bsValue)]="myDateValue">
+    </div>
+        <div class="col-md-2 col-xs-6">
+            <input type="text" class="form-control" placeholder="Via event name" name="searchTerm" value="">
+        </div>
+        <div class="col-md-3 col-xs-12">
+            <button type="submit" id="form_submit" class="blue_button">Filter</button>
+            <a href="http://newlotusbook.com/report/profitloss" class="red_button">Clear</a>
+            <button type="submit" name="submit" value="export" class="blue_button">Export</button>
+        </div>
+     </form> 
+</div>	
+</div>	
+      <div class="col-md-12 col-sm-12 col-xs-12">
+          <div id="divLoading"> </div><!--Loading class -->
+                                          
+                  <div class="table-scroll">
+                   <table class="table table-striped jambo_table bulk_action">
+                <thead>
+                  <tr class="headings">
+                    <th class="">S.No. </th>
+                    <th class="">Event Name </th>
+                    <th class="">Market </th>
+                    <th class="">P_L </th>
+                                                <th class="">Commission </th>
+                    <th class="">Created On </th>
+                    <th class="">Action </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                     
+                    
+                    <tr><th colspan="8">No record found</th></tr>	
+
+                 </tbody>
+              </table>
+               <p>Showing 1 to 0 of 0 entries </p>  <p class="pagination-row dataTables_paginate paging_simple_numbers"> </p>
+                 </div>
+             <table class="table table-striped jambo_table bulk_action">
+                <thead>
+                  <tr class=" ">
+                    <th class="">(Total P &amp; L )  	0</th>
+                    <th class="">(Total Commition)  0</th>
+                </tr>	
+                
+              </thead></table>
+                              </div>
+<script>
+function perPage(val){
+$("#perpage").val(val);
+$( "#profitlossform #form_submit" ).click();
+
+}
+$('#from-date').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+format: 'YYYY-MM-DD'
+});
+$('#to-date').daterangepicker({
+singleDatePicker: true,
+showDropdowns: true,
+format: 'YYYY-MM-DD'
+});
+$('.nav-tabs a').click(function(){
+$(this).tab('show');
+})
+
+function ShowBet(userId,matchId,MarketId,type){
+
+    //http://localhost/betking/Betentrycntr/BetHistoryPL/1437/28589706/1.140242752/0
+    window.location.href = "http://newlotusbook.com/report/showbet/"+userId+'/'+matchId+'/'+MarketId+'/'+type;
+
+}
+function ShowMatchFancy(userId,matchId,MarketId,type){
+
+    //http://localhost/betking/Betentrycntr/BetHistoryPL/1437/28589706/1.140242752/0
+    window.location.href = "http://newlotusbook.com/report/fancy_profitloss/"+userId+'/'+matchId+'/'+MarketId+'/'+type;
+
+}
+
+</script>
+    
+
+<!--commanpopup-->
+<div id="commonpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+ <div class="popup_form">
+    <div class="title_popup">
+       <span>Title Popup</span>
+       <button type="button" class="close" data-dismiss="modal">
+          <div class="close_new"><i class="fa fa-times-circle"></i></div>
+       </button>
+    </div>
+    <div class="content_popup">
+       <div class="popup_form_row">
+          <div class="modal-body"></div>
+       </div>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+<!--commanpopup-->         </div>
+</div>

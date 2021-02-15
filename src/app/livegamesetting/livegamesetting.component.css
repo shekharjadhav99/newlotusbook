@@ -1,0 +1,36 @@
+.title_new_at {
+    width: 100%;
+    display: inline-block;
+    background: #2b2f35;
+    padding: 5px;
+    color: #fff;
+}
+
+.table>thead:first-child>tr:first-child>th {
+    border-top: solid 1px #b9b9b9;
+}
+
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+.tabel_content table tbody tr td {
+    padding: 5px 5px;
+    vertical-align: middle;
+}
+.table {
+    font-size: 12px;
+    color: #252525;
+    font-weight: normal;
+}
+table {
+    color: #252525;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
+    color: #212529;
+}

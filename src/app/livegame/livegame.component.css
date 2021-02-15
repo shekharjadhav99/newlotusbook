@@ -1,0 +1,30 @@
+.back-img[_ngcontent-c0] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/assets/images/livegame.jpg);
+    background-position: center;
+    height: 100%;
+}
+.li.error{
+margin-top: 20px;
+font-size: 15px;
+}
+html * {
+box-sizing: border-box;
+}
+ul, li {
+list-style-type: none;
+padding-left: 0;
+margin: 0;
+}
+.fail-messages .error {
+    color: #bf3e35;
+    font-weight: bold;
+}
+div.back-img{
+    padding-top: 10%;
+    padding-bottom: 0%;
+}
+

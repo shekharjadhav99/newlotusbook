@@ -1,0 +1,92 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+    <div class="main_container" id="sticky">
+        
+<div class="right_col" role="main" style="min-height: 783px;">
+    <div class="col-md-12">
+    <div class="title_new_at">
+            Session Fancy
+            <a href="http://newlotusbook.com/adminsetting/GetSuspendedFancyOnHeader">Suspended Fancy</a>    
+    </div>
+    </div>
+    <div class="">
+        <div class="page-title">
+            <div class="col-md-12">
+                            </div>
+            <div class="title_right">
+                				
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div id="editFancyModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <form id="FormEditFancy" class="form-inline" method="post"><input type="hidden" name="compute" value="acbb7aa24e41fcd7be27621fb1269df1">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4 class="modal-title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                </p><div class="form-group">
+                                    <label for="email">No[L]:</label>
+                                    <input type="hidden" id="updateFancyId" name="updateFancyId">
+                                    <input type="text" name="sessionNo" placeholder="No value" class="form-control" id="sessionNo">	
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Yes[B]:</label>
+                                    <input type="text" name="sessionYes" placeholder="Yes value" class="form-control" id="sessionYes">	
+                                </div>
+                                <p></p> 
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" onclick="editFancy(1)"> Active</button>
+                                <button type="button" class="btn btn-danger" onclick="editFancy(0)"> Deactive</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div id="divLoading"> </div><!--Loading class -->
+                    <div class="x_content">
+                        <div class="">						
+                            <table class="table table-striped jambo_table bulk_action" id=" ">
+                                <thead>
+                                    <tr class="headings">
+                                        <th>S.No. </th>
+                                        <th>MatchName </th>
+                                        <th>FancyName</th>
+                                        <th>Profit Limit</th>
+                                        <th>Stake Limit</th>
+                                        <th>Volume</th>
+                                        <th>Commission</th>
+                                        <th> Active</th> 
+                                            <th>InActive </th>
+                                            <th> Suspend </th>
+                                            <th><button onclick="updateHideShow(1)" class="btn btn-xs btn-danger"> HIDE</button></th>
+                                            <th><button onclick="updateHideShow(2)" class="btn btn-xs btn-primary">SHOW</button></th> 
+											<th>Edit</th>	
+                                            <th>Show Bet</th>	
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th colspan="6">No record found</th></tr> 							
+                                    	
+                                </tbody>
+                            </table>                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </div>
+</div>

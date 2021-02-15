@@ -1,0 +1,101 @@
+
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+
+    <div class="main_container" id="sticky">
+        <div id="userModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+  <div class="modal-content">
+  </div>
+</div>
+</div>
+<div class="right_col" role="main" style="min-height: 790px;">
+<div class="col-md-12">
+  <div class="title_new_at">
+     <span class="lable-user-name">User Listing with zero balance</span>
+     <form class="usersech user-mobile" id="userListForm">
+        <input type="hidden" name="formSubmit" value="1">
+        <input type="hidden" name="perpage" id="perpage" value="100">
+        <input type="text" name="searchTerm" id="searchTerm" placeholder="Search here" value="">
+        <button class="fa fa-search"></button>
+     </form>
+     <select class="user-mobile custom-user-select" id="useraction" style="color:black">
+        <option value="">Select Action</option>
+        <option value="mstrlock-0">Lock User</option>
+     </select>
+     <button class="btn btn-warning btn-xs"(click)="openModal(template)" style="padding:4px 5px;">ACTION</button>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div id="divLoading"></div>
+
+     <div class="table-scroll" id="contentreplace">
+        <table class="table table-striped jambo_table bulk_action" id="datatabless">
+           <thead>
+              <tr class="headings">
+                 <th>S.No. <input type="checkbox" id="ckbCheckAll"></th>
+                 <th>User</th>
+                 <th>Dealer</th>
+                 <th>Master</th>
+                 <th>Hyper</th>
+              </tr>
+           </thead>
+           <tbody>
+                                
+              <tr><th colspan="5">No record found</th></tr>               </tbody>
+        </table>
+        <p>Showing 1 to 0 of 0 entries </p>
+        <p class="pull-right pagination-row dataTables_paginate paging_simple_numbers"></p>
+     </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+   $("#ckbCheckAll").click(function () {
+       $(".select-users").prop('checked', $(this).prop('checked'));
+   });
+});
+</script>           
+<!--commanpopup-->
+<div id="commonpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+  <div class="modal-content">
+     <div class="popup_form">
+        <div class="title_popup">
+           <span>Title Popup</span>
+           <button type="button" class="close" data-dismiss="modal">
+              <div class="close_new"><i class="fa fa-times-circle"></i></div>
+           </button>
+        </div>
+        <div class="content_popup">
+           <div class="popup_form_row">
+              <div class="modal-body"></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+<!--commanpopup-->         </div>
+
+
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">newlotusbook.com says</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    please select action
+  </div>
+</ng-template>

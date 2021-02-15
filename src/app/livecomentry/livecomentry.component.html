@@ -1,0 +1,194 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+<div class="main_container" id="sticky">
+    <style>
+.clkvalue{
+margin-bottom:10px!important;
+margin-right:15px!important;
+}
+</style>
+<div class="right_col" role="main" style="min-height: 790px;">
+
+
+
+<div class="row">
+
+
+<div class="col-md-12">
+                <div class="title_new_at">Live Commentary</div>
+                 
+                   
+          </div>
+
+           <div class="col-md-12">
+                                              </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+         
+                <div id="divLoading"> </div><!--Loading class -->
+                
+                
+                <div class="popup_col_12">
+                
+                <div class="popup_col_2">
+                            
+         <button class="button" class="com_blue_button"(click)="showSuccess()">Wide</button> 
+        <button class="button" class="com_blue_button"(click)="showSuccess()">No Ball</button> 
+<button class="button" class="com_blue_button"(click)="showSuccess()">Wicket</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Free Hit</button>
+                </div>
+                <div class="popup_col_2">
+                    <button class="button" class="com_blue_button"(click)="showSuccess()">Spinner Bowler</button>
+                <button class="button" class="com_blue_button"(click)="showSuccess()">Faster Bowler</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Baller Ruka</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Third Umpire</button>
+                </div>
+                <div class="popup_col_2">
+     <button class="button" class="com_blue_button"(click)="showSuccess()">Decision Pending</button>
+    <button class="button" class="com_blue_button"(click)="showSuccess()">Run Out</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Not Out</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Inning Break</button>
+                </div>
+                
+                <div class="popup_col_2">
+         <button class="button" class="com_blue_button"(click)="showSuccess()">Game Start</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Review</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Time Out</button>
+                </div>
+                
+                
+                
+
+
+                
+                </div>
+        
+</div><div class="col-md-12 col-sm-12 col-xs-12">			
+
+        <div class="popup_col_6">
+        <input type="text" name="Commentary" class="form-control Commentary1" id="Commentary" value="">
+         
+        </div>
+        <div class="popup_col_6">
+         
+         <button class="button" class="blue_button" id="save_commentary" click="showSuccess()">Save</button>  
+        </div>
+        
+    
+
+
+                     
+                </div>
+                
+                
+                
+        <div class="col-md-12 col-sm-12 col-xs-12">			
+        <div class="popup_col_2">
+<button class="button" class="com_blue_button"(click)="showSuccess()">1 run</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">2 run</button> 
+<button class="button" class="com_blue_button"(click)="showSuccess()">3 run</button> 
+
+<button class="button" class="com_blue_button"(click)="showSuccess()">5 run</button> 
+
+        </div>
+        
+        <div class="popup_col_2">
+<button class="button" class="com_blue_button"(click)="showSuccess()">Four</button> 
+<button class="button" class="com_blue_button"(click)="showSuccess()">Six</button><br>
+<button class="button" class="com_blue_button"(click)="showSuccess()">Ball Running</button>
+<button class="button" class="com_blue_button"(click)="showSuccess()">No run</button> 
+        </div>
+        <div class="popup_col_2">
+                                <button id="fancyButton" style="padding: 15px 128px;font-size: 19px;background-color:green" type="button" class="com_blue_button" onclick="fancyOnOff('fancySett')">Fancy</button> 
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">			
+            
+        </div>
+        
+        
+        
+        </div>
+</div>
+
+
+
+
+
+
+
+<script>
+$(document).keyup(function(e) {
+if (e.keyCode == 27) { 
+$("#oddsonoffSett").val('Y');
+$("#oddsonoffSettfor").val('fancySett');
+saveOddsSett();
+$("#fancyButton").css("background", "red");
+}
+if(e.keyCode == 13){
+$("#oddsonoffSett").val('N');
+$("#oddsonoffSettfor").val('fancySett');
+saveOddsSett();
+$("#fancyButton").css("background", "green");
+
+}
+});
+
+function save_commentary(val=''){
+if(val==''){
+val = $("#Commentary").val();
+}
+//if(val!=''){
+ jQuery.ajax({ 
+    
+    //url: 'http://newlotusbook.com/oddsSettingSave/commentary/'+val,			
+    //success: function(data) {
+    type: "post",
+    url: 'http://newlotusbook.com/oddsSettingSave',
+   //data:datastring,//only input
+    data: {commentary: 'commentary', val: val},
+    cache: false,
+    success: function(output)
+    {   	
+        new PNotify({
+                  title: 'Success',
+                  text: 'Saved successfully',
+                  type: 'success',
+                  styling: 'bootstrap3',
+                  delay:500
+              });
+              
+    },
+    error: function (request) {
+        new PNotify({
+                  title: 'Error',
+                  text: 'Not Saved successfully',
+                  type: 'error',
+                  styling: 'bootstrap3',
+                  delay:500
+              });
+        
+    },
+}); 
+
+//}
+
+}
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+$('.clkvalue').click(function(e) { 
+var text = $(this).text();
+$(".Commentary1").val(text);
+});
+
+});
+</script>          

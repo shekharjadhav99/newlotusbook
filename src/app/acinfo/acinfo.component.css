@@ -1,0 +1,24 @@
+.title_new_at {
+    width: 100%;
+    display: inline-block;
+    background: #2b2f35;
+    padding: 5px;
+    color: #fff;
+}
+.table-scroll {
+    overflow: scroll;
+}
+
+table.jambo_table tbody tr td {
+    border: solid 1px #dbdbdb;
+    border-top: transparent;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
+    color: black;
+}

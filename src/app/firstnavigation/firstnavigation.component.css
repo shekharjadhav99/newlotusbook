@@ -1,0 +1,209 @@
+
+
+ul.nav
+  
+    #cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #head-mobile {
+        border: 0;
+        list-style: none;
+        line-height: 1;
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+    ol, ul {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    user agent stylesheet
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+    body {
+        background: #ececed;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+    }
+    body {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+    }
+    ul.nav a {
+        color: white;
+        margin-left: 4px;
+    }
+   
+    
+    ul.nav > * {
+        padding: 8px 3px;
+        margin: 0.7px;
+
+    }
+    
+    
+    .top_nav {
+        width: 100%;
+        float: left;
+        padding: 5px;
+        background: #2b2f35;
+    }
+    ul.nav{
+        padding: 0.7px;
+        line-height:20px;
+        font-size: 2px;
+        
+    }
+   button.dropbtn{
+      margin: 0px;
+      
+   }
+
+   .dropbtn {
+    background-color: #4a4b4c;
+    color: white;
+    padding: 2px;
+    font-size: 15px;
+    border: none;
+}
+.fa-android:before {
+    content: "\f17b";
+    margin-left: 50px;
+    padding: 5px;
+}
+
+.top_nav .navbar-right ul {
+    margin-bottom: 0px;
+}
+.top_nav {
+    width: 100%;
+    float: left;
+    padding: 8px;
+    background: #2b2f35;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+ul.nav .top_nav[_ngcontent-tto-c75] .navbar-right[_ngcontent-tto-c75] ul[_ngcontent-tto-c75] {
+    margin-bottom: 0px;
+    margin-left: 111px;
+}
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2px;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background-color: red;
+    margin-right: 50;
+}
+.popup_col_12 {
+    width: 200%;
+    float: left;
+}
+
+.btn[_ngcontent-vgq-c78]:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background-color: red;
+    margin-right: 50;
+}
+.dropdown-toggle {
+    white-space: nowrap;
+    background-color: #2b2f35;
+    border:none;
+    color:white;
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 10px;
+    text-decoration: none;
+    
+    
+}
+.dropdown{
+    margin-left: 300px;
+    margin-top: 2px;
+}
+
+.user_img {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.social-links{display:inline-block;float:right;position:absolute;right:0;top:0;}
+.social-links ul{padding:0px;margin:0px;}
+.social-links ul li{list-style:none;float:left;padding:5px 10px;}
+.social-links ul li a{color:#fff;font-size:25px;}
+
+
+button.dropbtn {
+    margin: 0px;
+    padding-top: 1px;
+    
+}
+
+.top_nav {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    background: #2b2f35;
+}
+
+.top_nav .navbar-right li {
+    display: inline-block;
+    position: relative;
+}
+
+.belance-top {
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 35px;
+}
+.navbar-right li a {
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.belance-top a {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+.liability {
+    color: #ff3d47;
+}
+ul.nav[_ngcontent-xai-c78] {
+    padding: 0.7px;
+    line-height: 20px;
+    font-size: 2px;
+    padding-left: 11px;
+}

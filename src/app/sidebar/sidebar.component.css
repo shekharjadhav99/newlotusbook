@@ -1,0 +1,12 @@
+title>.small, .panel-title>.small>a, .panel-title>a, .panel-title>small, .panel-title>small>a {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500;
+}
+.panel-group h6 {
+    margin: 0px;
+    background: #c51a1b;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}

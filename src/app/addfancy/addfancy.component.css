@@ -1,0 +1,13 @@
+.title_new_at {
+    width: 100%;
+    display: inline-block;
+    background: #2b2f35;
+    padding: 5px;
+    color: #fff;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #c5201b;
+    border-color: #c5201b;
+    float: right;
+}

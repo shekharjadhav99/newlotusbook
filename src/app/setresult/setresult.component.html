@@ -1,0 +1,49 @@
+
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+
+
+
+<div class="main_container" id="sticky">
+            
+   <!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    
+    <hr />
+   
+    <div>
+      
+      <div> </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Fullname</th>
+            <th>Phone no.</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of employeedata | paginate: { itemsPerPage: count, currentPage: p }">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.phoneno}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.nationality}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+    <!--Including the pagination control.-->
+    <div class="text-right">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>

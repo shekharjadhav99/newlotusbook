@@ -1,0 +1,652 @@
+
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+    <div class="main_container" id="sticky">
+        <div class="right_col" role="main" style="min-height: 2460px;">
+<div class="col-md-12">
+    <div class="title_new_at">Set General Setting</div>	   
+</div>  
+<div class="col-md-12">
+            </div>
+<div class="col-md-12 col-sm-12 col-xs-12">                
+  <div id="divLoading" style="text-align:center;"></div>
+    <div class="filter_page">
+    
+    
+                    <form id="update_gen_val" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">
+                        <div class="sub_heading_tabel">User Commission </div>
+                        <div class="content_bg">
+                            <div class="block_2">
+                            <label> Odds Commission </label>
+                              <input type="text" name="settings[Commission]" class="form-control" id="Commission" value="2">
+                                <span id="CommissionN" class="errmsg"></span>
+                            </div>
+                            <div class="block_2">
+                                <label> Session Commission</label>
+                                <input type="text" name="settings[sessionCommission]" class="form-control" id="SessionComm" value="0">
+                                            <span id="SessionCommN" class="errmsg"></span>		
+                            </div>
+                            <div class="block_2">
+                                <label> Other Commission</label>
+                                <input type="text" name="settings[otherCommission]" class="form-control" id="OtherComm" value="0">
+                                <span id="OtherCommN" class="errmsg"></span>	
+                            </div>
+                            <div class="block_2">
+                                <label> Admin Percentage</label>
+                                <input type="text" name="settings[admin_percentage]" class="form-control" id="admin_percentage" value="4">
+                                <span id="admin_percentageN" class="errmsg"></span>	
+                            </div>
+                            <div class="block_2">
+                                <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                    Update
+                                </button> 
+                        </div>
+                    
+                    <!-- 1=>Soccer,2=>Tennis,4=>Cricket,10=>Fancy,11=>Manual Fancy,12=>Manual Match Odds,13=>Lm Fancy -->
+                                        
+                    <div class="sub_heading_tabel">Soccer</div>
+                    <div class="content_bg">  
+                    <form id="1_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="1">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="1_min_stake" value="1000">
+                             <span id="1_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="1_max_stake" value="10001">
+                                <span id="1_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="1_max_profit" value="25000">
+                                <span id="1_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> Max Loss </label>
+                                <input type="text" name="sport[max_loss]" class="form-control" id="1_max_loss" value="25000">
+                                <span id="1_max_lossN" class="errmsg"></span>								 
+                        </div> 
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="1_bet_delay" value="7">
+                                <span id="1_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> PRE INPLAY PROFIT</label>
+                                <input type="text" name="sport[pre_innplay_profit]" class="form-control" id="1_pre_innplay_profit" value="10000">
+                                <span id="1_pre_innplay_profitN" class="errmsg"></span>
+                        </div> 
+                        <div class="block_2">
+                            <label> PRE INPLAY STAKE</label>
+                            <input type="text" name="sport[pre_inplay_stake]" class="form-control" id="1_pre_inplay_stake" value="10000">
+                            <span id="pre_inplay_stakeN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> VOLUME LIMIT</label>
+                            <input type="text" name="sport[volume_limit]" class="form-control" id="1_volume_limit" value="150">
+                            <span id="volume_limitN" class="errmsg"></span>								 
+                        </div>
+                                                                                <div class="block_2">
+                            <label> MIN ODDS</label>
+                            <input type="text" name="sport[min_odds]" class="form-control" id="1_min_odds" value="1.01">
+                            <span id="1_min_oddsN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> MAX ODDS</label>
+                            <input type="text" name="sport[max_odds]" class="form-control" id="1_max_odds" value="2.00">
+                            <span id="1_max_oddsN" class="errmsg"></span>								 
+                        </div> 
+                                                                                                                <div class="block_2">
+                                <label>UNMATCH BET</label>
+                                <input type="checkbox" name="sport[is_unmatch_bet]" value="1"> <br>
+                                <span id="1_is_unmatch_betN" class="errmsg"></span>			 							 
+                            </div>
+                                                    <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="1_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="1_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button>  
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Tennis</div>
+                    <div class="content_bg">  
+                    <form id="2_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="2">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="2_min_stake" value="1000">
+                             <span id="2_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="2_max_stake" value="10000">
+                                <span id="2_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="2_max_profit" value="25000">
+                                <span id="2_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> Max Loss </label>
+                                <input type="text" name="sport[max_loss]" class="form-control" id="2_max_loss" value="25000">
+                                <span id="2_max_lossN" class="errmsg"></span>								 
+                        </div> 
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="2_bet_delay" value="7">
+                                <span id="2_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> PRE INPLAY PROFIT</label>
+                                <input type="text" name="sport[pre_innplay_profit]" class="form-control" id="2_pre_innplay_profit" value="10000">
+                                <span id="2_pre_innplay_profitN" class="errmsg"></span>
+                        </div> 
+                        <div class="block_2">
+                            <label> PRE INPLAY STAKE</label>
+                            <input type="text" name="sport[pre_inplay_stake]" class="form-control" id="2_pre_inplay_stake" value="10000">
+                            <span id="pre_inplay_stakeN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> VOLUME LIMIT</label>
+                            <input type="text" name="sport[volume_limit]" class="form-control" id="2_volume_limit" value="1">
+                            <span id="volume_limitN" class="errmsg"></span>								 
+                        </div>
+                                                                                <div class="block_2">
+                            <label> MIN ODDS</label>
+                            <input type="text" name="sport[min_odds]" class="form-control" id="2_min_odds" value="1.02">
+                            <span id="2_min_oddsN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> MAX ODDS</label>
+                            <input type="text" name="sport[max_odds]" class="form-control" id="2_max_odds" value="2.00">
+                            <span id="2_max_oddsN" class="errmsg"></span>								 
+                        </div> 
+                                                                                                                <div class="block_2">
+                                <label>UNMATCH BET</label>
+                                <input type="checkbox" name="sport[is_unmatch_bet]" value="1"> <br>
+                                <span id="2_is_unmatch_betN" class="errmsg"></span>			 							 
+                            </div>
+                                                    <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="2_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="2_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Cricket</div>
+                    <div class="content_bg">  
+                    <form id="4_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="4">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="4_min_stake" value="500">
+                             <span id="4_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="4_max_stake" value="500000">
+                                <span id="4_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="4_max_profit" value="5000000">
+                                <span id="4_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> Max Loss </label>
+                                <input type="text" name="sport[max_loss]" class="form-control" id="4_max_loss" value="5000000">
+                                <span id="4_max_lossN" class="errmsg"></span>								 
+                        </div> 
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="4_bet_delay" value="5">
+                                <span id="4_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> PRE INPLAY PROFIT</label>
+                                <input type="text" name="sport[pre_innplay_profit]" class="form-control" id="4_pre_innplay_profit" value="500000">
+                                <span id="4_pre_innplay_profitN" class="errmsg"></span>
+                        </div> 
+                        <div class="block_2">
+                            <label> PRE INPLAY STAKE</label>
+                            <input type="text" name="sport[pre_inplay_stake]" class="form-control" id="4_pre_inplay_stake" value="500000">
+                            <span id="pre_inplay_stakeN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> VOLUME LIMIT</label>
+                            <input type="text" name="sport[volume_limit]" class="form-control" id="4_volume_limit" value="200">
+                            <span id="volume_limitN" class="errmsg"></span>								 
+                        </div>
+                                                                                <div class="block_2">
+                            <label> MIN ODDS</label>
+                            <input type="text" name="sport[min_odds]" class="form-control" id="4_min_odds" value="1.02">
+                            <span id="4_min_oddsN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> MAX ODDS</label>
+                            <input type="text" name="sport[max_odds]" class="form-control" id="4_max_odds" value="4.00">
+                            <span id="4_max_oddsN" class="errmsg"></span>								 
+                        </div> 
+                                                                                                                <div class="block_2">
+                                <label>UNMATCH BET</label>
+                                <input type="checkbox" name="sport[is_unmatch_bet]" value="1"> <br>
+                                <span id="4_is_unmatch_betN" class="errmsg"></span>			 							 
+                            </div>
+                                                    <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="4_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="4_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button>  
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Horse Racing</div>
+                    <div class="content_bg">  
+                    <form id="7_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="7">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="7_min_stake" value="1000">
+                             <span id="7_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="7_max_stake" value="25000">
+                                <span id="7_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="7_max_profit" value="200000">
+                                <span id="7_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> Max Loss </label>
+                                <input type="text" name="sport[max_loss]" class="form-control" id="7_max_loss" value="200000">
+                                <span id="7_max_lossN" class="errmsg"></span>								 
+                        </div> 
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="7_bet_delay" value="5">
+                                <span id="7_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> PRE INPLAY PROFIT</label>
+                                <input type="text" name="sport[pre_innplay_profit]" class="form-control" id="7_pre_innplay_profit" value="200000">
+                                <span id="7_pre_innplay_profitN" class="errmsg"></span>
+                        </div> 
+                        <div class="block_2">
+                            <label> PRE INPLAY STAKE</label>
+                            <input type="text" name="sport[pre_inplay_stake]" class="form-control" id="7_pre_inplay_stake" value="25000">
+                            <span id="pre_inplay_stakeN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> VOLUME LIMIT</label>
+                            <input type="text" name="sport[volume_limit]" class="form-control" id="7_volume_limit" value="200">
+                            <span id="volume_limitN" class="errmsg"></span>								 
+                        </div>
+                                                                                <div class="block_2">
+                            <label> MIN ODDS</label>
+                            <input type="text" name="sport[min_odds]" class="form-control" id="7_min_odds" value="1.02">
+                            <span id="7_min_oddsN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> MAX ODDS</label>
+                            <input type="text" name="sport[max_odds]" class="form-control" id="7_max_odds" value="4.00">
+                            <span id="7_max_oddsN" class="errmsg"></span>								 
+                        </div> 
+                                                                                                                <div class="block_2">
+                                <label>UNMATCH BET</label>
+                                <input type="checkbox" name="sport[is_unmatch_bet]" value="1"> <br>
+                                <span id="7_is_unmatch_betN" class="errmsg"></span>			 							 
+                            </div>
+                                                    <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="7_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="7_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button>  
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Teenpatti</div>
+                    <div class="content_bg">  
+                    <form id="9_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="9">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="9_min_stake" value="500">
+                             <span id="9_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="9_max_stake" value="25000">
+                                <span id="9_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="9_max_profit" value="200000">
+                                <span id="9_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> Max Loss </label>
+                                <input type="text" name="sport[max_loss]" class="form-control" id="9_max_loss" value="200000">
+                                <span id="9_max_lossN" class="errmsg"></span>								 
+                        </div> 
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="9_bet_delay" value="2">
+                                <span id="9_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> PRE INPLAY PROFIT</label>
+                                <input type="text" name="sport[pre_innplay_profit]" class="form-control" id="9_pre_innplay_profit" value="50000">
+                                <span id="9_pre_innplay_profitN" class="errmsg"></span>
+                        </div> 
+                        <div class="block_2">
+                            <label> PRE INPLAY STAKE</label>
+                            <input type="text" name="sport[pre_inplay_stake]" class="form-control" id="9_pre_inplay_stake" value="50000">
+                            <span id="pre_inplay_stakeN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> VOLUME LIMIT</label>
+                            <input type="text" name="sport[volume_limit]" class="form-control" id="9_volume_limit" value="10000000">
+                            <span id="volume_limitN" class="errmsg"></span>								 
+                        </div>
+                                                                                <div class="block_2">
+                            <label> MIN ODDS</label>
+                            <input type="text" name="sport[min_odds]" class="form-control" id="9_min_odds" value="1.02">
+                            <span id="9_min_oddsN" class="errmsg"></span>								 
+                        </div>
+                        <div class="block_2">
+                            <label> MAX ODDS</label>
+                            <input type="text" name="sport[max_odds]" class="form-control" id="9_max_odds" value="10.00">
+                            <span id="9_max_oddsN" class="errmsg"></span>								 
+                        </div> 
+                                                                                                                <div class="block_2">
+                                <label>UNMATCH BET</label>
+                                <input type="checkbox" name="sport[is_unmatch_bet]" value="1"> <br>
+                                <span id="9_is_unmatch_betN" class="errmsg"></span>			 							 
+                            </div>
+                                                    <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="9_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="9_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Fancy</div>
+                    <div class="content_bg">  
+                    <form id="10_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="10">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="10_min_stake" value="500">
+                             <span id="10_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="10_max_stake" value="100000">
+                                <span id="10_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="10_max_profit" value="300000">
+                                <span id="10_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="10_bet_delay" value="3">
+                                <span id="10_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                                                                                                        <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="10_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="10_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Manual Fancy</div>
+                    <div class="content_bg">  
+                    <form id="11_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="11">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="11_min_stake" value="500">
+                             <span id="11_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="11_max_stake" value="200000">
+                                <span id="11_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="11_max_profit" value="500000">
+                                <span id="11_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="11_bet_delay" value="3">
+                                <span id="11_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                                                                                                        <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="11_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="11_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Manual Match Odds</div>
+                    <div class="content_bg">  
+                    <form id="12_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="12">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="12_min_stake" value="1000">
+                             <span id="12_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="12_max_stake" value="500000">
+                                <span id="12_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="12_max_profit" value="2500000">
+                                <span id="12_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="12_bet_delay" value="3">
+                                <span id="12_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                                                                                                        <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="12_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="12_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-12-setting" (click)="openModal(template)">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                    
+                    <div class="sub_heading_tabel">Lm Fancy</div>
+                    <div class="content_bg">  
+                    <form id="13_setting" method="post"><input type="hidden" name="compute" value="ab70ef74781940f3c6ddc8d0be8cb193">						
+                        <div class="block_2">
+                              <input type="hidden" name="sport[sport_id]" value="13">
+                             <label> MIN STAKE</label>
+                             <input type="text" name="sport[min_stake]" class="form-control" id="13_min_stake" value="500">
+                             <span id="13_min_stakeN" class="errmsg"></span>
+                        </div>							
+                        <div class="block_2">
+                                <label> Max STAKE </label>
+                                <input type="text" name="sport[max_stake]" class="form-control" id="13_max_stake" value="100000">
+                                <span id="13_max_stakeN" class="errmsg"></span>								 
+                        </div> 
+                        
+                        <div class="block_2">
+                                <label> MAX PROFIT </label>
+                                <input type="text" name="sport[max_profit]" class="form-control" id="13_max_profit" value="500000">
+                                <span id="13_max_profitN" class="errmsg"></span>								 
+                        </div>
+                                                    <div class="block_2">
+                                <label> BET DELAY</label>
+                                <input type="text" name="sport[bet_delay]" class="form-control" id="13_bet_delay" value="3">
+                                <span id="13_bet_delayN" class="errmsg"></span>								 
+                        </div>
+                                                                                                                                        <div class="block_2">
+                            <label> LOCK BET</label>
+                            <!--input type="text" name="sport[lock_bet]" class="form-control" id="13_lock_bet" value=""-->								
+                            <input type="checkbox" name="sport[lock_bet]" value="1"> <br>							
+                            <span id="13_lock_betN" class="errmsg"></span>								 
+                        </div>
+                        <div class="popup_col_3">
+                            <input type="checkbox" name="sport[updateuser]">Click to update for all users<br>								 
+                        </div>
+                        <div class="popup_col_12">
+                            <!--input type="checkbox" name="updateuser"/>Click to update bet & fancy delay for all users<br/-->
+                            <button type="button" class="blue_button" id="update-13-setting" onclick="submit_user_gen_setting('13_setting','13')">
+                                Update
+                            </button> 
+                        </div>
+                    </form>							
+                    </div>
+                                </div>
+         
+       
+<!--commanpopup-->
+<div id="commonpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+  <div class="modal-content">
+     <div class="popup_form">
+        <div class="title_popup">
+           <span>Title Popup</span>
+           <button type="button" class="close" data-dismiss="modal">
+              <div class="close_new"><i class="fa fa-times-circle"></i></div>
+           </button>
+        </div>
+        <div class="content_popup">
+           <div class="popup_form_row">
+              <div class="modal-body"></div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">newlotusbook.com says</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      changes save successfully
+    </div>
+  </ng-template>

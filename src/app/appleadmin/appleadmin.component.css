@@ -1,0 +1,51 @@
+.table-scroll {
+    overflow: scroll;
+}
+.title_new_at {
+    width: 100%;
+    display: inline-block;
+    background: #2b2f35;
+    padding: 5px;
+    color: #fff;
+}
+.usersech input, select {
+    padding: 2px 5px;
+    border: solid 1px #eee;
+    color: #000;
+    height: 28px;
+}
+.usersech input, select {
+    padding: 2px 5px;
+    border: solid 1px #eee;
+    color: #000;
+    height: 28px;
+}
+{
+    padding: 4px 5px;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #33b85f!important;
+    border-color: #33b85f!important;
+    font-weight: normal;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #fdfdfd;
+    border-color: #c5201b;
+    float: right;
+}
+table.jambo_table tbody tr:hover td {
+    background: transparent;
+}
+table.jambo_table tbody tr td {
+    border: solid 1px #dbdbdb;
+    border-top: transparent;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
+    color: rgb(0, 0, 0);
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
+    color: black;
+}

@@ -1,0 +1,203 @@
+
+
+<div class="header-section">
+    <div class="top_nav">
+       <div class="righttogal righttogalhide">
+          <span style="cursor:pointer" onclick="openNav()">☰ </span>
+       </div>
+       <div class="nav_menu">
+          <nav class="" role="navigation">
+             <div class="nav_title">
+                <a href="/dashboard" class="site_title endcooki"> 
+                <img src="assets/images/newlotusbook.png" alt=""> 
+                </a>
+             </div>
+             <div class="marquee hidden-xs">
+                               <marquee>all activities in this id will stop on sunday night pls change your clients to new id  sab programme ye id me ravivar rat ko band hojayega aap sab clients ko naya id me badal dijiye </marquee>
+                               <span class="notifi_ico hidden-xs"><img src="/assets/images/bell-icon.png"></span>
+             </div>
+             
+             <div class="nav navbar-nav navbar-right">
+                <ul>
+                   <li class="belance-top hidden-xs">
+                      <span class="wallet-icon">
+                      <img class="toggle-btn" src="assets/images/wallet-icon.png" alt="">
+                      </span>
+                      <a id="Wallet">Main: <span class="mWallet">600,000,000.00</span></a>
+                      <a id="UserLiability">Exposure : <span class="liability">0.00</span></a>
+                   </li>
+                   
+                   <div class="dropdown">                     
+                     <button class="user-profile dropdown-toggle" data-toggle="dropdown" ><img class="user_img" src="/assets/images/admin13.png"> admin</button>
+                    <div class="dropdown-content">
+                       <li><a routerLink="changepassword"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> </li>
+                       <li><a class="endcooki" href="#logout"><i class="fa fa-sign-out"></i> Log Out</a> </li>
+                    </div>
+              </div>
+                
+
+                </ul>
+             </div>
+          </nav>
+       </div>
+    </div>
+    <!--top navigation -->
+    <div id="leftSidenav" class="left_col sidenav">
+       <a href="javascript:void(0)" class="closebtn righttogalhide" onclick="closeNav()">x</a>
+       <div class="left_col scroll-view">
+          <div class="clearfix">
+
+          </div>
+          <nav id="cssmenu"></nav>
+            
+            <ul class="nav">
+               <li><a class="endcooki" routerLink="/dashboard"><i class="fa fa-home hidden-xs"></i> Dashboard</a></li>
+
+               <div class="dropdown">
+                  <button class="dropbtn">Masters</button>
+                  <div class="dropdown-content">
+                     <li><a href="/settlements">Settlement Entry List</a></li>
+                     <li><a href="/MatchLst">Match Setting</a></li>
+                     <li><a href="/MatchResult/4">Set Match Result</a></li>
+                     <li><a routerLink="/websitesetting">Website Setting</a></li>
+                     <li><a routerLink="/msgsetting">Message Setting</a></li>
+                     <li><a routerLink="/usergeneralsetting">User general Setting </a></li>
+                     <li><a routerLink="/matchgeneralsetting">Match general Setting </a></li>
+                     <li><a routerLink="/livecommentry">Live Commentary</a></li>
+                     <li><a (click)="openModal1(template)">Odd ON/OFF</a></li>
+
+                     <li><a (click)="openModal2(template)">Fancy ON/OFF</a></li>
+                 <li><a href="javascript:void(0)" onclick="oddOff('auto_fancy')">Auto Fancy</a></li>
+                     <li><a href="/logoutUser">Logout Users </a></li>
+                 <li><a routerLink="/livegamesetting">Live Game Settings </a></li>
+                  </div>
+                </div>
+                
+
+                <div class="dropdown">
+                  <button class="dropbtn">Client Listing</button>
+                  <div class="dropdown-content">
+                     <li><a routerLink="/admin"> Admin</a> </li>
+                     <li><a href="/userList/1"> Hyper </a></li>
+                     <li><a href="/userList/2"> Super Master</a> </li>
+                     <li><a href="/userList/3"> Master </a> </li>
+                     <li><a href="/userList/4"> Users</a></li>
+                     <li><a href="/Adminmaster/Partnership/1"> Partnership</a></li>
+                     <!--li><a href="/Adminmaster/Partnership/2"> Partnership  Casino</a></li-->
+                     <li><a href="/Adminmaster/Partnership/3"> Partnership Live TennPatti</a></li>
+                     <li><a href="/closeusers"> Close Users</a></li>
+                     <li><a routerLink="/zerobalanceuser"> Zero Balance Users</a></li>
+                  </div>
+                </div>
+                
+
+   
+
+   <div class="dropdown">
+      <button class="dropbtn">Betting</button>
+      <div class="dropdown-content">
+         <li><a routerLink="/bettingcricket">Cricket</a></li>
+         <li><a routerLink="/bettingtennis">Tennis</a> </li>
+         <li><a routerLink="/bettingsoccer">Soccer</a> </li>
+         <li><a routerLink="/setresult">Set Result</a> </li>
+         <li><a href="/adminsetting/matchLists">Admin Match List</a> </li>
+      </div>
+    </div>
+
+  
+   
+   <li><a  routerLink="/addfancy" routerLinkActive="active" > Add Fancy</a> </li>
+
+   <li><a   routerLink="/addmanualfancy" routerLinkActive="active"   > Add Manual Fancy</a> </li>
+ 
+
+   <li><a routerLink="/blockmarket">Block Market</a></li>
+  
+
+   <li><a class="endcooki" href="/dashboard?inplay">In-Play</a></li>
+ 
+
+   <li><a class="endcooki" routerLink= "/favourite" routerLinkActive="active">Favorite</a></li>
+   
+
+   <li><a class="endcooki" routerLink="/runningmarket">Running Market Analysis</a></li>
+
+   
+<div class="dropdown">
+   <button class="dropbtn">Report</button>
+   <div class="dropdown-content">
+      <li><a routerLink="/acinfo">Account Info </a> </li>
+      <li><a href="/acStatement">Account Statement </a> </li>
+                        <li><a href="/new_chipsummary">Chip Summary </a> </li>
+         
+                        <li><a routerLink="/useronline">All Users online </a> </li>
+                        <li class="hidden-xs"><a href="/chip_history">Chip History </a> </li>
+                        <li><a routerLink="/clientpl">Client P L</a> </li>
+      <li><a routerLink="/marketpl">Market P L</a> </li>
+      <li><a routerLink="/sportpl">Sport P L</a> </li>
+      <li><a routerLink="/userpl">User P L</a> </li>
+                         
+      <li><a routerLink="/profitloss">Profit &amp; Loss</a> </li>
+      <li><a routerLink="/bethistory">Bet History</a> </li>
+  <li><a href="/gameclientbet">Livegame Bet History</a> </li>
+                        <li><a href="/report/fancystack">Fancy Stack</a> </li>
+       
+                           <li><a href="#oneMinuteChk">Bet Compare</a> </li>
+                                         <li><a href="#fancy_bethistory">VIP Customer</a> </li>
+                    
+   </div>
+ </div>
+ 
+
+   <li class="hidden-xs hidden-lg"><a routerLink="/teenpatti" class=""> Teen Patti</a> </li>
+
+   <!--li class="hidden-xs"><a onclick="lobbylink()" href="javascript:void(0)" class=""> New Teen Patti</a> </li-->
+
+   <li> <a class="hidden-xs"  routerLink="/livegame" routerLinkActive="active" class="blinking" > Live game</a> </li>
+  
+   
+   <li><a  class=" " routerLink="/sessionfancy"> Session Fancy</a> 
+   </li>
+   <ul>
+      <li class="hidden-xs"><a href="/assets/apk/newlotusbook.com.apk" class="download-apk-btn"> 
+         <i class="fa fa-android"></i></a>
+      </li>
+   </ul>
+
+
+
+   
+   
+   <ng-template #template>
+      
+     <div class="modal-body text-center">
+      <div class="title_popup">
+         <span> ON/OFF Setting</span> 
+         
+      </div>
+       <p>you want to STOP showing the ODDS</p>
+       
+       <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+       <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+     </div>
+   </ng-template>
+
+
+
+
+   
+   <ng-template #template>
+      
+     <div class="modal-body text-center">
+      <div class="title_popup">
+         <span> ON/OFF Setting</span> 
+         
+      </div>
+       <p>you want to STOP showing the Fancy</p>
+       
+       <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+       <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+     </div>
+   </ng-template>
+
+  

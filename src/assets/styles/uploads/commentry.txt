@@ -1,0 +1,465 @@
+!DOCTYPE html
+html lang=en slick-uniqueid=3
+head
+      meta http-equiv=Content-Type content=texthtml; charset=UTF-8
+      !-- Meta, title, CSS, favicons, etc. --
+       meta name=viewport content=width=device-width, initial-scale=1.0
+      titlenewlotusbooktitle
+	  link rel=shortcut icon type=imagex-icon href=httpnewlotusbook.comassetsimagesfavicon.ico
+      !-- Bootstrap --
+      link href=httpnewlotusbook.comassetsbootstrapdistcssbootstrap.min.css rel=stylesheet
+      !-- Font Awesome --
+      link href=httpnewlotusbook.comassetsfont-awesomecssfont-awesome.min.css rel=stylesheet
+      !-- Custom Theme Style --
+      link href=httpnewlotusbook.comassetscsscustom.cssversion=1612853515 rel=stylesheet
+      link href=httpnewlotusbook.comassetscssmenu.cssversion=1612853515 rel=stylesheet
+      script src=httpnewlotusbook.comassetsjquerydistjquery.min.jsscript
+      script src=httpnewlotusbook.comassetsjsmoment.min.jsscript 
+      script src=httpnewlotusbook.comassetsjsdaterangepicker.jsscript
+      link href=httpnewlotusbook.comassetscssjquery.dataTables.min.css rel=stylesheet type=textcss
+      script src=httpnewlotusbook.comassetsjsjquery.dataTables.min.jsscript 
+      script src=httpnewlotusbook.comassetsjscryptoaes.jsscript
+      script src=httpnewlotusbook.comassetsjscryptoaes-json-format.jsscript
+      script
+         var userId1 =1;
+         var userType1 =0;
+         var stype =0;
+         var pstr ='0';         
+         var acceptTerms = 'N';
+         var site_url = 'httpnewlotusbook.com' ;
+         var socketurl = 'http139.162.217.304909' ;
+         var socketurlM = 'httpfancy.paramexch.com' ;
+		 var liveTvUrl ='httpapple.apple365.bettvsettingshowTvFeedApi';
+		 var liveTvUrl2 ='httpsnew.apple365.bettvsettingshowTvFeedApi';
+      script
+      input type=hidden name=testData data-name=testData data-val=12e75eb1cdff3e333dc2b3fb35c8b7b1
+      script src=httpnewlotusbook.comassetsjssocket.io.jsscript 	  
+      script src=httpnewlotusbook.comassetsjsjs.cookie.min.jsscript
+      script src=httpnewlotusbook.comassetsjsserialize_json.jsscript
+      script src=httpnewlotusbook.comassetsjsmain_1.jsversion=1612853515script 
+	   script src=httpnewlotusbook.comassetsjsserver-request.jsversion=1612853515script
+            script src=httpnewlotusbook.comassetsjsadmin.jsversion=1612853515script 
+            script src=httpnewlotusbook.comassetsjsadminmaster.jsversion=1612853515script 
+      	  meta name=csrf-name content=compute
+meta name=csrf-token content=1f09951c3d293d403128fe920869a43b
+head
+   
+body oncontextmenu=if (!window.__cfRLUnblockHandlers) return false; return false; oncopy=if (!window.__cfRLUnblockHandlers) return false; return false; oncut=if (!window.__cfRLUnblockHandlers) return false; return false; onpaste=if (!window.__cfRLUnblockHandlers) return false; return false; class=nav-md bg-default 
+   	 !-- top navigation --
+div class=header-section
+   div class=top_nav
+      div class=righttogal righttogalhide
+         span style=cursorpointer onclick=openNav()&#9776; span
+      div
+      div class=nav_menu
+         nav class= role=navigation
+            div class=nav_title
+               a href=httpnewlotusbook.comdashboard class=site_title endcooki 
+               img src=httpnewlotusbook.comassetsuploadsnewlotusbookcom.pngv=2.3658 alt= 
+               a
+            div
+            div class=marquee hidden-xs
+                              Marqueeall activities in this id will stop on sunday night please change your clients to new id Marquee
+                              span class=notifi_ico hidden-xsimg src=httpnewlotusbook.comassetsimagesbell-icon.pngspan
+            div
+            div class=nav navbar-nav navbar-right
+               ul
+                  li class=belance-top hidden-xs
+                     span class=wallet-icon
+                     img class=toggle-btn src=httpnewlotusbook.comassetsimageswallet-icon.pngv=1.789789 alt=
+                     span
+                     a id=Wallet Main span class=mWallet599,193,303.67spana
+                     a id=UserLiability Exposure  span class=liability0.00spana
+                  li
+                  li class=
+                     a href=javascript; class=user-profile dropdown-toggle data-toggle=dropdown aria-expanded=falseimg class=user_img src=httpnewlotusbook.comassetsimagesuser-ico.svgv=1.5647896 adminspan class= fa fa-angle-downspana
+                     ul class=dropdown-menu dropdown-usermenu pull-right
+                        lia href=httpnewlotusbook.comdashboardchange_passwordi class=fa fa-key aria-hidden=trueiChange Passworda li
+                        lia class=endcooki href=httpnewlotusbook.comlogouti class=fa fa-sign-outi Log Outa li
+                     ul
+                  li
+               ul
+            div
+         nav
+      div
+   div
+   !--top navigation --
+   div id=lefttSidenav  class=left_col  sidenav
+      a href=javascriptvoid(0) class=closebtn righttogalhide onclick=closeNav()&times;a 
+      div class=left_col scroll-view
+         div class=clearfixdiv
+         nav id='cssmenu'
+         !--div class=buttondiv--
+         ul class=nav
+                        lia class=endcooki href=httpnewlotusbook.comdashboardi class=fa fa-home hidden-xsi Dashboardali
+                         
+            li
+               a href=#Mastersa
+               ul
+                  lia href=httpnewlotusbook.comsettlementsSettlement Entry Listali
+                  lia href=httpnewlotusbook.comMatchLstMatch Settingali
+                  lia href=httpnewlotusbook.comMatchResult4Set Match Resultali
+                  lia href=httpnewlotusbook.comwebsiteWebsite Settingali
+                  lia href=httpnewlotusbook.commsg_settingMessage Settingali
+                  lia href=httpnewlotusbook.comsetSiteSettingUser general Setting ali
+                  lia href=httpnewlotusbook.comsetMatchSettingMatch general Setting ali
+                  lia href=httpnewlotusbook.comcommentaryLive Commentaryali
+                  lia href=javascriptvoid(0) onclick=oddOff('oddSett')Odd ONOFFali
+                  lia href=javascriptvoid(0) onclick=oddOff('fancySett')Fancy ONOFFali
+				  lia href=javascriptvoid(0) onclick=oddOff('auto_fancy')Auto Fancyali
+                  lia href=httpnewlotusbook.comlogoutUserLogout Users ali
+				  lia href=httpnewlotusbook.comadminsettinglive_game_settingLive Game Settings ali
+               ul
+            li
+            li
+               a href=#Client Listinga
+               ul
+                  lia href=httpnewlotusbook.comuserList0 Admina li
+                  lia href=httpnewlotusbook.comsubadminLstSub Admina li
+                  lia href=httpnewlotusbook.comuserList1 Hyper ali
+                  lia href=httpnewlotusbook.comuserList2 Super Mastera li
+                  lia href=httpnewlotusbook.comuserList3 Master a li
+                  lia href=httpnewlotusbook.comuserList4 Usersali
+                  lia href=httpnewlotusbook.comAdminmasterPartnership1 Partnershipali
+                  !--lia href=httpnewlotusbook.comAdminmasterPartnership2 Partnership  Casinoali--
+                  lia href=httpnewlotusbook.comAdminmasterPartnership3 Partnership Live TennPattiali
+                  lia href=httpnewlotusbook.comcloseusers Close Usersali
+                  lia href=httpnewlotusbook.comadminsettingbalanceUserList Zero Balance Usersali
+               ul
+            li
+                                    li
+               a href=#Bettinga
+               ul
+                  lia href=httpnewlotusbook.comadminsettinggetSeriesOfSport4Cricketali
+                  lia href=httpnewlotusbook.comadminsettinggetSeriesOfSport2Tennisa li
+                  lia href=httpnewlotusbook.comadminsettinggetSeriesOfSport1Soccera li
+                  lia href=httpnewlotusbook.comadminsettingresultmatchListsSet Resulta li
+                  lia href=httpnewlotusbook.comadminsettingmatchListsAdmin Match Lista li
+               ul
+            li
+            lia href=httpnewlotusbook.comadminsettingaddfancy1 Add Fancya li
+            lia href=httpnewlotusbook.comadminsettingaddfancy2 Add Manual Fancya li
+                                    lia  href=httpnewlotusbook.comAdminmasterSporTypeListBlock Marketali
+             
+                        lia class=endcooki href=httpnewlotusbook.comdashboardinplayIn-Playali
+            lia class=endcooki href=httpnewlotusbook.comdashboardFavoriteFavoriteali
+            lia href=httpnewlotusbook.comdashboardmy_marketRunning Market Analysisali
+            li
+               a href=#Reporta
+               ul
+                  lia href=httpnewlotusbook.comacInfoAccount Info a li
+                  lia href=httpnewlotusbook.comacStatementAccount Statement a li
+                                    lia href=httpnewlotusbook.comnew_chipsummaryChip Summary a li
+                     
+                                    lia href=httpnewlotusbook.comuserOnlineAll Users online a li
+                                    li class=hidden-xsa href=httpnewlotusbook.comchip_historyChip History a li
+                                    lia href=httpnewlotusbook.comclientplClient P La li
+                  lia href=httpnewlotusbook.commarketplMarket P La li
+                  lia href=httpnewlotusbook.comreportsportplSport P La li
+                  lia href=httpnewlotusbook.comreportuserplUser P La li
+                                     
+                  lia href=httpnewlotusbook.comprofitlossProfit & Lossa li
+                  lia href=httpnewlotusbook.combethistoryBet Historya li
+				  lia href=httpnewlotusbook.comgameclientbetLivegame Bet Historya li
+                                    lia href=httpnewlotusbook.comreportfancystackFancy Stacka li
+                   
+                                       lia href=httpnewlotusbook.comoneMinuteChkBet Comparea li
+                  				                       lia href=httpnewlotusbook.comfancy_bethistoryVIP Customera li
+                  				  
+				  
+               ul
+            li
+                        li class=hidden-xs hidden-lga href=httpnewlotusbook.comTeenpatti class= Teen Pattia li
+                        !--li class=hidden-xsa onclick=lobbylink() href=javascriptvoid(0) class= New Teen Pattia li--
+            			li class=hidden-xsa  class=blinking href=httpnewlotusbook.comlivegames class= Live gamea li			
+                                                     
+            lia href=httpnewlotusbook.comheaderfancy class=  Session Fancya 
+            li
+            li class=hidden-lg
+               a href=httpnewlotusbook.comdashboardchange_password
+               Change Passworda 
+            li
+                                             ul
+         div class=social-links
+            ul
+               li class=hidden-xsa href=httpnewlotusbook.comassetsapknewlotusbook.com.apk class=download-apk-btn i class=fa fa-androidia
+               li
+                                       
+            ul
+         div
+      div
+      !--sidebar menu --
+   div
+div
+div class=mrq hidden-lg
+   div class=mob_balance
+      a id=Walletimg src=httpnewlotusbook.comassetsimageswallet-icon.pngv=1.789789 alt= Main span class=mWallet599,193,303.67span
+      a
+      a id=UserLiabilityExposure  span class=liability0.00span
+      a
+   div
+   div class=marquee
+            Marqueeall activities in this id will stop on sunday night please change your clients to new id Marquee
+         div
+div
+div class=forModaldiv      div class=container body
+	    div class=left-side-menu
+	div class=panel-group id=accordion
+	h6Sportsh6
+		     div		
+div
+         div class=main_container id=sticky
+            style
+.clkvalue{
+	margin-bottom10px!important;
+	margin-right15px!important;
+}
+style
+div class=right_col role=main
+ 
+ 
+ 
+div class=row
+
+
+div class=col-md-12
+						div class=title_new_atLive Commentarydiv
+						 
+						   
+				  div
+
+				   div class=col-md-12
+													  div
+
+			div class=col-md-12 col-sm-12 col-xs-12
+				 
+						div id=divLoading div!--Loading class --
+						
+						
+						div class=popup_col_12
+						
+						div class=popup_col_2
+									
+						button type=button class=com_blue_button onclick=save_commentary('Wide')Widebutton 
+button type=button class=com_blue_button onclick=save_commentary('No Ball')No Ballbutton 
+button type=button class=com_blue_button onclick=save_commentary('Wicket')Wicketbutton
+button type=button class=com_blue_button onclick=save_commentary('Free Hit')Free Hitbutton
+						div
+						div class=popup_col_2
+						button type=button class=com_blue_button onclick=save_commentary('Spinner Bowler')Spinner Bowlerbutton
+button type=button class=com_blue_button onclick=save_commentary('Faster Bowler')Faster Bowlerbutton
+button type=button class=com_blue_button onclick=save_commentary('Baller Ruka')Baller Rukabutton
+button type=button class=com_blue_button onclick=save_commentary('Third Umpire')Third Umpirebutton
+						div
+						div class=popup_col_2
+						button type=button class=com_blue_button onclick=save_commentary('Decision Pending')Decision Pendingbutton
+button type=button class=com_blue_button onclick=save_commentary('Run Out')Run Outbutton
+button type=button class=com_blue_button onclick=save_commentary('Not Out')Not Outbutton
+button type=button class=com_blue_button onclick=save_commentary('Inning Break')Inning Breakbutton
+						div
+						
+						div class=popup_col_2
+						button type=button class=com_blue_button onclick=save_commentary('Game Start')Game Startbutton
+button type=button class=com_blue_button onclick=save_commentary('Review')Reviewbutton
+button type=button class=com_blue_button onclick=save_commentary('Time Out')Time Outbutton
+						div
+						
+						
+						
+			
+
+
+
+
+						
+						div
+				
+	divdiv class=col-md-12 col-sm-12 col-xs-12			
+
+				div class=popup_col_6
+				input type=text name=Commentary class=form-control Commentary1 id=Commentary value=
+				 
+				div
+				div class=popup_col_6
+				 
+				 button type=button class=blue_button id=save_commentary onclick=save_commentary()Savebutton  
+				div
+				
+			
+ 
+ 
+							 
+						div
+						
+						
+						
+				div class=col-md-12 col-sm-12 col-xs-12			
+				div class=popup_col_2
+				button type=button class=com_blue_button onclick=save_commentary('1 run')1 runbutton
+button type=button class=com_blue_button onclick=save_commentary('2 run')2 runbutton 
+button type=button class=com_blue_button onclick=save_commentary('3 run')3 runbutton 
+
+button type=button class=com_blue_button onclick=save_commentary('5 run')5 runbutton 
+ 
+				div
+				
+				div class=popup_col_2
+  button type=button class=com_blue_button onclick=save_commentary('Four')Fourbutton 
+button type=button class=com_blue_button onclick=save_commentary('Six')Sixbuttonbr
+button type=button class=com_blue_button onclick=save_commentary('Ball Running')Ball Runningbutton
+button type=button class=com_blue_button onclick=save_commentary('No run')No runbutton 
+				div
+				div class=popup_col_2
+										button id=fancyButton style=padding 15px 128px;font-size 19px;background-colorgreen type=button class=com_blue_button onclick=fancyOnOff('fancySett')Fancybutton 
+					div
+				div
+				div class=col-md-12 col-sm-12 col-xs-12			
+					
+				div
+				
+				
+				
+				div
+div
+ 
+
+script
+$(document).keyup(function(e) {
+	if (e.keyCode == 27) { 
+	   $(#oddsonoffSett).val('Y');
+	   $(#oddsonoffSettfor).val('fancySett');
+       saveOddsSett();
+	   $(#fancyButton).css(background, red);
+    }
+	if(e.keyCode == 13){
+		$(#oddsonoffSett).val('N');
+	    $(#oddsonoffSettfor).val('fancySett');
+        saveOddsSett();
+		$(#fancyButton).css(background, green);
+		
+	}
+ });
+	
+function save_commentary(val=''){
+	if(val==''){
+		val = $(#Commentary).val();
+	}
+	if(val!=''){
+		 jQuery.ajax({ 
+			
+			url 'httpnewlotusbook.comoddsSettingSavecommentary'+val,			
+			success function(data) {
+			type post,
+            url 'httpnewlotusbook.comoddsSettingSave',
+           datadatastring,only input
+			data {commentary 'commentary', val val},
+            cache false,
+            success function(output)
+            {   	
+				new PNotify({
+						  title 'Success',
+						  text 'Saved successfully',
+						  type 'success',
+						  styling 'bootstrap3',
+						  delay500
+					  });
+					  
+			},
+			error function (request) {
+				new PNotify({
+						  title 'Error',
+						  text 'Not Saved successfully',
+						  type 'error',
+						  styling 'bootstrap3',
+						  delay500
+					  });
+				
+			},
+		}); 
+		
+	}
+	
+}
+script
+
+
+
+
+script
+ $(document).ready(function(){
+ $('.clkvalue').click(function(e) { 
+   var text = $(this).text();
+$(.Commentary1).val(text);
+ });
+
+});
+script            !--footerlinks--
+footer
+   ul class=menu-links
+      li class=itema href=httpnewlotusbook.comdashboardinplayimg src=httpnewlotusbook.comassetsimagesgames-imginplay.pngv=1.5647896spanInplayspanali
+      li class=itema href=javascript; class=UserChipData data-toggle=modal data-target=#addUser data-backdrop=static data-keyboard=falseimg src=httpnewlotusbook.comassetsimagesgames-imgedit-stake.pngv=1.5647896spanEdit stakespanali
+      li class=itema href=httpnewlotusbook.comdashboard class=site_title endcooki activeimg src=httpnewlotusbook.comassetsimagesgames-imghome.pngv=1.5647896ali
+      li class=itema href=httpnewlotusbook.combethistoryimg src=httpnewlotusbook.comassetsimagesgames-imghistory.pngv=1.5647896spanBet Historyspanali
+      li class=itema href=httpnewlotusbook.comlogoutimg src=httpnewlotusbook.comassetsimagesgames-imglogout.pngv=1.5647896spanLogoutspanali
+   ul
+footer
+
+!--footerlinks--
+script src=httpnewlotusbook.comassetsbootstrapdistjsbootstrap.min.jsscript
+script src=httpnewlotusbook.comassetsjsbootbox.min.jsscript
+script src=httpnewlotusbook.comassetsjspnotify.jsscript
+script src=httpnewlotusbook.comassetsjsmenu.jsscript
+script src=httpnewlotusbook.comassetsjscustom.jsver=1.2script
+
+!--commanpopup--
+div id=commonpopup class=modal fade role=dialog
+   div class=modal-dialog
+      div class=modal-content
+         div class=popup_form
+            div class=title_popup
+               spanTitle Popupspan
+               button type=button class=close data-dismiss=modal
+                  div class=close_newi class=fa fa-times-circleidiv
+               button
+            div
+            div class=content_popup
+               div class=popup_form_row
+                  div class=modal-bodydiv
+               div
+            div
+         div
+      div
+   div
+div
+!--commanpopup--         div
+      div
+	  
+script type=textjavascript
+  document.onkeydown = function(e) {
+      if(event.keyCode == 123) {
+          return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+          return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+          return false;
+      }
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+          return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+          return false;
+      }
+  }
+script
+body
+html
+script
+   $('.right_col').click(function(){
+       $('.child_menu').hide();
+   });
+   $('.top_nav').click(function(){
+       $('.child_menu').hide();
+   });
+script
