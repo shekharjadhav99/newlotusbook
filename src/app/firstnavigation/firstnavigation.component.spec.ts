@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstnavigationComponent } from './firstnavigation.component';
+import { FirstnavigationComponent } from "./FirstnavigationComponent";
 
 describe('FirstnavigationComponent', () => {
   let component: FirstnavigationComponent;

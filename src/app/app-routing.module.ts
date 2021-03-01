@@ -40,7 +40,12 @@ import { BethistoryComponent } from './bethistory/bethistory.component';
 import { ZerobalanceuserComponent} from './zerobalanceuser/zerobalanceuser.component';
 import {UsergeneralsettingComponent } from './usergeneralsetting/usergeneralsetting.component';
 import { MatchgeneralsettingComponent} from './matchgeneralsetting/matchgeneralsetting.component';
-
+import { ChipsummaryComponent} from './chipsummary/chipsummary.component'; 
+import {CricketComponent } from './cricket/cricket.component';
+import {InplayComponent} from './inplay/inplay.component';
+import {SoccerComponent} from './soccer/soccer.component';
+import {TennisComponent } from './tennis/tennis.component';
+import { FullmarketComponent } from './fullmarket/fullmarket.component';
 
 
 
@@ -50,6 +55,14 @@ const routes: Routes = [
     path: '',
     component: MainContainerComponent,
     children: [
+      {
+        path: ':sportid/:tourid/:matchId/:marketId/:bfId',
+        component: FullmarketComponent,
+      },
+      {
+        path: ':sportid/:tourid/:matchId/:marketId',
+        component: FullmarketComponent,
+      },
       { path: '', component: DashboardComponent, pathMatch: 'full' },
       { path: 'livegame', component: LivegameComponent },
       { path: 'favourite', component: FavouriteComponent },
@@ -87,7 +100,14 @@ const routes: Routes = [
       {path:'bethistory',component:BethistoryComponent},
       {path:'zerobalanceuser',component:ZerobalanceuserComponent},
       {path:'usergeneralsetting',component:UsergeneralsettingComponent},
-      {path:'matchgeneralsetting',component:MatchgeneralsettingComponent}
+      {path:'matchgeneralsetting',component:MatchgeneralsettingComponent},
+      {path:'chipsummary',component:ChipsummaryComponent},
+      {path:'cricket',component:CricketComponent},
+      {path:'inplay',component:InplayComponent},
+      {path:'soccer',component:SoccerComponent},
+      {path:'tennis',component:TennisComponent},
+      {path:'fullmarket',component:FullmarketComponent}
+
     ]
   },
 

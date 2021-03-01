@@ -1,0 +1,209 @@
+.widget-body {
+    background-color: #fbfbfb;
+    box-shadow: 1px 0 10px 1px rgb(0 0 0 / 30%);
+    padding: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.runner-name, .runner-name span {
+    font-size: 12px;
+}
+.runner-name {
+    width: 55%;
+    height: 34px;
+    border-bottom: 0;
+    border-top: 1px #e0e6e6 solid;
+}
+td, th {
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    
+    color: #004085;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+a {
+    background-color: transparent;
+}
+
+.marketview-main button {
+    width: 100%;
+    min-width: 40px;
+    height: 25px;
+    margin: 0;
+    text-align: center;
+    color: #273a47;
+    border: 1px solid #fff;
+    background: none;
+    filter: none;
+    display: inline-block;
+    padding: 0px;
+}
+.back {
+    background-color: #72bbef !important;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.widget-header.bordered-bottom {
+    border-bottom: 3px solid #fff;
+}
+.widget-header {
+    position: relative;
+    min-height: 35px;
+    background: #2b2f35;
+    box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+    color:white;
+    padding-left: 12px;
+    text-align: right;
+}
+.bordered-sky {
+    border-color: #4a4b4c !important;
+}
+b, strong {
+    font-weight: bolder;
+    float: left;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.accordion.panel-group .panel-heading .accordion-toggle:hover {
+    color: #262626;
+    text-decoration:none;
+}
+.accordion.panel-group .panel-heading .accordion-toggle.collapsed {
+    color: #464646;
+    font-weight:bold;
+    
+    background-color: #fff;
+    transition: border 0.218s;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.accordion.panel-group .panel-body {
+    background-color: #eee;
+    border-left: 2px solid #eee;
+    color: #262626 !important;
+}
+.panel-body {
+    padding: 15px;
+}
+
+
+.panel-body {
+    padding: 15px;
+}
+
+.accordion.panel-group .panel-body {
+    background-color: #4a4b4c38;
+    border-left: 2px solid #eee;
+    color: #262626 !important;
+  
+}
+
+.panel-body {
+    padding: 15px;
+}
+.lay {
+    background-color: #f994ba !important;
+}
+.widget.collapsed .widget-body {
+    display: none;
+  }
+  .widget.collapsed.radius-bordered .widget-header {
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px 3px 3px 3px;
+    background-clip: padding-box;
+  }
+  .widget-buttons > [data-toggle="collapse"] {
+    color: #777;
+    font-size: 14px;
+  }
+  .accordion.panel-group .panel-heading .accordion-toggle.collapsed:after {
+    content: "";
+    
+}
+.accordion.panel-group .panel-heading .accordion-toggle:after {
+    transition: all 0.218s;
+       float: right;
+    right: 20px;
+    top: 8px;
+    font-family: "FontAwesome";
+    font-size: 17px;
+    font-weight: bold;
+    content: "";
+    color: #bebebe;
+    
+}
+.accordion.panel-group .panel-heading .accordion-toggle.collapse {
+    color: #737373;
+    font-weight:600;
+    background-color: #fff;
+    transition: border 0.218s;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+
+.runner-name, .runner-name span {
+    font-size: 12px;
+}
+.runner-name {
+    width: 55%;
+    height: 34px;
+    border-bottom: 0;
+    border-top: 1px #e0e6e6 solid;
+}
+td, th {
+    padding: 0;
+}
+.panel-default>.panel-heading {
+    color: rgb(119 96 96);
+    background-color: #3e1414;
+    border-color: #ddd;
+}

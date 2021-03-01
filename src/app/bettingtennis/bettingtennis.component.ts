@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-bettingtennis',
   templateUrl: './bettingtennis.component.html',
   styleUrls: ['./bettingtennis.component.css']
 })
-export class BettingtennisComponent implements OnInit {
+export class BettingtennisComponent  {
 
-  constructor() { }
+  
+  constructor(private _location: Location) { }
 
-  ngOnInit(): void {
+  backClicked() {
+    this._location.back();
   }
-
 }

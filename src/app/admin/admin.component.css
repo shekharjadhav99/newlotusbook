@@ -47,7 +47,7 @@ body {
     padding-left: 15px;
 }
 button.btn.btn-warning.btn-xs{
-    padding: 0px;
+    padding: 2px 1px;
 }
 .table {
     font-size: 12px;
@@ -64,7 +64,14 @@ table {
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
     color: black;
 }
-
+element.style {
+    padding: 2px 1px;
+}
+button.btn{
+    padding: 2px 1px;
+    padding-left: 2px;
+    padding-right: 50px;
+}
 
 
 

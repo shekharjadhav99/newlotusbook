@@ -1,0 +1,310 @@
+
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+
+<div class="main_container" id="sticky">
+    <div class="right_col" role="main" style="min-height: 799px;">
+<div id="chipData"><div class="col-md-12">
+<div class="title_new_at">Chip Summary of admin            </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="clearfix data-background">
+<div class="col-md-12 col-sm-12 col-xs-12">
+ <div class="popup_col_2">
+    <input type="text" name="searchTerm" id="searchTerm" class="form-control" placeholder="Search by Name" value="">
+    <input type="hidden" name="userType" id="userType" value="0">
+    <input type="hidden" name="userID" id="userID" value="1">
+ </div>
+ <div class="popup_col_3">
+    <button type="submit" name="submit" id="FilterData" class="blue_button">
+    Search
+    </button>
+    <button type="submit" name="submit" id="ClearFilterData" class="red_button">Clear
+    </button>
+ </div>
+ <div class="popup_col_2">
+ </div>
+</div>
+
+ <div id="divLoading"></div>
+ <!--Loading class -->
+       <div class="col-md-6 col-sm-6 green_table">
+             <div class="link">PLUS ACCOUNT</div>
+              <div class="main_gre-red">
+                <table class="table table-striped jambo_table bulk_action" id="">
+                   <thead>
+                      <tr class="headings">
+                         <th class="">Name</th>
+                         <th class="">Account</th>
+                         <th class="">Chips</th>
+                         <th class=""></th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                                                    <tr id="user_row_1">
+                         <td class="">admin</td>
+                         <td class="acco ">Own</td>                                 <td class=" ">14,298,645.00 </td>
+                         <td class=" ">
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_1">
+                         <td class="">admin</td>
+                         <td class="acco ">Own Commission</td>                                 <td class=" ">1,333,193.83 </td>
+                         <td class=" ">
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_9">
+                         <td class="">AdminShine02</td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(9,1)">AdminShine01 A/c</a></td>                                 <td class=" ">89,182.14 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=9&amp;fltrselct=4"><i aria-hidden="true">History</i></a>           
+                            <a class="btn btn-xs btn-success" href="javascript:;" title="Close Setellment" onclick="submitClearChip('9', '1', 'AdminShine02', 'AdminShine01 A/c', '89182.14', '1', '1', '2');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_2">
+                         <td class="">AdminSun01</td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(2,1)">AdminSun01 A/c</a></td>                                 <td class=" ">95,878.12 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=2&amp;fltrselct=4"><i aria-hidden="true">History</i></a>           
+                            <a class="btn btn-xs btn-success" href="javascript:;" title="Close Setellment" onclick="submitClearChip('2', '1', 'AdminSun01', 'AdminSun01 A/c', '95878.12', '1', '1', '2');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_5">
+                         <td class="">AdminStar01</td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(5,1)">AdminStar01 A/c</a></td>                                 <td class=" ">99,635.06 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=5&amp;fltrselct=4"><i aria-hidden="true">History</i></a>           
+                            <a class="btn btn-xs btn-success" href="javascript:;" title="Close Setellment" onclick="submitClearChip('5', '1', 'AdminStar01', 'AdminStar01 A/c', '99635.06', '1', '1', '2');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_4">
+                         <td class="">AdminSky01</td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(4,1)">AdminSky01 A/c</a></td>                                 <td class=" ">398,668.69 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=4&amp;fltrselct=4"><i aria-hidden="true">History</i></a>           
+                            <a class="btn btn-xs btn-success" href="javascript:;" title="Close Setellment" onclick="submitClearChip('4', '1', 'AdminSky01', 'AdminSky01 A/c', '398668.69', '1', '1', '2');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                     
+                   </tbody>
+                   <tfoot>
+                      <tr>
+                         <td> Total</td>
+                         <td></td>
+                         <td> 16,315,202.84 </td>
+                         <td></td>
+                      </tr>
+                   </tfoot>
+                </table>
+       </div>
+       </div>
+       <div class="col-md-6 col-sm-6 red_table">
+             <div class="link minus">MINUS ACCOUNT</div>
+              <div class="main_gre-red">
+                <table class="table table-striped jambo_table bulk_action" id="">
+                   <thead>
+                      <tr class="headings">
+                         <th class="">Name</th>
+                         <th class="">Account</th>
+                         <th class="">Chips</th>
+                         <th class=""></th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                                                    <tr id="user_row_427">
+                         <td class=" ">AdminApple02                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(427,1)">AdminApple02 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=427&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/427/1/AdminApple02/AdminApple02 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('427', '1', 'AdminApple02', 'AdminApple02 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_7">
+                         <td class=" ">AdminAura01                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(7,1)">AdminAura01 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=7&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/7/1/AdminAura01/AdminAura01 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('7', '1', 'AdminAura01', 'AdminAura01 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_11">
+                         <td class=" ">AdminSky02                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(11,1)">AdminSky02 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=11&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/11/1/AdminSky02/AdminSky02 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('11', '1', 'AdminSky02', 'AdminSky02 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_6">
+                         <td class=" ">AdminApple01                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(6,1)">AdminApple01 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=6&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/6/1/AdminApple01/AdminApple01 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('6', '1', 'AdminApple01', 'AdminApple01 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_8">
+                         <td class=" ">AdminAura02                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(8,1)">AdminAura02 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=8&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/8/1/AdminAura02/AdminAura02 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('8', '1', 'AdminAura02', 'AdminAura02 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_10">
+                         <td class=" ">AdminShine01                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(10,1)">AdminShine01 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=10&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/10/1/AdminShine01/AdminShine01 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('10', '1', 'AdminShine01', 'AdminShine01 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_3">
+                         <td class=" ">AdminSun02                                                                     </td>
+                         <td class="acco"><a href="javascript:void(0)" onclick="getuserchip(3,1)">AdminSun02 A/c</a></td>                                 <td class=" ">0.00 </td>
+                         <td class=" ">
+                                                                <a class="btn btn-xs btn-primary" href="http://newlotusbook.com/acStatement?user_id=3&amp;fltrselct=4"><i aria-hidden="true">History</i></a>
+                            <!--a class="btn btn-xs btn-primary" href="http://newlotusbook.com/report/user_chip_history/3/1/AdminSun02/AdminSun02 A/c/1"><i  aria-hidden="true">History</i></a-->
+                            <a class="btn btn-xs btn-danger" href="javascript:;" title="Close Setellment" onclick="submitClearChip('3', '1', 'AdminSun02', 'AdminSun02 A/c', '0', '1', '2', '1');"><i aria-hidden="true">Settlement</i></a>
+                                                             </td>
+                      </tr>
+                                                    <tr id="user_row_1">
+                         <td class=" ">admin                                                                     </td>
+                         <td class=" acco">Cash</td>                                 <td class=" ">16,315,202.84 </td>
+                         <td class=" ">
+                                                             </td>
+                      </tr>
+                                                 </tbody>
+                   <tfoot>
+                      <tr>
+                         <td> Total</td>
+                         <td></td>
+                         <td> 16,315,202.84 </td>
+                         <td></td>
+                      </tr>
+                   </tfoot>
+                </table>
+       </div>
+       </div>
+</div>
+</div>
+<div id="settlementpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="popup_form">
+        <div class="title_popup"><span id="tital_change"></span>
+            <button type="button" class="close" data-dismiss="modal">
+                <div class="close_new"><i class="fa fa-times-circle"></i></div>
+            </button>
+        </div>
+        <div class="content_popup">
+            <input type="hidden" name="UserID" id="UserID" value="">
+            <input type="hidden" name="amountPre" id="amountPre" value="">
+            <input type="hidden" name="CrDr" class="form-control" id="CrDr">
+            <input type="hidden" name="IsFree" class="form-control" id="IsFree">
+            <div class="popup_form_row">
+                <div class="popup_col_6">
+                    <label for="email">Chips :</label>
+                    <input type="text" name="Name1" class="form-control" id="Chips">
+                    <span id="Name1N" class="errmsg"></span>
+                </div>
+                <div class="popup_col_6">
+                    <label for="pwd">Remark:</label>
+                    <input type="text" name="Value1" class="form-control" id="Narration">
+                    <span id="Value1N" class="errmsg"></span>
+                </div>
+                <div class="popup_col_12">
+                    <button type="button" class="btn btn-success" id="saveSettelment" onclick="saveSettelment();">Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+$(function () {
+var Accordion = function (el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+
+    // Variables privadas
+    var links = this.el.find('.link');
+    // Evento
+    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+}
+
+Accordion.prototype.dropdown = function (e) {
+    var $el = e.data.el;
+    $this = $(this),
+        $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    if (!e.data.multiple) {
+        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+    }
+    ;
+}
+
+var accordion = new Accordion($('#accordion'), false);
+});
+
+$(document).ready(function () {
+$('.example-dataTable-p').DataTable({paging: false, searching: false,"order": [[ 2, "asc" ]]});
+$('.example-dataTable-m').DataTable({paging: false, searching: false,"order": [[ 2, "desc" ]]});
+});
+</script></div>
+
+<script>
+$(document).ready(function() {
+var userid = 1;
+var usertype = 0;
+$.ajax({
+  url: site_url+'child_chipsum/'+userid+'/'+usertype,
+  dataType: 'html', 
+  success: function(output)
+  {
+      $("#chipData").html(output);	 
+  }
+});
+});
+</script>
+
+    
+
+<!--commanpopup-->
+<div id="commonpopup" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+ <div class="popup_form">
+    <div class="title_popup">
+       <span>Title Popup</span>
+       <button type="button" class="close" data-dismiss="modal">
+          <div class="close_new"><i class="fa fa-times-circle"></i></div>
+       </button>
+    </div>
+    <div class="content_popup">
+       <div class="popup_form_row">
+          <div class="modal-body"></div>
+       </div>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+<!--commanpopup-->         </div>
+</div>

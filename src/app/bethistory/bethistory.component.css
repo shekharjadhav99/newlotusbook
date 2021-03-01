@@ -3,6 +3,7 @@
 }
 .tab_bets .nav-pills>li>a{
     background-color: #053331;
+    padding:1px;
 }
 .title_new_at {
     width: 100%;
@@ -51,4 +52,21 @@ button, select {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .close_new {
+    color: black;
+}
+button[_ngcontent-wvv-c171], select[_ngcontent-wvv-c171] {
+    text-transform: none;
+    padding: 3;
+}
+button[_ngcontent-bna-c171], input[_ngcontent-bna-c171], select[_ngcontent-bna-c171], textarea[_ngcontent-bna-c171] {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 2px 3px;
+}
+.nav-pills>li+li {
+    margin-left: 0px;
+    padding: 10;
 }

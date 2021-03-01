@@ -2,6 +2,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .bg_login #wrapper {
     position: absolute;
@@ -14,11 +15,13 @@
     border-radius: 20px;
     border: none;
     background: #fff;
+    
 }
 .bg_login #wrapper .logo img {
     width: 70%;
     margin: 0 auto;
     display: inherit;
+    margin-left: 45px;
 }
 img {
     vertical-align: middle;

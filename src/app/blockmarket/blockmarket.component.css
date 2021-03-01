@@ -59,7 +59,7 @@ table {
 .table-responsive {
     min-height: .01%;
     overflow-x: auto;
-    background-color:rgb(59, 59, 59);
+    background-color:#e9ecef;
 }
 .tabel_content table tbody tr td {
     padding: 5px 5px;

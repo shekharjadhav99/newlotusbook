@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @Component({
   selector: 'app-setresult',
@@ -6,37 +8,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setresult.component.css']
 })
 export class SetresultComponent  {
+  searchText;
   
   
-  public employeedata = [];
+  public data = [];
+  
   // Pagination parameters.
   p: Number = 1;
-  count: Number = 10;
+  count: Number = 5;
+  
  
   constructor() {
     console.log('Application loaded. Initializing data.');
  
-    this.employeedata = [
-      { 'id': 1, 'name': 'Clare Cornau', 'phoneno': '(815) 6180492', 'email': 'ccornau0@bigcartel.com', 'gender': 'Female', 'nationality': 'Somalia' },
-      { 'id': 2, 'name': 'Edouard Elsmore', 'phoneno': '(507) 3119958', 'email': 'eelsmore1@goo.gl', 'gender': 'Male', 'nationality': 'United States' },
-      { 'id': 3, 'name': 'Aeriel Elldred', 'phoneno': '(478) 7181722', 'email': 'aelldred2@archive.org', 'gender': 'Female', 'nationality': 'Russia' },
-      { 'id': 4, 'name': 'Abagael Meachem', 'phoneno': '(698) 4411762', 'email': 'ameachem3@columbia.edu', 'gender': 'Female', 'nationality': 'China' },
-      { 'id': 5, 'name': 'Jeremiah Hadwen', 'phoneno': '(345) 6582965', 'email': 'jhadwen4@vkontakte.ru', 'gender': 'Male', 'nationality': 'Mongolia' },
-      { 'id': 6, 'name': 'Rollin Wainscoat', 'phoneno': '(659) 9557733', 'email': 'rwainscoat5@thetimes.co.uk', 'gender': 'Male', 'nationality': 'Bhutan' },
-      { 'id': 7, 'name': 'Micah Braddock', 'phoneno': '(864) 2101861', 'email': 'mbraddock6@yellowbook.com', 'gender': 'Male', 'nationality': 'Peru' },
-      { 'id': 8, 'name': 'Jayme Crotty', 'phoneno': '(165) 5814372', 'email': 'jcrotty7@opensource.org', 'gender': 'Male', 'nationality': 'Niger' },
-      { 'id': 9, 'name': 'Margo Braker', 'phoneno': '(428) 2282928', 'email': 'mbraker8@yahoo.co.jp', 'gender': 'Female', 'nationality': 'Argentina' },
-      { 'id': 10, 'name': 'Bertie Bosman', 'phoneno': '(673) 5170425', 'email': 'bbosman9@google.co.jp', 'gender': 'Female', 'nationality': 'Greece' },
-      { 'id': 11, 'name': 'Darelle Rowlands', 'phoneno': '(978) 8885907', 'email': 'drowlandsa@slate.com', 'gender': 'Female', 'nationality': 'Indonesia' },
-      { 'id': 12, 'name': 'Neile Keets', 'phoneno': '(956) 9360112', 'email': 'nkeetsb@canalblog.com', 'gender': 'Female', 'nationality': 'Finland' },
-      { 'id': 13, 'name': 'Shari Bussen', 'phoneno': '(240) 7150720', 'email': 'sbussenc@so-net.ne.jp', 'gender': 'Female', 'nationality': 'Philippines' },
-      { 'id': 14, 'name': 'Arron Drivers', 'phoneno': '(416) 4076124', 'email': 'adriversd@com.com', 'gender': 'Male', 'nationality': 'Bosnia and Herzegovina' },
-      { 'id': 15, 'name': 'Carola Balasin', 'phoneno': '(262) 7945277', 'email': 'cbalasine@blogger.com', 'gender': 'Female', 'nationality': 'Bolivia' },
-      { 'id': 16, 'name': 'Clarinda Barrick', 'phoneno': '(501) 3984600', 'email': 'cbarrickf@t-online.de', 'gender': 'Female', 'nationality': 'China' },
-      { 'id': 17, 'name': 'Inglis Treweela', 'phoneno': '(718) 4157883', 'email': 'itreweelag@tripod.com', 'gender': 'Male', 'nationality': 'Finland' },
-      { 'id': 18, 'name': 'Yardley Georgeot', 'phoneno': '(213) 5730967', 'email': 'ygeorgeoth@360.cn', 'gender': 'Male', 'nationality': 'Portugal' },
-      { 'id': 19, 'name': 'Hestia Palffrey', 'phoneno': '(349) 6453938', 'email': 'hpalffreyi@nba.com', 'gender': 'Female', 'nationality': 'Madagascar' },
-      { 'id': 20, 'name': 'Gwendolyn Mordon', 'phoneno': '(474) 3068249', 'email': 'gmordonj@uiuc.edu', 'gender': 'Female', 'nationality': 'Greece' }
+    this.data = [
+     
+      {'id':'1.','name':'Kenil RSA 25th Nov', 'mname':'Kenil RSA 25th Nov','marketname':'R3 1200m Plt','checkbox':''},
+      { 'id': '2.', 'name': 'Wodg AUS 27th Nov', 'mname':'Wodg AUS 27th Nov','marketname':'R1 1200m Mdn','checkbox':''  },
+      { 'id': '3.', 'name': 'Wodg AUS 27th Nov','mname':'Wodg AUS 27th Nov','marketname':'R2 1100m Mdn ','checkbox':''  },
+      { 'id': '4.', 'name': 'Canb AUS 27th Nov', 'mname':'Kenil RSA 25th Nov','marketname':'R3 1200m Plt','checkbox':'' },
+      { 'id': '5.', 'name': 'Kilc AUS 29th Nov', 'mname':'Kilc AUS 29th Nov','marketname':'R1 1500m CL5','checkbox':'' },
+      { 'id': '6.', 'name': 'Kilc AUS 29th Nov','mname':'Kilc AUS 29th Nov','marketname':'R2 1500m Mdn ','checkbox':'' },
+      { 'id': '7.', 'name': 'Kilc AUS 29th Nov', 'mname':'Kilc AUS 29th Nov','marketname':'R3 1900m Hcap','checkbox':''},
+      { 'id': '8.', 'name': 'Kilc AUS 29th Nov','mname':'Kilc AUS 29th Nov','marketname':'R4 1060m 3yo','checkbox':'' },
+      { 'id': '9.', 'name': 'Kilc AUS 29th Nov',  'mname':'Kilc AUS 29th Nov','marketname':'R5 1500m Hcap','checkbox':''  },
+      { 'id': '10.', 'name': 'Kilc AUS 29th Nov','mname':'Kilc AUS 29th Nov','marketname':'R6 800m CL3','checkbox':'' },
+      { 'id': '11.', 'name': 'Kilc AUS 29th Nov','mname':'Kilc AUS 29th Nov','marketname':'R7 1060m Hcap','checkbox':''},
+      { 'id': '12.', 'name': 'Kilc AUS 29th Nov', 'mname':'Kilc AUS 29th Nov','marketname':'R8 1200m CL1','checkbox':''},
+      { 'id': '13.', 'name': 'English League 2', 'mname':'Cambridge Utd v Mansfield','marketname':'Match Odds ','checkbox':'' },
+      { 'id': '14.', 'name': 'Campinas Challenger 2020', 'mname':'Dutra Silva/Romboli v Doumbia/Reboul ','marketname':'Match Odds','checkbox':'' },
+      { 'id': '15.', 'name': 'Campinas Challenger 2020','mname':'Bueres/Camargo Lima v Cuevas/Duran','marketname':'Match Odds','checkbox':'' },
+      { 'id': '16.', 'name': 'Spanish Segunda Division','mname':'Fuenlabrada v Malaga','marketname':'Match Odds ','checkbox':''  },
+      { 'id': '17.', 'name': 'Northern Irish Premiership', 'mname':'Ballymena v Carrick Rangers','marketname':'Match Odds','checkbox':'' },
+      { 'id': '18.', 'name': 'Qatari Q League ','mname':'Al Mu Aidar SC v Al Bidda','marketname':'Match Odds','checkbox':'' },
+      { 'id': '19.', 'name': 'Campinas Challenger 2020', 'mname':'Luz v Tabilo','marketname':'Match Odd','checkbox':'' },
+      { 'id': '20.', 'name': 'Wagg AUS 6th Dec', 'mname':'Wagg AUS 6th Dec','marketname':'R4 1740m Pace M','checkbox':'' }
     ];
   }
 }

@@ -59,6 +59,7 @@ ul.nav
     ul.nav > * {
         padding: 8px 3px;
         margin: 0.7px;
+        font-size-adjust: inherit;
 
     }
     
@@ -71,7 +72,7 @@ ul.nav
     }
     ul.nav{
         padding: 0.7px;
-        line-height:20px;
+        line-height:15px;
         font-size: 2px;
         
     }
@@ -86,6 +87,19 @@ ul.nav
     padding: 2px;
     font-size: 15px;
     border: none;
+
+}
+
+.dropdown-toggle {
+    white-space: nowrap;
+    background-color: #2b2f35;
+    border: none;
+    color: white;
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 10px;
+    text-decoration: none;
+    margin-left: 200px;
 }
 .fa-android:before {
     content: "\f17b";
@@ -207,3 +221,24 @@ ul.nav[_ngcontent-xai-c78] {
     font-size: 2px;
     padding-left: 11px;
 }
+.top_nav .navbar-right li {
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+#mainBalance {
+  margin-left: 4px;
+}
+.top_nav .navbar-right li {
+    color: white;
+    display: inline-block;
+    position: fixed;
+    padding-left: 50;
+}
+.white-color {
+    color:white;
+    font-size: 18px;
+    }

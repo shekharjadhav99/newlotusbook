@@ -9,7 +9,7 @@
           <nav class="" role="navigation">
              <div class="nav_title">
                 <a href="/dashboard" class="site_title endcooki"> 
-                <img src="assets/images/newlotusbook.png" alt=""> 
+                <img src="assets/images/lotuslogo.jpg" alt=""> 
                 </a>
              </div>
              <div class="marquee hidden-xs">
@@ -23,15 +23,19 @@
                       <span class="wallet-icon">
                       <img class="toggle-btn" src="assets/images/wallet-icon.png" alt="">
                       </span>
-                      <a id="Wallet">Main: <span class="mWallet">600,000,000.00</span></a>
-                      <a id="UserLiability">Exposure : <span class="liability">0.00</span></a>
-                   </li>
+                      <li>Main <strong id="mainBalance">{{currentUser?.currencyCode}} {{balance | indianCurrency}}</strong></li>
+                      <li id="topRefreshIcon" (click)="updateBalance()">
+                        <img class="refresh-bar" src="assets/images/transparent.gif" />
+                      </li>
+                      
+                       
                    
                    <div class="dropdown">                     
-                     <button class="user-profile dropdown-toggle" data-toggle="dropdown" ><img class="user_img" src="/assets/images/admin13.png"> admin</button>
+                     <button class="user-profile dropdown-toggle" data-toggle="dropdown" ><img class="user_img" src="/assets/images/download.png"> admin</button>
                     <div class="dropdown-content">
                        <li><a routerLink="changepassword"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> </li>
-                       <li><a class="endcooki" href="#logout"><i class="fa fa-sign-out"></i> Log Out</a> </li>
+                       
+                       <li><i class="fa fa-sign-out"></i><a class="endcooki"  id="lblLogout" style="cursor: pointer;" (click)="logout()">Logout</a></li>
                     </div>
               </div>
                 
@@ -114,7 +118,7 @@
    <li><a routerLink="/blockmarket">Block Market</a></li>
   
 
-   <li><a class="endcooki" href="/dashboard?inplay">In-Play</a></li>
+   <li><a class="endcooki" routerLink="/inplay" class="blinking">In-Play</a></li>
  
 
    <li><a class="endcooki" routerLink= "/favourite" routerLinkActive="active">Favorite</a></li>
@@ -128,7 +132,7 @@
    <div class="dropdown-content">
       <li><a routerLink="/acinfo">Account Info </a> </li>
       <li><a href="/acStatement">Account Statement </a> </li>
-                        <li><a href="/new_chipsummary">Chip Summary </a> </li>
+                        <li><a routerLink="/chipsummary">Chip Summary </a> </li>
          
                         <li><a routerLink="/useronline">All Users online </a> </li>
                         <li class="hidden-xs"><a href="/chip_history">Chip History </a> </li>
@@ -160,7 +164,7 @@
    </li>
    <ul>
       <li class="hidden-xs"><a href="/assets/apk/newlotusbook.com.apk" class="download-apk-btn"> 
-         <i class="fa fa-android"></i></a>
+         <i class="fa fa-android white-color " ></i></a>
       </li>
    </ul>
 

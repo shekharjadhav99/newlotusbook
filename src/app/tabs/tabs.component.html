@@ -2,239 +2,51 @@
 
 <div class="container body">
     <div class="main_container" id="sticky">
-        <script>
-$(document).ready(function(){
-   var isFav = '0';
-   var ParmesMarketId = '0';	
-   if(isFav==1){
-       var favMAtches = JSON.parse('[]');
-        $.each(favMAtches, function( keyNew, valueNew ) {
-           MarketSelection(valueNew,keyNew);	
-       });
-   }
-   else if(ParmesMarketId > 0 ){			
-       MarketSelection('0',0);		
-   }	
-});
-$( "<div class='overlay-table'><span>Odds will start in next 15 minutes.</span></div>" ).insertBefore( ".ovrly-tbl" );    
-</script>	
-<div class="right_col" role="main" style="min-height: 790px;">
-<div class="fullrow tile_count">
-  <div class="col-md-7">
-    <div id="UpCommingData">
-     <div class="sport-highlight-content tabs" id="accountView" role="main">
-
-<div class="casinobg"><span><a href="http://newlotusbook.com/livegames" class="blinking"> Live games</a></span></div> 
-<ul class="nav nav-tabs match-buttons">
-  <li class="active tabcricket hidden-tabs" data-tabname="cricket">
-     <a data-toggle="tab" href="#cricket" class="tabid4">
-     <span class="item_sport hidden-lg">
-     <img src="http://newlotusbook.com/assets/images/games-img/cricket.jpg"></span>
-     <span class="game_label"> Cricket</span>
-     </a>
-  </li>
-  <li data-tabname="tennis" class="hidden-tabs"><a data-toggle="tab" href="#tennis" class="tabid2">
-     <span class="item_sport hidden-lg"><img src="http://newlotusbook.com/assets/images/games-img/tennis.jpg">
-   </span> <span class="game_label"> Tennis</span> </a></li>
-  <li data-tabname="soccer" class="hidden-tabs">
-     <a data-toggle="tab" href="#soccer" class="tabid1">
-        <span class="item_sport hidden-lg">
-           <img src="http://newlotusbook.com/assets/images/games-img/soccers.jpg">
-         </span> <span class="game_label"> Soccer</span> </a>
-  </li>
-          
-     
-     
-    <li class="tabcricket hidden-tabs" data-tabname="hrace">
-     <a data-toggle="tab" href="#hrace" class="tabid7">
-     <span class="item_sport hidden-lg">
-     <img src="http://newlotusbook.com/assets/images/games-img/horse.jpg"></span>
-     <span class="game_label"> Horse Racing</span>
-     </a>
-  </li>
-
+        	
     
-     
-</ul>
-
-                           
-<div class="modal-body tab-content matches-all">
-  <span id="msg_error"></span><span id="errmsg"></span>
-  <div class="table table-striped jambo_table bulk_action" id="">
-     <div class="clearfix"></div>
-     <div id="cricket" class="tab-pane fade in active">
-                 </div>
-     <!-- Tennis -->	
-     <div class="clearfix"></div>
-     <div id="tennis" class="tab-pane fade">
-                 </div>
-     <!-- Soccer -->		
-     <div class="clearfix"></div>
-     <div id="soccer" class="tab-pane fade">
-                 </div>
-     
-     
-     <div class="clearfix"></div>
-     <div id="hrace" class="tab-pane fade">
-                 </div>
-     
-     
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+  
+        <div class="item active">
+          <img src="/assets/images/crick.jpg" alt="Los Angeles" style="width:100%;">
+          <div class="carousel-caption">
+           
+          </div>
+        </div>
+  
+        <div class="item">
+          <img src="/assets/images/soccer2.jpg"  alt="Chicago" style="width:100%;">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+      
+        <div class="item">
+          <img src="/assets/images/tenn.jpg" alt="New York" style="width:100%;">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+    
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
-</div>
-</div>
-
-<script>
-$(document).ready(function() {
-$(".match-buttons").click(function () {		
-    $(this).addClass("actives");   
-  $(".btn-back").addClass("aj-back");
-});
-$(".tbback").click(function () {
-    $('#cricket, #tennis, #soccer, #hrace').removeClass("actives");
-    $(".match-buttons").removeClass("actives");
-  $(".btn-back").removeClass("aj-back");
-});
-$(".nav-tabs li").click(function () {	   
-    var dt=$(this).data('tabname');
-    console.log(dt);
-    $('#cricket, #tennis, #soccer, #hrace').removeClass("actives");
-    $('#'+dt).addClass('actives')
-});
-});
-</script>		</div>	 
-    <div id="MatchOddInfo"></div>
-  </div>
-  <div class="col-md-5 col-xs-12 matchBox">
-    <div class="other-items">
-            </div>
-
-     <div class="betSlipBox" style="display: none;">  
-       <div class="betslip-head"> 
-           <span id="tital_change" class="item">Bet Slip</span>
-           <a class="UserChipData" href="javascript:;" data-toggle="modal" data-target="#addUser" data-backdrop="static" data-keyboard="false">
-            Edit Stake
-           </a>									
-        </div>
-     <div>
-        <div class="betBox border-box" style="display: none;">
-           <div class="block_box">
-              <span id="msg_error"></span><span id="errmsg"></span>
-              <div class="loader" style="display:none">
-                 <div class="spinner">
-                    <div class="loader-inner box1"></div>
-                    <div class="loader-inner box2"></div>
-                    <div class="loader-inner box3"></div>
-                 </div>
-              </div>
-              <form method="POST" id="placeBetSilp"><input type="hidden" name="compute" value="acbb7aa24e41fcd7be27621fb1269df1">
-                    <label class="control-label m-t-xs BetFor"> Yet (Bet For)</label>
-                    <div class="liabilityprofit" id=" ">
-                       <span class="stake_label">Profit</span>
-                       <div class="stack_input_field">
-                          <span id="profitData" style="color:rgb(0, 124, 14);font-weight:bold"> 0.00</span>
-                       </div>
-                    </div>
-                    <div class="liabilityprofit" id=" ">
-                       <span class="stake_label">Loss</span>
-                       <div class="stack_input_field">
-                          <span id="LossData" style="color:rgb(255, 0, 0);font-weight:bold"> 0.00</span>
-                       </div>
-                    </div>
-                    <div id="ShowRunnderName" class="match_runner_name">
-                    </div>
-                 <div class="odds-stake">
-                    <div class="item form-group full_rowOdd">
-                       <span class="stake_label">Odd</span>
-                       <div class="stack_input_field numbers-row">
-                          <input type="number" step="0.01" id="ShowBetPrice" class="calProfitLoss odds-input form-control  CommanBtn">
-                       </div>
-                    </div>
-                    <div class="item form-group" id=" ">
-                       <span class="stake_label">Stake</span>
-                       <div class="stack_input_field numbers-row">
-                          <input type="number" pattern="[0-9]*" step="1" id="stakeValue" class="calProfitLoss stake-input form-control  CommanBtn">
-                          <input type="hidden" name="selectionId" id="selectionId" value="" class="form-control">
-                          <input type="hidden" name="matchId" id="matchId" value="" class="form-control">
-                          <input type="hidden" name="isback" id="isback" value="" class="form-control">
-                          <input type="hidden" name="MarketId" id="MarketId" value="" class="form-control">
-                          <input type="hidden" name="placeName" id="placeName" value="" class="form-control">     
-                          <input type="hidden" name="text" id="stackcount" value="0" class="form-control">	
-                          <input type="hidden" name="text" id="isfancy" value="0" class="form-control">	
-                       </div>
-                    </div>
-                 </div>
-                 <div class="betPriceBox">
-                    <button class="btn  btn-success CommanBtn chipName1" type="button" value="1000" onclick="StaKeAmount(this);">1k</button><button class="btn  btn-success CommanBtn chipName2" type="button" value="5000" onclick="StaKeAmount(this);">5k</button><button class="btn  btn-success CommanBtn chipName3" type="button" value="10000" onclick="StaKeAmount(this);">10k</button><button class="btn  btn-success CommanBtn chipName4" type="button" value="25000" onclick="StaKeAmount(this);">25k</button><button class="btn  btn-success CommanBtn chipName5" type="button" value="50000" onclick="StaKeAmount(this);">50k</button><button class="btn  btn-success CommanBtn chipName6" type="button" value="100000" onclick="StaKeAmount(this);">1Lac</button><button class="btn  btn-success CommanBtn chipName7" type="button" value="500000" onclick="StaKeAmount(this);">5Lac</button>                        <button class="btn  btn-success CommanBtn " type="button" onclick="ClearStack( );">Clear</button>
-                 </div>
-                 <div class="betFooter">
-                    <button class="btn btn-danger CommanBtn" type="button" onclick="ClearAllSelection();">Clear All</button>				
-                    <button class="btn btn-success  CommanBtn placebet" type="button" onclick="PlaceBet();">Place Bet</button>
-                    <button class="btn btn-success CommanBtn placefancy" type="button" onclick="PlaceFancy();" style="display:none">Place Bet</button>
-                 </div>
-              </form>
-           </div>
-        </div>
-
-        <div class="tab_bets">
-           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item betdata active-all active">
-                 <a class="allbet" href="javascript:void(0);" onclick="getDataByType(this,'4');"><span class="bet-label">All Bet</span> <span id="cnt_row">(  )</span></a>
-              </li>
-              <li class="nav-item betdata active-unmatch">
-                 <a class="unmatchbet" href="javascript:void(0);" onclick="getDataByType(this,'2');"><span class="bet-label">UnMatch Bet</span> <span id="cnt_row1">(  ) </span> </a>
-              </li>
-              <li class="nav-item betdata">
-                 <a class="unmatchbet" href="javascript:void(0);" onclick="getDataByType(this,'3');"><span class="bet-label">Fancy Bet</span> <span id="cnt_row3">(  ) </span> </a>
-              </li>
-                                <li class="nav-item active-position"><a class="currentposition" href="javascript:void(0);" onclick="getDataByType(this,'5');">Current Position</a></li>
-                                        
-              <a class="btn full-btn" onclick="viewAllMatch()" href="javascript:void(0);"><img src="http://newlotusbook.com/assets/images/full-size-btn.png" alt="..."></a>
-                             </ul>
-        </div>
-     </div>
-   </div>
-     <!--- Match UnMatch data --->
-     <div class="" id="MatchUnMatchBetaData">									
-     </div>
-     <!--- User Current Position  --->									
-     <div class="" id="getUserPosition">	
-     </div>
-  </div>
-</div>
-</div>
-<!-- /page content -->
-<div id="fancyposition" class="modal fade" role="dialog">
-<div class="modal-dialog">
-  <div class="modal-content">
-     <div class="popup_form">
-        <div class="title_popup">
-           <span> Fancy Position</span> 
-           <button type="button" class="close" data-dismiss="modal">
-              <div class="close_new"><i class="fa fa-times-circle"></i> </div>
-           </button>
-        </div>
-        <div class="content_popup">
-           <div class="popup_form_row">
-              <div class="modal-body"></div>
-           </div>
-        </div>
-     </div>
-  </div>
-</div>
-</div>         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  

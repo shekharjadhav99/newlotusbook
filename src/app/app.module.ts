@@ -1,6 +1,7 @@
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { NgModule } from '@angular/core';
-;
+import { TokenInterceptor } from './interceptors/token.interceptor';
+
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { AcinfoComponent } from './acinfo/acinfo.component';
@@ -20,7 +21,7 @@ import { ChildlistComponent } from './childlist/childlist.component';
 import { ContainerComponent } from './container/container.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FavouriteComponent } from './favourite/favourite.component';
-import { FirstnavigationComponent } from './firstnavigation/firstnavigation.component';
+import { FirstnavigationComponent } from "./firstnavigation/FirstnavigationComponent";
 import { FooterComponent } from './footer/footer.component';
 import { LivecomentryComponent } from './livecomentry/livecomentry.component';
 import { LivegameComponent } from './livegame/livegame.component';
@@ -58,6 +59,20 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { ZerobalanceuserComponent } from './zerobalanceuser/zerobalanceuser.component';
 import { UsergeneralsettingComponent } from './usergeneralsetting/usergeneralsetting.component';
 import { MatchgeneralsettingComponent } from './matchgeneralsetting/matchgeneralsetting.component';
+import { ChipsummaryComponent } from './chipsummary/chipsummary.component';
+import { CookieModule } from 'ngx-cookie';
+import { IndianCurrencyPipe } from './indian-currency.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CricketComponent } from './cricket/cricket.component';
+import { InplayComponent } from './inplay/inplay.component';
+import { FullmarketComponent } from './fullmarket/fullmarket.component';
+
+import { SoccerComponent } from './soccer/soccer.component';
+import { TennisComponent } from './tennis/tennis.component';
+import { CollapseModule } from "ngx-bootstrap/collapse";
+import { CarouselComponent } from './carousel/carousel.component';
+
+
 
 
 
@@ -112,7 +127,19 @@ import { MatchgeneralsettingComponent } from './matchgeneralsetting/matchgeneral
     ZerobalanceuserComponent,
     UsergeneralsettingComponent,
     MatchgeneralsettingComponent,
-
+    IndianCurrencyPipe,
+    CricketComponent,
+    InplayComponent,
+    FullmarketComponent,
+    ChipsummaryComponent,
+    
+    SoccerComponent,
+    
+    TennisComponent,
+    
+    CarouselComponent,
+    
+    
     
     
    
@@ -132,10 +159,21 @@ import { MatchgeneralsettingComponent } from './matchgeneralsetting/matchgeneral
     BsDatepickerModule.forRoot(),
     DatepickerModule.forRoot() ,
     NgxPaginationModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CookieModule.forRoot(),
+    Ng2SearchPipeModule,
+    CollapseModule.forRoot()
+    
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

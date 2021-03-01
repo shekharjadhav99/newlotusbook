@@ -1758,13 +1758,14 @@ div#leftSide.left_col.sidenav{
     padding: 5px 8px;
     text-decoration: none;
     display: block;
+    
   }
   .dropdown-content a{color: tomato};
   .dropdown-content a:hover {background-color: rgb(162, 143, 143);}
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #1b1c1b;}
+  .dropdown:hover .dropbtn {background-color: none}
 
   ul.nav{
       font-size: 4px;

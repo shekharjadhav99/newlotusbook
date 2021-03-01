@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-addfancy',
   templateUrl: './addfancy.component.html',
   styleUrls: ['./addfancy.component.css']
 })
-export class AddfancyComponent implements OnInit {
+export class AddfancyComponent  {
 
-  constructor() { }
+  constructor(private _location: Location) { }
 
-  ngOnInit(): void {
+  backClicked() {
+    this._location.back();
   }
-
 }

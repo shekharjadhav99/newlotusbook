@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: "http://95.179.144.126:81",
+  oddsUrl: "http://209.250.242.175:33332",
+  raceUrl: "http://209.250.242.175:33333",
+  oddsSocketUrl: "ws://209.250.242.175",
 };
 
 /*

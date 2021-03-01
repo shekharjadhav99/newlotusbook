@@ -7,38 +7,88 @@
 
    <div id="login" class="form">
       <section class="login_content">
-         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+         <form [formGroup]="loginForm" (ngSubmit)="login()">
             <input type="hidden" name="compute" value=" ">
-            <div>
-               <label>Username</label>
-               <div class="linput">
-                  <input type="text" name="email" formControlName="userName" value class="form-control" placeholder="Enter Username" required="1">
-               </div>
-            </div>
-            <div>
-               <label>Password</label>
-               <input type="password" name="password" formControlName="password" value class="form-control" placeholder="Password" required="1">
-            </div>
-            <div>
-               <input type="password" name="captcha" formControlName="captcha" value class="form-control" placeholder="Captcha" required="1">
-               <img id="captchaImg" src="" alt="">
-            </div>
+            
+            <div class="loginbox-textbox">
+               <span class="input-icon icon-right"> 
+                 <input
+                   name="txtUserName"
+                   type="text"
+                   autocomplete="off"
+                   id="txtUserName"
+                   formControlName="userName"
+                   class="form-control"
+                   placeholder="User Name"
+                   required=""
+                   autofocus=""
+                 />
+                 
+               </span>
+               <span id="ctl01" class="text-danger" [style.visibility]="(f.controls['userName'].dirty || f.controls['userName'].touched || isSubmitted) && f.controls['userName'].invalid && f.controls['userName'].errors?.required? 'visible': 'hidden'"
+                 >The user name field is required.</span
+               >
+             </div>
+             <div class="loginbox-textbox">
+               <span class="input-icon icon-right">
+                 <input
+                   name="txtPassword"
+                   autocomplete="off"
+                   id="txtPassword"
+                   [type]="isPasswordVisible ? 'text' : 'password'"
+                   formControlName="password"
+                   class="form-control pwd"
+                   aria-describedby="basic-addon2"
+                   placeholder="Password"
+                   required=""
+                 />
+       
+                 
+               </span>
+               <span id="ctl02" class="text-danger" [style.visibility]="(f.controls['password'].dirty || f.controls['password'].touched || isSubmitted) && f.controls['password'].invalid && f.controls['password'].errors?.required? 'visible': 'hidden'"
+                 >The password field is required.</span
+               >
+             </div>
+             <div class="loginbox-textbox captcha-box">
+               <span class="input-icon icon-right">
+                 <input
+                   type="text"
+                   autocomplete="off"
+                   formControlName="captcha"
+                   class="form-control"
+                   placeholder="Captcha"
+                   required=""
+                 />
+                 <i>
+                   <img id="authenticateImage" alt="" />
+                 </i>
+               </span>
+               <span id="ctl02" class="text-danger" [style.visibility]="(f.controls['captcha'].dirty || f.controls['captcha'].touched || isSubmitted) && f.controls['captcha'].invalid && f.controls['captcha'].errors?.required? 'visible': 'hidden'"
+                 >The Captcha field is required.</span
+               >
+             </div>
+             
+
             <div class="checkbox">
                <label>
                   <input type="checkbox" name="remember" id="remember">
                   "Remember me"
                </label>
                <div>
+                  
                   <input type="hidden" value=" " name="submitted">
                   <button type="submit" class="btn btn.default submit">Log in</button>
                </div>
                <div class="clearfix"></div>
-               
+               <div style="text-align: center; padding-top: 10px">
+                  <div id="ctl03">
+                    <span id="msg" class="aspNetDisabled label label-danger">{{errorMsg}}</span>
+                  </div>
+                </div>
             </div>
-         </form>
-      </section>
-   </div>
-</div>
-</div>
+         
+
+
+
    
                                            

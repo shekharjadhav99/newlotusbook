@@ -1,0 +1,122 @@
+<div class="left-side-menu">
+    <div class="panel-group" id="accordion">
+    <h6>Sports</h6>
+             </div>		
+    </div>
+
+<div class="main_container" id="sticky">
+    
+        <div class="col-md-10 featured-box">
+          <div>
+              <div>
+                  <ul role="tablist" id="home-events" class="nav nav-tabs">
+                      <li class="nav-item"><a href="javascript:void(0)" data-toggle="tab" class="nav-link active">Tennis<button class="btn btn-xs btn-primary" (click)="backClicked()" style="float:right;">Back
+                    </button></a></li>
+                  </ul>
+                  <div class="tab-content">
+                      <div class="tab-pane active">
+                          <div class="coupon-card coupon-card-first">
+                              <div class="card-content">
+                                <table class="table coupon-table">
+                                  <thead>
+                                      <tr>
+                                         
+                                           <th ></th>
+                                          <th colspan="2">1</th>
+                                          <th colspan="2">X</th>
+                                          <th colspan="2">2</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    <!-- ngRepeat: event in events track by event.id -->
+                                    <tr
+                                      ng-repeat="event in events track by event.id"
+                                      class="ng-scope"
+                                      *ngFor="let item of Highlightlist; let $index = index"
+                                    >
+                                    <td>
+                                      <i
+                                        analytics-on=""
+                                        analytics-event="Toggle"
+                                        analytics-category="Favourites"
+                                        analytics-label="Remove Match"
+                                        class="-qa-add-to-fav apl-icon-star-o"
+                                        ng-click="toggleFavourite(event)"
+                                        ng-class="
+                                          selectedFavourites[event.id]
+                                            ? 'apl-icon-star starred'
+                                            : 'apl-icon-star-o'
+                                        "
+                                      ></i>
+        
+                                      <a
+                                        class="event-name ng-binding"
+                                        data-ng-click="loadMatchData(item.matchId)"
+                                        routerLink="/fullmarket"
+                                        >{{ item.matchName }}  &nbsp; / &nbsp; {{
+                                          item.matchDate | date: "d/MM/yyyy hh:mm"
+                                        }}</a
+                                      >
+                                    </td>
+                                      <!-- ngIf: event.inPlay -->
+                                      <!-- ngIf: !event.inPlay -->
+                                      <td>
+                                        <small *ngIf="item.inPlay == 1; " class="fa fa-circle " style="color: darkgreen;"> </small>
+        
+        
+                                          <!-- end ngIf: !event.inPlay -->
+                                    </td>
+                                  <td>
+                                    <button class="back">
+                                      <a id="hback1_{{$index}}" class="odds" data-side="Back">{{(matchDataHome[item.matchId]?.runners[0]?.backPrice == null || matchDataHome[item.matchId]?.runners[0]?.backPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[0]?.backPrice}}</a>
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <button class="lay">
+                                      <a id="hlay1_{{$index}}" class="odds" data-side="Lay">{{(matchDataHome[item.matchId]?.runners[0]?.layPrice == null || matchDataHome[item.matchId]?.runners[0]?.layPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[0]?.layPrice}}</a>
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <button class="back">
+                                      <a id="hback3_{{$index}}" class="odds" data-side="Back">{{(matchDataHome[item.matchId]?.runners[2]?.backPrice == null || matchDataHome[item.matchId]?.runners[2]?.backPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[2]?.backPrice}}</a>
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <button class="lay">
+                                      <a id="hlay3_{{$index}}" class="odds" data-side="Lay">{{(matchDataHome[item.matchId]?.runners[2]?.layPrice == null || matchDataHome[item.matchId]?.runners[2]?.layPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[2]?.layPrice}}</a>
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <button class="back">
+                                      <a id="hback2_{{$index}}" class="odds" data-side="Back">{{(matchDataHome[item.matchId]?.runners[1]?.backPrice == null || matchDataHome[item.matchId]?.runners[1]?.backPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[1]?.backPrice}}</a>
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <button class="lay">
+                                      <a id="hlay2_{{$index}}" class="odds" data-side="Lay">{{(matchDataHome[item.matchId]?.runners[1]?.layPrice == null || matchDataHome[item.matchId]?.runners[1]?.layPrice == "") ? '-' : matchDataHome[item.matchId]?.runners[1]?.layPrice}}</a>
+                                    </button>
+                                  </td>
+                                      <!-- end ngIf: event.status == 'OPEN' -->
+                                    </tr>
+                                    <!-- end ngRepeat: event in events track by event.id -->
+        
+        
+                                  </tbody>
+                              </table>
+                              <table cellspacing="2" class="marketview-main" border="0" id="tblTennis" *ngIf="Highlightlist?.length == 0">
+                                <tbody>
+                                   <tr>
+                                      <td> No match found!</td>
+                                   </tr>
+                                </tbody>
+                             </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+        
+        

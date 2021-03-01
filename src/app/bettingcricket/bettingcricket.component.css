@@ -36,3 +36,7 @@
 .title_new_at{
     margin-top: 1%;
 }
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    padding: 1px 2px;
+}
