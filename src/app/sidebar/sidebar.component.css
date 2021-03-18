@@ -10,3 +10,13 @@ title>.small, .panel-title>.small>a, .panel-title>a, .panel-title>small, .panel-
     font-size: 15px;
     font-weight: 600;
 }
+img {
+    border-radius: 50%;
+    height:10px;
+    width: 15;
+
+  }
+  .fa-soccer-ball-o:before, .fa-futbol-o:before {
+    content: "\f1e3";
+    color: white;
+}

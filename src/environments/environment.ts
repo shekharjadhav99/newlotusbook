@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://95.179.144.126:81",
+  baseUrl: "http://136.244.79.114:81",
   oddsUrl: "http://209.250.242.175:33332",
   raceUrl: "http://209.250.242.175:33333",
   oddsSocketUrl: "ws://209.250.242.175",

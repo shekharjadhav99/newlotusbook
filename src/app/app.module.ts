@@ -65,12 +65,19 @@ import { IndianCurrencyPipe } from './indian-currency.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CricketComponent } from './cricket/cricket.component';
 import { InplayComponent } from './inplay/inplay.component';
-import { FullmarketComponent } from './fullmarket/fullmarket.component';
+
 
 import { SoccerComponent } from './soccer/soccer.component';
 import { TennisComponent } from './tennis/tennis.component';
 import { CollapseModule } from "ngx-bootstrap/collapse";
 import { CarouselComponent } from './carousel/carousel.component';
+import { GreyhoundComponent } from './greyhound/greyhound.component';
+import {LoadingBarRouterModule} from '@ngx-loading-bar/router';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { Ng2DropdownModule } from 'ng2-material-dropdown';
+
+
+
 
 
 
@@ -130,7 +137,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     IndianCurrencyPipe,
     CricketComponent,
     InplayComponent,
-    FullmarketComponent,
+  
     ChipsummaryComponent,
     
     SoccerComponent,
@@ -138,6 +145,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     TennisComponent,
     
     CarouselComponent,
+    
+    GreyhoundComponent,
+    
+   
     
     
     
@@ -162,7 +173,13 @@ import { CarouselComponent } from './carousel/carousel.component';
     ModalModule.forRoot(),
     CookieModule.forRoot(),
     Ng2SearchPipeModule,
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    LoadingBarRouterModule,
+    LoadingBarModule,
+    Ng2DropdownModule ,
+ 
+  
+    
     
 
   ],

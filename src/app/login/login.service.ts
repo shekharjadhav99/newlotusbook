@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class LoginService {
 
-  baseUrl = "http://95.179.144.126:81";
+  baseUrl = "http://136.244.79.114:81";
   constructor(
     private httpClient: HttpClient
   ) { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService} from '../_services/message.service';
 
 
 @Component({
@@ -10,9 +11,14 @@ export class MsgsettingComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(
+    private messageService: MessageService,
+  ) { }
 
   ngOnInit(): void {
   }
-
+  onChange(mname){
+    console.log(mname.value)
+    this.messageService.message.next(mname.value)
+  }
 }

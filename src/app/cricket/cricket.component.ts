@@ -25,14 +25,18 @@ export class CricketComponent implements OnInit {
 
  
 
-  constructor( private _location: Location, private activatedRoute: ActivatedRoute,
-    private dataformatService: DataFormatService,private gamesService:GamesService,
+  constructor(private activatedRoute:ActivatedRoute,
+     private _location: Location,
+     
+    private dataformatService: DataFormatService,
+    private gamesService:GamesService,
     private oddsService: OddsServiceService) { }
 
     backClicked() {
       this._location.back();
     }
     ngOnInit():void {
+      
       this.getOddsData();
       this.subscription.add(
         interval(15000).subscribe(() => {
@@ -46,7 +50,7 @@ export class CricketComponent implements OnInit {
       this.dataformatService.sportsData$.subscribe(() => {
         this.Highlightlist = this.dataformatService.highlightwisedata(4);
         //console.log('High Light list', this.Highlightlist);
-        console.log(' Cricket highlight list', this.Highlightlist);
+        console.log('Cricket highlight list', this.Highlightlist);
         var ids = [];
         this.Highlightlist.forEach((match, index) => {
           if (this.selectedSportId === +match.SportbfId) {

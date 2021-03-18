@@ -52,7 +52,7 @@
                                       <a
                                         class="event-name ng-binding"
                                         data-ng-click="loadMatchData(item.matchId)"
-                                        routerLink="/fullmarket"
+                                        [routerLink]="['/fullmarket', item.SportbfId, item.TourbfId, item.matchId, item.marketId, item.bfId]"
                                         >{{ item.matchName }}  &nbsp; / &nbsp; {{
                                           item.matchDate | date: "d/MM/yyyy hh:mm"
                                         }}</a

@@ -4,38 +4,35 @@
              </div>		
     </div>
 
-<div class="main_container" id="sticky">
-    <div class="right_col" role="main">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="title_new_at">Message Setting </div>	   
-        </div>
-        <div class="col-md-12">
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div id="divLoading"> </div>
-            <!--Loading class -->
-            <div class="filter_page">
-          <div class="">
-              <textarea name="setMessage" cols="40" rows="10" id="setMessage" class="form-control col-md-7 col-xs-12" placeholder="Message" label=" " required="required">all activities in this id will stop on sunday night please change your clients to new id</textarea>
-</div>
-                <div class="popup_col_12">
-                        <button type="button" class="blue_button" id="save_msg" onclick="save_msg()"> Save Message</button>	 
-                        
-                </div>	
+    <div class="main_container" id="sticky">
+        <div class="right_col" role="main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title_new_at">Message Setting </div>	   
             </div>
+            <div class="col-md-12">
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="divLoading"> </div>
+                <!--Loading class -->
+                <div class="filter_page">
+              <div class="">
+
+                  <textarea name="setMessage" cols="40" rows="10" 
+                  
+                  id="setMessage" class="form-control col-md-7 col-xs-12" #mname
+                   placeholder="Message" label=" "></textarea>
+                   
     </div>
-
-    <div class="bootbox modal fade bootbox-confirm in" tabindex="-1" role="dialog" style="display: block; padding-right: 5px;">
+    <div class="popup_col_12">
+        <button type="button" class="blue_button" id="save_msg" (click)="onChange(mname)"> Update Message</button>	 
         
-    <div class="modal-dialog">
-    <div class="modal-content">     
-     <div class="modal-body">
-    <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true" style="margin-top: -10px;">×</button>
-    <div class="bootbox-body">Are you sure?</div></div>
-    <div class="modal-footer">
-        <button data-bb-handler="cancel" type="button" class="btn btn-default">Cancel</button>
-        <button data-bb-handler="confirm" type="button" class="btn btn-primary">OK</button></div></div></div>
+</div>	
+</div>
+</div>
 
 
-       
+
+
+
+

@@ -4,3 +4,5 @@ export interface GenericResponse<T> {
     result: T[]
   }
   
+
+ 

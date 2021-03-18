@@ -45,7 +45,9 @@ import {CricketComponent } from './cricket/cricket.component';
 import {InplayComponent} from './inplay/inplay.component';
 import {SoccerComponent} from './soccer/soccer.component';
 import {TennisComponent } from './tennis/tennis.component';
-import { FullmarketComponent } from './fullmarket/fullmarket.component';
+import { GreyhoundComponent } from './greyhound/greyhound.component';
+
+
 
 
 
@@ -55,15 +57,9 @@ const routes: Routes = [
     path: '',
     component: MainContainerComponent,
     children: [
-      {
-        path: ':sportid/:tourid/:matchId/:marketId/:bfId',
-        component: FullmarketComponent,
-      },
-      {
-        path: ':sportid/:tourid/:matchId/:marketId',
-        component: FullmarketComponent,
-      },
+    
       { path: '', component: DashboardComponent, pathMatch: 'full' },
+     
       { path: 'livegame', component: LivegameComponent },
       { path: 'favourite', component: FavouriteComponent },
       { path: 'dashboard', component: DashboardComponent },
@@ -106,12 +102,23 @@ const routes: Routes = [
       {path:'inplay',component:InplayComponent},
       {path:'soccer',component:SoccerComponent},
       {path:'tennis',component:TennisComponent},
-      {path:'fullmarket',component:FullmarketComponent}
+      {path:'greyhound',component:GreyhoundComponent},
+      
+      {
+        path: 'fullmarket',
+        loadChildren: () =>
+          import('./fullmarket/fullmarket.module').then(
+            (m) => m.FullmarketModule
+          ),
+      },
+    
+      
 
     ]
   },
 
   { path: 'login', component: LoginComponent }
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

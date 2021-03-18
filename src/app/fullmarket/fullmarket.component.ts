@@ -14,8 +14,8 @@ import { IOpenBets } from '../_services/open-bets.service';
 import { BetsService } from '../_services/bets.service';
 import { FullmarketService } from '../_services/fullmarket.service';
 import { IBetslipData } from '../_services/betslip-data.service';
-import { ILoadEvent } from '../login/types/load-event'
-import { IMarketDescription } from '../login/types/market-description';
+import { ILoadEvent } from '../types/load-event';
+import { IMarketDescription } from '../types/market-description';
 declare var $: JQueryStatic;
 
 @Component({
@@ -203,7 +203,7 @@ export class FullmarketComponent implements OnInit, OnDestroy {
     this.fullmarketService
       .loadEvent(this.matchid)
       .subscribe((res: GenericResponse<ILoadEvent>) => {
-        if (res.errorCode === 0) {
+        if (res && res.errorCode === 0) {
           this.betDelay = res.result[0].betDelay;
           this.volMultiplier = res.result[0].volMultiplier
             ? res.result[0].volMultiplier
@@ -216,7 +216,7 @@ export class FullmarketComponent implements OnInit, OnDestroy {
         this.fullmarketService
           .loadEvent(this.matchid)
           .subscribe((res: GenericResponse<ILoadEvent>) => {
-            if (res.errorCode === 0) {
+            if (res && res.errorCode === 0) {
               this.betDelay = res.result[0].betDelay;
               this.volMultiplier = res.result[0].volMultiplier
                 ? res.result[0].volMultiplier

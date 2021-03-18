@@ -13,7 +13,7 @@
                 </a>
              </div>
              <div class="marquee hidden-xs">
-                               <marquee>all activities in this id will stop on sunday night pls change your clients to new id  sab programme ye id me ravivar rat ko band hojayega aap sab clients ko naya id me badal dijiye </marquee>
+                               <marquee> {{message}} </marquee>
                                <span class="notifi_ico hidden-xs"><img src="/assets/images/bell-icon.png"></span>
              </div>
              
@@ -27,18 +27,22 @@
                       <li id="topRefreshIcon" (click)="updateBalance()">
                         <img class="refresh-bar" src="assets/images/transparent.gif" />
                       </li>
+                    
+                       
+                      <div class="right">
+                        <img class="user_img" src="/assets/images/download.png">
+                      <strong> {{currentUser?.userName}}({{currentUser?.name? currentUser.name: '-'}})</strong> 
+                      </div>
+         
+                    
+                       
+   
+                         
                       
                        
+             
                    
-                   <div class="dropdown">                     
-                     <button class="user-profile dropdown-toggle" data-toggle="dropdown" ><img class="user_img" src="/assets/images/download.png"> admin</button>
-                    <div class="dropdown-content">
-                       <li><a routerLink="changepassword"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> </li>
-                       
-                       <li><i class="fa fa-sign-out"></i><a class="endcooki"  id="lblLogout" style="cursor: pointer;" (click)="logout()">Logout</a></li>
-                    </div>
-              </div>
-                
+                     
 
                 </ul>
              </div>
@@ -61,6 +65,7 @@
                   <button class="dropbtn">Masters</button>
                   <div class="dropdown-content">
                      <li><a href="/settlements">Settlement Entry List</a></li>
+
                      <li><a href="/MatchLst">Match Setting</a></li>
                      <li><a href="/MatchResult/4">Set Match Result</a></li>
                      <li><a routerLink="/websitesetting">Website Setting</a></li>
@@ -79,6 +84,7 @@
                 
 
                 <div class="dropdown">
+                  
                   <button class="dropbtn">Client Listing</button>
                   <div class="dropdown-content">
                      <li><a routerLink="/admin"> Admin</a> </li>
@@ -121,10 +127,10 @@
    <li><a class="endcooki" routerLink="/inplay" class="blinking">In-Play</a></li>
  
 
-   <li><a class="endcooki" routerLink= "/favourite" routerLinkActive="active">Favorite</a></li>
+  
    
 
-   <li><a class="endcooki" routerLink="/runningmarket">Running Market Analysis</a></li>
+   <li><a class="endcooki" routerLink="/runningmarket">Market Analysis</a></li>
 
    
 <div class="dropdown">
@@ -144,7 +150,7 @@
       <li><a routerLink="/profitloss">Profit &amp; Loss</a> </li>
       <li><a routerLink="/bethistory">Bet History</a> </li>
   <li><a href="/gameclientbet">Livegame Bet History</a> </li>
-                        <li><a href="/report/fancystack">Fancy Stack</a> </li>
+                        <li><a href="/l">Login & Logout report</a> </li>
        
                            <li><a href="#oneMinuteChk">Bet Compare</a> </li>
                                          <li><a href="#fancy_bethistory">VIP Customer</a> </li>
@@ -162,6 +168,14 @@
    
    <li><a  class=" " routerLink="/sessionfancy"> Session Fancy</a> 
    </li>
+   
+    <div class="dropdown">
+      <button class="dropbtn"><strong>My Account</strong></button>
+      <div class="dropdown-content">
+         <li><a routerLink="changepassword"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a> </li>
+         <li><i class="fa fa-sign-out"></i><a class="endcooki"  id="lblLogout" style="cursor: pointer;" (click)="logout()">Logout</a></li>
+      </div>
+    </div>
    <ul>
       <li class="hidden-xs"><a href="/assets/apk/newlotusbook.com.apk" class="download-apk-btn"> 
          <i class="fa fa-android white-color " ></i></a>

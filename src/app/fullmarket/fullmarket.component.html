@@ -1,1827 +1,685 @@
 <div class="left-side-menu">
-    <div class="panel-group" id="accordion">
-    <h6>Sports</h6>
-             </div>		
-    </div>
+  <div class="panel-group" id="accordion">
+  <h6>Sports</h6>
+           </div>		
+  </div>
 
 <div class="main_container" id="sticky">
 
-
-
-
-
+  
 <div id="ctl30">
-    <div id="ctl32" style="display: none" role="status" aria-hidden="true">
-      Loading...
-    </div>
-  
-    <div class="row">
-      <div class="col-lg-8 col-sm-12 col-xs-12">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div
-              class="databox databox-xlg databox-halved radius-bordered databox-shadowed databox-vertical"
-              style="height: 160px"
-            >
-              <div class="databox-top bg-white no-padding">
-                <div
-                  class="no-padding col-lg-12 col-sm-12 col-xs-12 text-align-center"
-                >
-                  <h3 id="mktName" class="carbon">
-                    {{ matchName?.split(" v ")[0] }} v
-                    {{ matchName?.split(" v ")[1] }} / Match Odds
-                  </h3>
-                  <div class="databox-top bg-white no-padding" id="score">
-                    <div id="soccerTimeline" style="display: none">
-                      <div class="row-12">
-                        <div
-                          class="col-lg-6 col-sm-6 col-xs-6 padding-5 text-align-left"
-                        >
-                          <span class="databox-header text-shadow no-margin"
-                            ><span id="teamA"></span><span id="teamB"></span
-                          ></span>
-                        </div>
-                        <div
-                          class="col-lg-6 col-sm-6 col-xs-6 padding-5 text-align-right"
-                        >
-                          <span class="databox-header text-shadow no-margin"
-                            ><i class="fa fa-hourglass-half"></i
-                            ><span id="matchTime"></span
-                          ></span>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-12 col-sm-12 col-xs-12">
-                          <div class="row-12">
-                            <div class="col-lg-6 col-sm-6 col-xs-6 padding-5">
-                              <div id="pb1Parent"></div>
-                              <div
-                                class="progress progress-no-radius progress-sm"
-                              >
-                                <div
-                                  class="progress-bar progress-bar-success"
-                                  style="
-                                    border-top: 1px solid white;
-                                    border-bottom: 1px solid white;
-                                    border-left: 1px solid white;
-                                  "
-                                  role="progressbar"
-                                  id="pb1"
-                                  aria-valuemin="0"
-                                  aria-valuemax="45"
-                                >
-                                  <span class="sr-only"></span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-xs-6 padding-5">
-                              <div id="pb2Parent"></div>
-                              <div
-                                class="progress progress-no-radius progress-sm"
-                              >
-                                <div
-                                  class="progress-bar progress-bar-success"
-                                  style="
-                                    border-top: 1px solid white;
-                                    border-bottom: 1px solid white;
-                                    border-right: 1px solid white;
-                                  "
-                                  role="progressbar"
-                                  id="pb2"
-                                  aria-valuemin="45"
-                                  aria-valuemax="90"
-                                >
-                                  <span class="sr-only"></span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <span class="databox-text carbon" id="raceDetails"></span>
-                  </div>
-                </div>
-              </div>
+  <div id="ctl32" style="display: none" role="status" aria-hidden="true">
+    Loading...
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+          <div
+            class="databox databox-xlg databox-halved radius-bordered databox-shadowed databox-vertical"
+            
+          >
+            <div class="databox-top bg-white no-padding">
               <div
-                class="databox-bottom bg-white no-padding"
-                style="height: 60px"
+                class="no-padding col-lg-12 col-sm-12 col-xs-12 text-align-center"
               >
-                <div class="databox-row row-12">
-                  <div class="databox-row row-6 no-padding">
-                    <div
-                      class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum"
-                    >
-                      <span class="databox-text carbon no-margin"
-                        ><strong
-                          >Start Time:
-                          <span id="marketStartTime"
-                            >Fri 13 Nov, 15:00</span
-                          ></strong
-                        ></span
+                <h3 id="mktName" class="carbon">
+                  {{ matchName?.split(" v ")[0] }} vs
+                  {{ matchName?.split(" v ")[1] }} / Match Odds
+                </h3>
+                <div class="databox-top bg-white no-padding" id="score">
+                  <div id="soccerTimeline" style="display: none">
+                    <div class="row-12">
+                      <div
+                        class="col-lg-6 col-sm-6 col-xs-6 padding-5 text-align-left"
                       >
-                      <span class="databox-text carbon no-margin"
-                        ><strong
-                          >Time remaining:
-                          <span id="timer" style="display: none">0</span
-                          ><span id="timerplus" style="" class="is-countdown"
-                            ><span class="countdown-row countdown-amount"
-                              >01:32:25</span
-                            ></span
-                          ></strong
-                        >
-                      </span>
-                    </div>
-                    <div
-                      class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum"
-                    >
-                      <span class="databox-text carbon no-margin"
-                        ><strong>Commentary</strong></span
-                      >
-                      <span
-                        class="databox-number lightcarbon no-margin"
-                        id="commentary"
-                        >Not available</span
-                      >
-                    </div>
-                    <div class="databox-cell cell-4 no-padding text-align-center">
-                      <span class="databox-text carbon no-margin"
-                        ><strong
-                          >Market liability:
-                          <span class="red" id="marketLiability"
-                            >0.00</span
-                          ></strong
-                        ></span
-                      >
-                      <span class="databox-text carbon no-margin"
-                        ><strong
-                          >Number of Winner:
-                          <span id="numOfWinner">1</span></strong
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <input
-              type="hidden"
-              name="ctl00$MainContent$evtId"
-              id="evtId"
-              value="30120861"
-            />
-            <input
-              type="hidden"
-              name="ctl00$MainContent$evtType"
-              id="evtType"
-              value="Tennis"
-            />
-            <input type="hidden" name="ctl00$MainContent$Delay" id="Delay" />
-            <input
-              type="hidden"
-              name="ctl00$MainContent$marketType"
-              id="marketType"
-              value="MATCH_ODDS"
-            />
-          </div>
-  
-          <div class="col-xs-12">
-            <div
-              id="jbWrapper"
-              class="databox radius-bordered databox-shadowed"
-              style="display: none; background: #ffffff"
-            >
-              <div class="databox-row">
-                <div class="databox-cell cell-8 text-align-center">
-                  <div style="width: 50%; margin: 0 auto">
-                    <ul id="jrunnerSection" class="databox-text jRunners"></ul>
-                  </div>
-                </div>
-                <div class="databox-cell cell-4 text-align-center">
-                  <table class="table" style="background-color: transparent">
-                    <tbody>
-                      <tr>
-                        <td style="width: 50%; padding: 5px 0px 5px 0px">
-                          <button
-                            class="jBackBtn"
-                            onclick="Jdeal(this);return false; "
-                            style="display: none"
-                          >
-                            <span class="odds" id="jBackBtn">BACK</span>
-                          </button>
-                        </td>
-                        <td style="width: 50%; padding: 5px 0px 5px 0px">
-                          <button
-                            class="jLayBtn"
-                            onclick="Jdeal(this);return false; "
-                            style="display: none"
-                          >
-                            <span class="odds" id="jLayBtn">LAY</span>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col-xs-12">
-            <div class="dashboard-box">
-              <div class="overlay" style="display: none">
-                <span id="mktstatus"> </span>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <div class="box-header">
-                    <div class="betdelay" style="display: none">
-                      Bet Delay: <span id="betDelay">NaN</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="box-header">
-                    <div class="betnotallow hide" id="betStatus">
-                      BET NOT ALLOWED
-                    </div>
-                    <div class="inplay" id="inplay" data-ng-show="inPlay===1">
-                      <span class="blink_me">IN-PLAY</span>
-                    </div>
-                    <div class="market-rules">
-                      <a href="#" data-toggle="modal" data-target="#myModal"
-                        >Rules</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="table-responsive">
-                <table
-                  class="marketview table-hover"
-                  border="0"
-                  *ngFor="
-                    let market of currentMatchData;
-                    let $index = index;
-                    trackBy: trackByFnMO
-                  "
-                >
-                  <thead>
-                    <tr>
-                      <th scope="col" colspan="1">
-                        <span
-                          style="display: none"
-                          id="marketid"
-                          onclick=" loadgrid(); "
-                          >1.175451196</span
-                        >
-                        <span id="totalMatched"
-                          >Total Matched:
-                          {{ currentMatchData[0].totalMatched }}</span
-                        >
-                      </th>
-                      <th
-                        style="text-align: center"
-                        class="hidden-xs hidden-sm totalmatch"
-                        scope="col"
-                      >
-                        <span style="font-size: 9px">Last Price /</span>
-                        <br />
-                        <span style="font-size: 9px">Total Match</span>
-                      </th>
-                      <th class="rules-heading hidden-xs impli" scope="col"></th>
-                      <th class="rules-heading hidden-xs impli" scope="col"></th>
-                      <th class="rules-heading" scope="col">
-                        <span>Back</span>
-                        <br />
-                        <span
-                          ><i class="back-color fa fa-arrow-circle-down"></i
+                        <span class="databox-header text-shadow no-margin"
+                          ><span id="teamA"></span><span id="teamB"></span
                         ></span>
-                      </th>
-                      <th class="lay-rules-heading" scope="col">
-                        <span>Lay</span>
-                        <br />
-                        <span
-                          ><i class="lay-color fa fa-arrow-circle-down"></i
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-6 col-xs-6 padding-5 text-align-right"
+                      >
+                        <span class="databox-header text-shadow no-margin"
+                          ><i class="fa fa-hourglass-half"></i
+                          ><span id="matchTime"></span
                         ></span>
-                      </th>
-                      <th class="lay-rules-heading hidden-xs impli"></th>
-                      <th class="lay-rules-heading hidden-xs impli"></th>
-                    </tr>
-                  </thead>
-  
-                  <tbody>
-                    <tr
-                      *ngFor="
-                        let runnerData of market.runners;
-                        let $index = index;
-                        trackBy: trackByFnRunner
-                      "
-                    >
-                      <td class="runner-name" onclick="jB(this); return false;">
-                        <span style="display: none" id="BetingType">ODDS</span>
-                        <span style="display: none" id="StartTimeSecs">-92</span>
-                        <span style="display: none" id="StartedTime"
-                          >Fri 13 Nov, 15:00</span
-                        >
-                        <div class="runner-wrapper">
-                          <div class="runner-wrapper">
-                            <div class="graph">
-                              <a
-                                href="#"
-                                onclick=" getgraph('7445660','Christopher Eubanks');return false; "
-                              >
-                                <i class="fa fa-bar-chart-o"></i>
-                              </a>
-                            </div>
-                            <div class="runner-cloth-info" style="display: none">
-                              <img
-                                src=" "
-                                class="img-responsive"
-                                id="img7445660"
-                                alt="&nbsp;"
-                              />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="row-12">
+                          <div class="col-lg-6 col-sm-6 col-xs-6 padding-5">
+                            <div id="pb1Parent"></div>
+                            <div
+                              class="progress progress-no-radius progress-sm"
+                            >
                               <div
-                                id="saddle-7445660"
-                                style="display: none"
-                              ></div>
-                              <span
-                                class="tooltip-carbon"
-                                style="font-weight: bold"
-                                data-toggle="tooltip"
-                                id="cloth-7445660"
-                                data-original-title=""
-                                title=""
-                              ></span>
-                              <span id="stall-7445660"></span>
+                                class="progress-bar progress-bar-success"
+                                style="
+                                  border-top: 1px solid white;
+                                  border-bottom: 1px solid white;
+                                  border-left: 1px solid white;
+                                "
+                                role="progressbar"
+                                id="pb1"
+                                aria-valuemin="0"
+                                aria-valuemax="45"
+                              >
+                                <span class="sr-only"></span>
+                              </div>
                             </div>
-                            <div class="runner-named">
-                              <span style="display: none" id="handiCap-7445660"
-                                >0.000000</span
+                          </div>
+                          <div class="col-lg-6 col-sm-6 col-xs-6 padding-5">
+                            <div id="pb2Parent"></div>
+                            <div
+                              class="progress progress-no-radius progress-sm"
+                            >
+                              <div
+                                class="progress-bar progress-bar-success"
+                                style="
+                                  border-top: 1px solid white;
+                                  border-bottom: 1px solid white;
+                                  border-right: 1px solid white;
+                                "
+                                role="progressbar"
+                                id="pb2"
+                                aria-valuemin="45"
+                                aria-valuemax="90"
                               >
-                              <span
-                                class="tooltip-carbon"
-                                id="runnername-7445660"
-                                style="font-weight: bold; cursor: pointer"
-                                data-toggle="tooltip"
-                                data-html="true"
-                                data-original-title=""
-                                title=""
-                              >
-                                <!-- <tr id="8860646">  -->
-                                {{ runnerData.runnerName }}
-                                <span
-                                  id="result-7445660"
-                                  style="display: none"
-                                ></span>
-                              </span>
-                              <span style="display: none" id="jokey-7445660"
-                                >Jockey Name</span
-                              >
-                            </div>
-                            <div class="pull-right">
-                              <span
-                                style="display: block; font-size: 10.5px"
-                                class="actualPnl"
-                                id="exposure_{{ runnerData.selectionId }}"
-                              ></span>
-                              <span
-                                style="display: block; font-size: 10.5px"
-                                class="actualPnl"
-                                id="exposureAfter_{{ runnerData.selectionId }}"
-                              ></span>
+                                <span class="sr-only"></span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </td>
-                      <td class="hidden-xs hidden-sm">
-                        <button style="background-color: #e3e8e8">
-                          <span class="odds">{{
-                            runnerData.ex.availableToBack
-                              ? runnerData.ex.availableToBack[2]?.price
-                              : "-"
-                          }}</span>
-                          <span class="ammount" style="font-size: 9px">
-                            {{
-                              runnerData.ex.availableToBack &&
-                              (runnerData.ex.availableToBack[2]?.size !== null ||
-                                runnerData.ex.availableToBack[2]?.size !== "")
-                                ? (runnerData.ex.availableToBack[2]?.size *
-                                    volMultiplier | number: "0.2")
-                                : "-"
-                            }}
-                          </span>
-                        </button>
-                      </td>
-                      <td class="hidden-xs impli">
-                        <button
-                          (click)="
-                            runnerData.ex.availableToBack &&
-                            (runnerData.ex.availableToBack[2]?.price == null ||
-                              runnerData.ex.availableToBack[2]?.price ==
-                                undefined)
-                              ? ''
-                              : betSlip(
-                                  bfId,
-                                  'back',
-                                  'runner' + $index + 'back3',
-                                  runnerData.runnerName,
-                                  runnerData.selectionId,
-                                  matchName,
-                                  runnerData.ex.availableToBack[2]?.price,
-                                  matchid,
-                                  market.marketId,
-                                  0,
-                                  0,
-                                  market.sport,
-                                  market.eventId
-                                )
-                          "
-                          id="runner{{ $index }}back3"
-                          data-side="back"
-                        >
-                          <span class="odds">{{
-                            runnerData.ex.availableToBack
-                              ? runnerData.ex.availableToBack[2]?.price
-                              : "-"
-                          }}</span>
-                          <span class="ammount" style="font-size: 9px">
-                            {{
-                              runnerData.ex.availableToBack &&
-                              (runnerData.ex.availableToBack[2]?.size !== null ||
-                                runnerData.ex.availableToBack[2]?.size !== "")
-                                ? (runnerData.ex.availableToBack[2]?.size *
-                                    volMultiplier | number: "0.2")
-                                : "-"
-                            }}
-                          </span>
-                        </button>
-                      </td>
-                      <td class="hidden-xs impli">
-                        <button
-                          (click)="
-                            runnerData.ex.availableToBack &&
-                            (runnerData.ex.availableToBack[1]?.price == null ||
-                              runnerData.ex.availableToBack[1]?.price ==
-                                undefined)
-                              ? ''
-                              : betSlip(
-                                  bfId,
-                                  'back',
-                                  'runner' + $index + 'back2',
-                                  runnerData.runnerName,
-                                  runnerData.selectionId,
-                                  matchName,
-                                  runnerData.ex.availableToBack[1]?.price,
-                                  matchid,
-                                  market.marketId,
-                                  0,
-                                  0,
-                                  market.sport,
-                                  market.eventId
-                                )
-                          "
-                          id="runner{{ $index }}back2"
-                          data-side="back"
-                        >
-                          <span class="odds">{{
-                            runnerData.ex.availableToBack
-                              ? runnerData.ex.availableToBack[1]?.price
-                              : "-"
-                          }}</span>
-                          <span class="ammount">
-                            {{
-                              runnerData.ex.availableToBack &&
-                              (runnerData.ex.availableToBack[1]?.size !== null ||
-                                runnerData.ex.availableToBack[1]?.size !== "")
-                                ? (runnerData.ex.availableToBack[1]?.size *
-                                    volMultiplier | number: "0.2")
-                                : "-"
-                            }}</span
-                          >
-                        </button>
-                      </td>
-                      <td>
-                        <div class="back" style="height: 38px">
-                          <button
-                            (click)="
-                              runnerData.ex.availableToBack &&
-                              (runnerData.ex.availableToBack[0]?.price == null ||
-                                runnerData.ex.availableToBack[0]?.price ==
-                                  undefined)
-                                ? ''
-                                : betSlip(
-                                    bfId,
-                                    'back',
-                                    'runner' + $index + 'back1',
-                                    runnerData.runnerName,
-                                    runnerData.selectionId,
-                                    matchName,
-                                    runnerData.ex.availableToBack[0]?.price,
-                                    matchid,
-                                    market.marketId,
-                                    0,
-                                    0,
-                                    market.sport,
-                                    market.eventId
-                                  )
-                            "
-                            id="runner{{ $index }}back1"
-                            data-side="back"
-                          >
-                            <span class="odds">{{
-                              runnerData.ex.availableToBack
-                                ? runnerData.ex.availableToBack[0]?.price
-                                : "-"
-                            }}</span>
-                            <span class="ammount">
-                              {{
-                                runnerData.ex.availableToBack &&
-                                (runnerData.ex.availableToBack[0]?.size !==
-                                  null ||
-                                  runnerData.ex.availableToBack[0]?.size) !== ""
-                                  ? (runnerData.ex.availableToBack[0]?.size *
-                                      volMultiplier | number: "0.2")
-                                  : "-"
-                              }}
-                            </span>
-                          </button>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="lay" style="height: 38px">
-                          <button
-                            (click)="
-                              runnerData.ex.availableToLay &&
-                              (runnerData.ex.availableToLay[0]?.price == null ||
-                                runnerData.ex.availableToLay[0]?.price == '')
-                                ? ''
-                                : betSlip(
-                                    bfId,
-                                    'lay',
-                                    'runner' + $index + 'lay1',
-                                    runnerData.runnerName,
-                                    runnerData.selectionId,
-                                    matchName,
-                                    runnerData.ex.availableToLay[0]?.price,
-                                    matchid,
-                                    market.marketId,
-                                    0,
-                                    0,
-                                    market.sport,
-                                    market.eventId
-                                  )
-                            "
-                            id="runner{{ $index }}lay1"
-                            data-side="lay"
-                          >
-                            <span class="odds">{{
-                              runnerData.ex.availableToLay
-                                ? runnerData.ex.availableToLay[0]?.price
-                                : "-"
-                            }}</span>
-                            <span class="ammount">
-                              {{
-                                runnerData.ex.availableToLay &&
-                                (runnerData.ex.availableToLay[0]?.size !== null ||
-                                  runnerData.ex.availableToLay[0]?.size !== "")
-                                  ? (runnerData.ex.availableToLay[0]?.size *
-                                      volMultiplier | number: "0.2")
-                                  : "-"
-                              }}
-                            </span>
-                          </button>
-                        </div>
-                      </td>
-                      <td class="hidden-xs impli">
-                        <button
-                          (click)="
-                            runnerData.ex.availableToLay &&
-                            (runnerData.ex.availableToLay[1]?.price == null ||
-                              runnerData.ex.availableToLay[1]?.price == '')
-                              ? ''
-                              : betSlip(
-                                  bfId,
-                                  'lay',
-                                  'runner' + $index + 'lay2',
-                                  runnerData.runnerName,
-                                  runnerData.selectionId,
-                                  matchName,
-                                  runnerData.ex.availableToLay[1]?.price,
-                                  matchid,
-                                  market.marketId,
-                                  0,
-                                  0,
-                                  market.sport,
-                                  market.eventId
-                                )
-                          "
-                          id="runner{{ $index }}lay2"
-                          data-side="lay"
-                        >
-                          <span class="odds">{{
-                            runnerData.ex.availableToLay
-                              ? runnerData.ex.availableToLay[1]?.price
-                              : "-"
-                          }}</span>
-                          <span class="ammount">
-                            {{
-                              runnerData.ex.availableToLay &&
-                              (runnerData.ex.availableToLay[1]?.size !== null ||
-                                runnerData.ex.availableToLay[1]?.size !== "")
-                                ? (runnerData.ex.availableToLay[1]?.size *
-                                    volMultiplier | number: "0.2")
-                                : "-"
-                            }}
-                          </span>
-                        </button>
-                      </td>
-                      <td class="hidden-xs impli">
-                        <button
-                          (click)="
-                            runnerData.ex.availableToLay &&
-                            (runnerData.ex.availableToLay[2]?.price == null ||
-                              runnerData.ex.availableToLay[2]?.price == '')
-                              ? ''
-                              : betSlip(
-                                  bfId,
-                                  'lay',
-                                  'runner' + $index + 'lay3',
-                                  runnerData.runnerName,
-                                  runnerData.selectionId,
-                                  matchName,
-                                  runnerData.ex.availableToLay[2]?.price,
-                                  matchid,
-                                  market.marketId,
-                                  0,
-                                  0,
-                                  market.sport,
-                                  market.eventId
-                                )
-                          "
-                          id="runner{{ $index }}lay3"
-                          data-side="lay"
-                        >
-                          <span class="odds">{{
-                            runnerData.ex.availableToLay
-                              ? runnerData.ex.availableToLay[2]?.price
-                              : "-"
-                          }}</span>
-                          <span class="ammount">
-                            {{
-                              runnerData.ex.availableToLay &&
-                              (runnerData.ex.availableToLay[2]?.size !== null ||
-                                runnerData.ex.availableToLay[2]?.size !== "")
-                                ? (runnerData.ex.availableToLay[2]?.size *
-                                    volMultiplier | number: "0.2")
-                                : "-"
-                            }}
-                          </span>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div
-                  class="labels-container"
-                  id="line-position"
-                  style="display: none"
-                >
-                  <hr />
-                  <strong>Book position</strong><br />
-                </div>
-              </div>
-            </div>
-            <div
-              class="widget flat"
-              id="fancyWrapperParent"
-              style="display: none"
-            >
-              <div class="widget-header">
-                <span class="widget-caption"></span>
-                <div class="widget-buttons">
-                  <a data-toggle="dispose">
-                    <i class="fa fa-times danger"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-  
-            <div
-              class="dashboard-box"
-              id="fancyBetMarketList"
-              *ngIf="fancyData && fancyData.length && fancyData[0].length"
-            >
-              <div class="row">
-                <div class="col-xs-6">
-                  <div class="box-header">
-                    <div class="betdelay">Fancy Markets</div>
-                  </div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="box-header">
-                    <div class="market-rules">
-                      <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#fancyRuleModal"
-                        >Rules</a
-                      >
+                      </div>
                     </div>
                   </div>
+                  <span class="databox-text carbon" id="raceDetails"></span>
                 </div>
               </div>
-              <div class="grid-wrapper">
-                <div class="player-section">
-                  <div class="players"></div>
+            </div>
+            <div
+            class="databox-bottom bg-white no-padding"
+            
+          >
+            <div class="databox-row row-12">
+              <div class="databox-row row-6 no-padding">
+                <div
+                  class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum"
+                >
+                  <span class="databox-text carbon no-margin"
+                    ><strong
+                      >Start Time:
+                      <span id="marketStartTime"
+                        >Fri 13 Nov, 15:00</span
+                      ></strong
+                    ></span
+                  >
+                  <span class="databox-text carbon no-margin"
+                    ><strong
+                      >Time remaining:
+                      <span id="timer" style="display: none">0</span
+                      ><span id="timerplus" style="" class="is-countdown"
+                        ><span class="countdown-row countdown-amount"
+                          >01:32:25</span
+                        ></span
+                      ></strong
+                    >
+                  </span>
                 </div>
-                <div class="backlay-section">
-                  <div class="lay-head"><span>NO</span></div>
-                  <div class="back-head"><span>YES</span></div>
-                  <div class="minMax-head">
-                    <span class="hidden-lg hidden-md">Max Bet</span>
-                    <span class="hidden-lg hidden-md">Max Market</span>
-                  </div>
-                </div>
-              </div>
-              <ng-container
-                *ngFor="
-                  let fancy of fancyData[0];
-                  let $index = index;
-                  trackBy: trackByFn
-                "
+                <div
+                class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum"
               >
-                <div class="grid-wrapper" id="{{ fancy.sid }}" data-delay="1">
-                  <div class="player-section">
-                    <div class="players">
-                      <div class="players-block">
-                        <span id="market_name-219627">{{ fancy.nat }}</span>
-                      </div>
-                      <div class="players-postion">
-                        <span id="fexp_" class="position"></span
-                        ><span id="fexp_{{ fancy.sid }}" class="position"></span>
-                      </div>
-                      <span class="icn icn-ladder hidden-lg hidden-md"></span
-                      ><button
-                        class="hidden-sm hidden-xs btn btn-danger btn-sm"
-                        style="display: none"
-                        id="fancyBetBookBtn_{{ fancy.sid }}"
-                        (click)="
-                          GetFancyBook(
-                            fancyBookTemp,
-                            fancy.nat,
-                            fancy.mid,
-                            fancy.sid
-                          )
-                        "
-                      >
-                        Book
-                      </button>
-                    </div>
-                  </div>
-                  <div class="backlay-section">
-                    <div
-                      class="fancy_status"
-                      id="marketstatus-219627"
-                      style="display: block"
-                      *ngIf="fancy.gstatus !== ''"
-                    >
-                      <span>{{ fancy.gstatus }}</span>
-                    </div>
-                    <div class="lay">
-                      <button
-                        id="lay-{{ fancy.sid }}"
-                        (click)="
-                          fancy.gstatus == ''
-                            ? fancybetSlip(
-                                'no',
-                                $index,
-                                fancy.nat,
-                                fancy.sid,
-                                matchName,
-                                fancy.l1,
-                                'df_' + fancy.mid + '_' + fancy.sid,
-                                mtid,
-                                fancy.ls1,
-                                fancy.sid,
-                                sportId,
-                                mktId,
-                                bfId
-                              )
-                            : ''
-                        "
-                      >
-                        <span id="runsno-{{ fancy.sid }}">{{
-                          fancy.l1 == null || fancy.l1 == ""
-                            ? "-"
-                            : (fancy.l1 | number)
-                        }}</span
-                        ><small id="oddsno-219627">{{
-                          fancy.ls1 == null || fancy.ls1 == ""
-                            ? "-"
-                            : (fancy.ls1 | number)
-                        }}</small>
-                      </button>
-                    </div>
-                    <div class="back">
-                      <button
-                        id="back-{{ fancy.sid }}"
-                        (click)="
-                          fancy.gstatus == ''
-                            ? fancybetSlip(
-                                'yes',
-                                $index,
-                                fancy.nat,
-                                fancy.sid,
-                                matchName,
-                                fancy.b1,
-                                'df_' + fancy.mid + '_' + fancy.sid,
-                                mtid,
-                                fancy.bs1,
-                                fancy.sid,
-                                sportId,
-                                mktId,
-                                bfId
-                              )
-                            : ''
-                        "
-                      >
-                        <span id="runsyes-{{ fancy.sid }}">{{
-                          fancy.b1 == null || fancy.b1 == ""
-                            ? "-"
-                            : (fancy.b1 | number)
-                        }}</span
-                        ><small id="oddsyes-{{ fancy.sid }}">{{
-                          fancy.bs1 == null || fancy.bs1 == ""
-                            ? "-"
-                            : (fancy.bs1 | number)
-                        }}</small>
-                      </button>
-                    </div>
-                    <div class="minMax">
-                      <span
-                        ><i class="hidden-sm hidden-xs">Max Bet: </i
-                        ><i id="maxBet-{{ fancy.sid }}">{{
-                          sessionSettings?.min | number: "0.2"
-                        }}</i></span
-                      ><span
-                        ><i class="hidden-sm hidden-xs">Max Market: </i
-                        ><i id="maxMarket-{{ fancy.sid }}">{{
-                          sessionSettings?.max | number: "0.2"
-                        }}</i></span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="fancyBetBoard_{{ fancy.sid }}_back"
-                  class="betslip-inline-container fancy-quick-tr"
-                  *ngIf="fancy.gstatus == ''"
-                  style="display: none; background-color: #abcbe2"
+                <span class="databox-text carbon no-margin"
+                  ><strong>Commentary</strong></span
                 >
-                  <div id="fancy_overly" class="fancy-overly-singleline">
-                    <img
-                      src="assets/images/Spin-1.3s-55px.gif"
-                      alt="loading..."
-                    /><br />
-                    <p>Processing your request, please wait...</p>
-                  </div>
-                  <div class="input__odd__stake__single">
-                    <span>{{ fancy.nat }}</span
-                    ><span
-                      ><input
-                        type="number"
-                        class="form-control"
-                        id="fancy_odds"
-                        [value]="fancy.b1"
-                        readonly=""
-                        name="runs" /></span
-                    ><span
-                      ><input
-                        type="number"
-                        id="inputStake_YES_{{ fancy.sid }}"
-                        class="form-control"
-                        name="stake" /></span
-                    ><span
-                      ><button
-                        (click)="removefancybetslip(fancy.sid, 'yes')"
-                        id="btnClear221231"
-                        class="btn btn-default btn-lg form-control"
-                      >
-                        <i class="fa fa-trash-o"></i> Clear
-                      </button></span
-                    ><span
-                      ><button
-                        id="btn_221231_lay"
-                        class="btn place form-control"
-                        data-delay="1"
-                        (click)="
-                          placeFancyBet(
-                            'yes',
-                            $index,
-                            fancy.nat,
-                            fancy.sid,
-                            matchName,
-                            fancy.b1,
-                            'df_' + fancy.mid + '_' + fancy.sid,
-                            mtid,
-                            fancy.bs1,
-                            fancy.sid,
-                            sportId,
-                            mktId,
-                            bfId
-                          )
-                        "
-                      >
-                        Place bet
-                      </button></span
-                    >
-                  </div>
-                  <div class="stake__buttons">
-                    <span *ngFor="let stake of stakeList"
-                      ><button
-                        (click)="selectStake(stake.stake, fancy.sid, 'yes')"
-                        class="btn form-control btn-default btn-lg"
-                      >
-                        {{ stake.stake }}
-                      </button></span
-                    >
-                  </div>
-                </div>
-                <div
-                  id="fancyBetBoard_{{ fancy.sid }}_lay"
-                  class="betslip-inline-container fancy-quick-tr"
-                  style="display: none; background-color: #f3dce2"
+                <span
+                  class="databox-number lightcarbon no-margin"
+                  id="commentary"
+                  >Not available</span
                 >
-                  <div id="fancy_overly" class="fancy-overly-singleline">
-                    <img
-                      src="assets/images/Spin-1.3s-55px.gif"
-                      alt="loading..."
-                    /><br />
-                    <p>Processing your request, please wait...</p>
-                  </div>
-                  <div class="input__odd__stake__single">
-                    <span>{{ fancy.nat }}</span
-                    ><span
-                      ><input
-                        type="number"
-                        class="form-control"
-                        [value]="fancy.l1"
-                        readonly=""
-                        name="runs" /></span
-                    ><span
-                      ><input
-                        type="number"
-                        id="inputStake_NO_{{ fancy.sid }}"
-                        class="form-control"
-                        name="stake" /></span
-                    ><span
-                      ><button
-                        (click)="removefancybetslip(fancy.sid, 'no')"
-                        id="btnClear221231"
-                        class="btn btn-default btn-lg form-control"
-                      >
-                        <i class="fa fa-trash-o"></i> Clear
-                      </button></span
-                    ><span
-                      ><button
-                        id="btn_221231_lay"
-                        class="btn place form-control"
-                        data-delay="1"
-                        (click)="
-                          placeFancyBet(
-                            'no',
-                            $index,
-                            fancy.nat,
-                            fancy.sid,
-                            matchName,
-                            fancy.b1,
-                            'df_' + fancy.mid + '_' + fancy.sid,
-                            mtid,
-                            fancy.bs1,
-                            fancy.sid,
-                            sportId,
-                            mktId,
-                            bfId
-                          )
-                        "
-                      >
-                        Place bet
-                      </button></span
-                    >
-                  </div>
-                  <div class="stake__buttons">
-                    <span *ngFor="let stake of stakeList"
-                      ><button
-                        (click)="selectStake(stake.stake, fancy.sid, 'no')"
-                        class="btn form-control btn-default btn-lg"
-                      >
-                        {{ stake.stake }}
-                      </button></span
-                    >
-                  </div>
-                </div>
-              </ng-container>
+              </div>
+              <div class="databox-cell cell-4 no-padding text-align-center">
+                <span class="databox-text carbon no-margin"
+                  ><strong
+                    >Market liability:
+                    <span class="red" id="marketLiability"
+                      >0.00</span
+                    ></strong
+                  ></span
+                >
+                <span class="databox-text carbon no-margin"
+                  ><strong
+                    >Number of Winner:
+                    <span id="numOfWinner">1</span></strong
+                  ></span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-  
-      <div class="col-lg-4 col-sm-12 col-xs-12">
-        <div class="widget collapsed" id="liveStream" style="display: none">
-          <div class="widget-header">
-            <i class="widget-icon typcn typcn-video"></i>
-            <span class="widget-caption">Live Broadcast</span>
-            <div class="widget-buttons">
-              <a href="#" data-toggle="collapse">
-                <i class="fa fa-plus"></i>
-              </a>
-            </div>
-            <!--Widget Buttons-->
+      <input
+      type="hidden"
+      name="ctl00$MainContent$evtId"
+      id="evtId"
+      value="30120861"
+    />
+    <input
+      type="hidden"
+      name="ctl00$MainContent$evtType"
+      id="evtType"
+      value="Tennis"
+    />
+    <input type="hidden" name="ctl00$MainContent$Delay" id="Delay" />
+    <input
+      type="hidden"
+      name="ctl00$MainContent$marketType"
+      id="marketType"
+      value="MATCH_ODDS"
+    />
+  </div>
+  <div class="col-xs-12">
+    <div
+      id="jbWrapper"
+      class="databox radius-bordered databox-shadowed"
+      style="display: none; background: #ffffff"
+    >
+      <div class="databox-row">
+        <div class="databox-cell cell-8 text-align-center">
+          <div style="width: 50%; margin: 0 auto">
+            <ul id="jrunnerSection" class="databox-text jRunners"></ul>
           </div>
-          <div class="widget-body" style="text-align: center"></div>
         </div>
-        <div data-spy="affix" data-offset-top="640" class="affix-top">
-          <div class="widget hidden-xs" id="BetSlipSection">
-            <div class="widget-header bordered-bottom bordered-sky">
-              <span class="widget-caption">Bet Slip</span>
-              <div class="widget-buttons">
-                Keep Alive on Suspend?
-                <label>
-                  <input
-                    style="z-index: -1000"
-                    class="checkbox-slider toggle colored-blue"
-                    id="chkkeepalive"
-                    type="checkbox"
-                  /><span class="text"></span>
-                </label>
-              </div>
-            </div>
-            <div class="widget-body" style="padding: 0px">
-              <div class="tabbable">
-                <ul class="nav nav-tabs tabs-flat nav-justified" id="myTab9">
-                  <li class="active" id="aSimpleBet">
-                    <a data-toggle="tab" href="#simpleBet">Single Bet </a>
-                  </li>
-  
-                  <li class="tab-red" id="aJoriBet">
-                    <a data-toggle="tab" href="#joriBet">Jori Bet </a>
-                  </li>
-                </ul>
-  
-                <div class="tab-content tabs-flat" style="padding: 3px">
-                  <div id="simpleBet" class="tab-pane in active">
-                    <div
-                      id="BetSlipMain"
-                      class="betslip-wrapper"
-                      style="position: relative"
-                    >
-                      <a
-                        routerLink="/reports/stake"
-                        target="_blank"
-                        class="btn btn-blue btn-xs pull-right"
-                        style="margin-bottom: 3px"
-                        >Customize Stake Buttons <i class="fa fa-edit"></i
-                      ></a>
-                      <br />
-                      <table
-                        cellspacing="0"
-                        width="100%"
-                        *ngIf="
-                          backBetSlipDataArray.length ||
-                          layBetSlipDataArray.length
-                        "
-                      >
-                        <thead>
-                          <tr>
-                            <th width="40%" colspan="2" class="runner">
-                              (Bet For)
-                            </th>
-                            <th width="30%" class="oddsH">Odds</th>
-                            <th width="15%" class="stake">Stake</th>
-                            <th width="15%" class="profit">
-                              Profit or Liability
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody id="betslip">
-                          <ng-container
-                            *ngFor="let BetSlipData of backBetSlipDataArray"
-                          >
-                            <ng-container
-                              *ngFor="let backBet of BetSlipData.backBetSlipData"
-                            >
-                              <tr class="BetSlipBack">
-                                <td class="delete">
-                                  <a
-                                    onclick="tremove(this); return false;"
-                                    href="#"
-                                    ><i class="fa fa-trash-o"></i
-                                  ></a>
-                                </td>
-                                <td>
-                                  <span class="runnername"
-                                    ><strong
-                                      >{{ backBet.runnerName }}
-                                    </strong></span
-                                  >
-                                </td>
-                                <td class="oddsH">
-                                  <span
-                                    ><div class="oddWrapper">
-                                      <div class="odd-left">
-                                        <button
-                                          id="ldown-10301"
-                                          onclick="cDown(this); return false;"
-                                        >
-                                          <span
-                                            class="fa fa-minus"
-                                          ></span></button
-                                        ><input
-                                          tabindex="1"
-                                          type="number"
-                                          id="10301-LayOdds"
-                                          class="text oddInput numeric"
-                                          [value]="backBet.odds"
-                                        /><button
-                                          id="lup-10301"
-                                          onclick="cUp(this); return false;"
-                                        >
-                                          <span class="fa fa-plus"></span>
-                                        </button>
-                                      </div></div
-                                  ></span>
-                                </td>
-                                <td class="stake">
-                                  <span class="stake"
-                                    ><input
-                                      (input)="updateStake(backBet)"
-                                      id="10301-LayStake"
-                                      min="0"
-                                      class="text stake numeric"
-                                      type="number"
-                                      [(ngModel)]="backBet.stake"
-                                    />
-                                  </span>
-                                </td>
-                                <td class="profit">
-                                  <div class="wrapper">
-                                    <span
-                                      style="color: red; font-weight: 600"
-                                      class="profit-value"
-                                      >{{ backBet.profit }}</span
-                                    >
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr class="BetSlipBack">
-                                <td colspan="5">
-                                  <div class="btnStake">
-                                    <input
-                                      class="btn btn-sm btn-default"
-                                      type="button"
-                                      (click)="stakeValue(stake.stake, backBet)"
-                                      *ngFor="let stake of stakeList"
-                                      [value]="stake.stake"
-                                    />
-                                  </div>
-                                </td>
-                              </tr>
-                            </ng-container>
-                          </ng-container>
-  
-                          <ng-container
-                            *ngFor="let BetSlipData of layBetSlipDataArray"
-                          >
-                            <ng-container
-                              *ngFor="let layBet of BetSlipData.layBetSlipData"
-                            >
-                              <tr class="BetSlipLay">
-                                <td class="delete">
-                                  <a
-                                    onclick="tremove(this); return false;"
-                                    href="#"
-                                    ><i class="fa fa-trash-o"></i
-                                  ></a>
-                                </td>
-                                <td>
-                                  <span class="runnername"
-                                    ><strong
-                                      >{{ layBet.runnerName }}
-                                    </strong></span
-                                  >
-                                </td>
-                                <td class="oddsH">
-                                  <span
-                                    ><div class="oddWrapper">
-                                      <div class="odd-left">
-                                        <button
-                                          id="ldown-414464"
-                                          onclick="cDown(this); return false;"
-                                        >
-                                          <span
-                                            class="fa fa-minus"
-                                          ></span></button
-                                        ><input
-                                          tabindex="1"
-                                          type="number"
-                                          id="414464-LayOdds"
-                                          class="text oddInput numeric"
-                                          [value]="layBet.odds"
-                                        /><button
-                                          id="lup-414464"
-                                          onclick="cUp(this); return false;"
-                                        >
-                                          <span class="fa fa-plus"></span>
-                                        </button>
-                                      </div></div
-                                  ></span>
-                                </td>
-                                <td class="stake">
-                                  <span class="stake"
-                                    ><input
-                                      (input)="updateStake(layBet)"
-                                      class="text stake numeric"
-                                      maxlength="7"
-                                      type="number"
-                                      [(ngModel)]="layBet.stake"
-                                    />
-                                  </span>
-                                </td>
-                                <td class="profit">
-                                  <div class="wrapper">
-                                    <span
-                                      style="color: red; font-weight: 600"
-                                      class="profit-value"
-                                      >{{ layBet.profit }}</span
-                                    >
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr class="BetSlipLay">
-                                <td colspan="5">
-                                  <div class="btnStake">
-                                    <input
-                                      class="btn btn-sm btn-default"
-                                      type="button"
-                                      (click)="stakeValue(stake.stake, layBet)"
-                                      *ngFor="let stake of stakeList"
-                                      [value]="stake.stake"
-                                    />
-                                  </div>
-                                </td>
-                              </tr>
-                            </ng-container>
-                          </ng-container>
-                        </tbody>
-                        <tfoot>
-                          <tr>
-                            <td
-                              colspan="5"
-                              style="
-                                text-align: center;
-                                font-size: 12px;
-                                font-weight: bold;
-                                padding-top: 5px;
-                              "
-                            >
-                              <span id="betTimer"></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td colspan="2">
-                              <button
-                                id="cancelAll"
-                                (click)="removeAllBetSlip('remove')"
-                              >
-                                Clear All
-                              </button>
-                            </td>
-                            <td colspan="3" align="right">
-                              <button id="btnPlaceBet" (click)="placeBet()">
-                                Submit
-                              </button>
-                            </td>
-                          </tr>
-                        </tfoot>
-                      </table>
-                    </div>
-                  </div>
-  
-                  <div
-                    id="joriBet"
-                    class="tab-pane bg-whitesmoke"
+        <div class="databox-cell cell-4 text-align-center">
+          <table class="table" style="background-color: transparent">
+            <tbody>
+              <tr>
+                <td style="width: 50%; padding: 5px 0px 5px 0px">
+                  <button
+                    class="jBackBtn"
+                    onclick="Jdeal(this);return false; "
                     style="display: none"
                   >
-                    <div
-                      id="BetSlipJori"
-                      class="betslip-wrapper hide"
-                      style="position: relative"
-                    >
-                      <span
-                        class="pull-left"
-                        style="
-                          vertical-align: middle;
-                          height: 20px;
-                          line-height: 0;
-                        "
-                        >Rate Reverse?
-                        <label>
-                          <input
-                            class="checkbox-slider slider-icon colored-danger yesno"
-                            id="rateReverse"
-                            type="checkbox"
-                          />
-                          <span class="text"></span>
-                        </label>
-                      </span>
-                      <a
-                        routerLink="/reports/stake"
-                        target="_blank"
-                        class="btn btn-blue btn-xs pull-right"
-                        style="margin-bottom: 3px"
-                        >Customize Stake Buttons <i class="fa fa-edit"></i
-                      ></a>
-                      <br />
-                      <table cellspacing="0" width="100%">
-                        <thead>
-                          <tr>
-                            <th width="40%" colspan="2" class="runner">
-                              (Bet For)
-                            </th>
-                            <th width="25%" class="oddsH">Odds</th>
-                            <th width="15%" class="stake">Stake</th>
-                            <th width="20%" class="profit">Profit/Liability</th>
-                          </tr>
-                        </thead>
-                        <tbody id="Jbetslip"></tbody>
-                        <tfoot>
-                          <tr>
-                            <td
-                              colspan="5"
-                              style="
-                                text-align: center;
-                                font-size: 12px;
-                                font-weight: bold;
-                                padding-top: 5px;
-                              "
-                            >
-                              <span id="JoribetTimer"></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td colspan="2">
-                              <button
-                                id="cancelAllJori"
-                                (click)="removeAllBetSlip('remove')"
-                              >
-                                Clear
-                              </button>
-                            </td>
-                            <td colspan="3" align="right">
-                              <button
-                                id="btnJPlaceBet"
-                                class="btn btn-xs btn-info"
-                                (click)="placeBet()"
-                              >
-                                Submit
-                              </button>
-                            </td>
-                          </tr>
-                        </tfoot>
-                      </table>
-                      <div class="clear-fix"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="widget">
-            <div class="widget-header bordered-bottom bordered-sky">
-              <span class="widget-caption">My Bets</span>
-              <div class="widget-buttons">
-                <img
-                  src="assets/images/ajax-loader.gif"
-                  id="loading-indicator"
-                  style="display: none"
-                />
-                <a
-                  href="#"
-                  onclick="GetCurrentBetsMultiLine(); return false;"
-                  data-toggle="tooltip"
-                  title=""
-                  data-original-title="Refresh"
-                >
-                  <i class="fa fa-repeat"></i>
-                </a>
-              </div>
-            </div>
-            <div class="widget-body">
-              <div class="mybet-wrapper" id="mybetWrapper">
-                <div
-                  class="slimScrollDiv"
-                  style="
-                    position: relative;
-                    overflow: hidden;
-                    width: auto;
-                    height: 438px;
-                  "
-                >
-                  <div
-                    id="matchWrapper"
-                    style="overflow: auto; width: auto; height: 438px"
+                    <span class="odds" id="jBackBtn">BACK</span>
+                  </button>
+                </td>
+                <td style=" padding: 5px 0px 5px 0px">
+                  <button
+                    class="jLayBtn"
+                    onclick="Jdeal(this);return false; "
+                    style="display: none"
                   >
-                    <!-- <table class="table table-condensed" width="100%">
-                      <thead>
-                        <tr>
-                          <th colspan="3">
-                            Unmatched Bets <span id="ttlUMB"></span>
-                          </th>
-                          <th>
-                            <button
-                              id="btnCancelAll"
-                              onclick="cacelAll(this);return false; "
-                              class="btn btn-xs btn-danger pull-right"
-                            >
-                              Cancel All
-                            </button>
-                          </th>
-                        </tr>
-                        <tr>
-                          <th colspan="2">Runner Name</th>
-                          <th>Bet Price</th>
-                          <th>Bet Size</th>
-                        </tr>
-                      </thead>
-                      <tbody data-type="unmatched" id="unMatched"></tbody>
-                    </table> -->
-                    <span class="pull-right" style="vertical-align: middle"
-                      >Average Bets?
-                      <label style="padding-top: 10px">
-                        <input
-                          style="z-index: -1000"
-                          class="checkbox-slider toggle colored-blue"
-                          id="chkavgBets"
-                          type="checkbox"
-                        />
-                        <span class="text"></span>
-                      </label>
-                    </span>
-                    <table class="table table-condensed" width="100%">
-                      <thead>
-                        <tr>
-                          <th colspan="2">
-                            Matched Bets <span id="ttlMB"></span>
-                          </th>
-                          <th></th>
-                        </tr>
-                        <tr>
-                          <th>Runner Name</th>
-                          <th>Bet Price</th>
-                          <th>Bet Size</th>
-                        </tr>
-                      </thead>
-                      <tbody data-type="matched" id="Matched">
-                        <ng-container
-                        *ngFor="let item of matchedData; trackBy: trackByCon"
-                        >
-                          <tr
-                          class="Back"
-                          *ngIf="item.betType === 'LAY' || item.betType == 'lay' || item.betType == 'NO' || item.betType == 'no'"
-                          title="Bet ID: {{item.consolidateId}}"
-                        >
-                          <td class="runner">{{item.selName}} </td>
-                          <td>{{(item.isFancy==1)?item.runs+'/'+item.odds:item.odds }}</td>
-                          <td>{{item.stake | number: '0.2'}} </td>
-                        </tr>
-                          <tr
-                          class="Lay"
-                          data-toggle="tooltip"
-                          *ngIf="item.betType == 'BACK' || item.betType == 'back' || item.betType == 'YES' || item.betType == 'yes'"
-                          title="Bet ID: {{item.consolidateId}}"
-                        >
-                          <td class="runner">{{item.selName}} </td>
-                          <td>{{(item.isFancy==1)?item.runs+'/'+item.odds:item.odds }}</td>
-                          <td>{{item.stake | number: '0.2'}} </td>
-                        </tr>
-                        <tr
-                          class="Lay"
-                          data-betid="224158335352"
-                          data-toggle="tooltip"
-                          *ngIf="item.betType === 'LAY' || item.betType == 'lay' || item.betType == 'NO' || item.betType == 'no'"
-                          title="Bet ID: 224158335352"
-                        >
-                          <td class="runner">{{item.selName}} </td>
-                          <td>{{(item.isFancy==1)?item.runs+'/'+item.odds:item.odds }}</td>
-                          <td>{{item.stake | number: '0.2'}} </td>
-                        </tr>
-                        </ng-container>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div
-                    class="slimScrollBar"
-                    style="
-                      background: rgb(0, 0, 0);
-                      width: 10px;
-                      position: absolute;
-                      top: 0px;
-                      opacity: 0.4;
-                      display: none;
-                      border-radius: 7px;
-                      z-index: 99;
-                      right: 1px;
-                      height: 438px;
-                    "
-                  ></div>
-                  <div
-                    class="slimScrollRail"
-                    style="
-                      width: 10px;
-                      height: 100%;
-                      position: absolute;
-                      top: 0px;
-                      display: block;
-                      border-radius: 7px;
-                      background: rgb(34, 34, 34);
-                      opacity: 0.1;
-                      z-index: 90;
-                      right: 1px;
-                    "
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="myModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">
-              Market Rules and Information
-            </h4>
-          </div>
-          <div class="modal-body">
-            <div id="rules">
-              <b>Market Information</b><br />For further information please see
-              Rules &amp; Regs.<br /><br />Who will win this match? At the start
-              of play all unmatched bets will be cancelled and this market will be
-              turned in-play. This market will not be actively managed therefore
-              it is the responsibility of all users to manage their positions.
-              <b
-                ><br /><br />Customers should be aware that:<br /><br />
-                <li>
-                  Transmissions described as “live” by some broadcasters may
-                  actually be delayed and that all in-play matches are not
-                  necessarily televised.
-                </li>
-                <br />
-                <li>
-                  The extent of any such delay may vary, depending on the set-up
-                  through which they are receiving pictures or data.
-                </li>
-                <br /><br /> </b
-              ><b>
-                <font color="red">
-                  If the first set is not completed all bets on this market will
-                  be void.</font
-                > </b
-              ><br /><br />Please be aware that times may be subject to change.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="lineModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="lineModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-            <h4 class="modal-title" id="lineModalLabel">
-              Market Rules and Information
-            </h4>
-          </div>
-          <div class="modal-body">
-            <div id="lineMarketRules" style="display: none"></div>
-            <div>
-              <p>
-                How many runs would be scored in mentioned overs, If
-                <strong>‘Back’</strong> bet is made then it will be
-                <strong>win bet</strong> if the runs scored in the mentioned overs
-                are<strong> equal or more</strong> then the Backed Runs otherwise
-                it will be a Lost bets.If <strong>‘Lay’</strong> bet is made then
-                it will be a win bet if Runs scored in the mentioned overs are
-                <strong>less</strong> than the lay runs otherwise it will be lost
-                bet.
-              </p>
-              <p>
-                All the line markets will be settled only if the mentioned
-                stipulated overs are completed or if the Batting team is bowled
-                out (All out) or the runs are chased, given the inning’s
-                stipulated(or reduced) overs are more than or equal to the
-                stipulated over of that particular line Market.
-              </p>
-              <strong>"Matched Tied"</strong> and
-              <strong>"Completed Match"</strong> doesn’t affect the settling of
-              Line markets.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal modal-blue fade"
-      id="graphModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="graphModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-            <h4 class="modal-title" id="graphModalLabel">Runner's Graph</h4>
-          </div>
-          <div
-            class="modal-body"
-            style="padding: 0px; background-color: white"
-            id="dvGph"
-          >
-            <div class="row">
-              <div class="col-md-6 col-sm-8 col-xs-12">
-                <table
-                  class="table table-hover table-striped table-condensed table-bordered"
-                >
-                  <tbody>
-                    <tr>
-                      <td style="font-weight: bold; text-align: right">
-                        On This Market:
-                      </td>
-                      <td id="onthismarket"></td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold; text-align: right">
-                        On This Selection:
-                      </td>
-                      <td id="onthisselection"></td>
-                    </tr>
-                    <tr>
-                      <td style="font-weight: bold; text-align: right">
-                        Last price Matched:
-                      </td>
-                      <td id="lastpricematched"></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <img class="img-responsive" id="graphpic" src=" " />
-              </div>
-              <div class="col-md-6 col-sm-8 col-xs-12">
-                <div style="max-height: 400px; overflow-x: auto">
-                  <table
-                    class="table table-striped table-bordered"
-                    id="graphtablebody"
-                  >
-                    <thead>
-                      <tr>
-                        <th colspan="4">Traded and Available</th>
-                      </tr>
-                      <tr>
-                        <th>Price</th>
-                        <th>To Back</th>
-                        <th>To Lay</th>
-                        <th>Traded</th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal modal-blue fade"
-      id="marketBookModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="marketBookLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" style="width: 935px">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-            <h4 class="modal-title" id="marketBookLabel"></h4>
-          </div>
-          <div class="modal-body" style="padding: 0px; overflow: scroll">
-            <div
-              class="labels-container"
-              id="line-position-multi"
-              style="display: none"
-            >
-              <table class="table table table-bordered table-condensed">
-                <thead>
-                  <tr>
-                    <th style="text-align: center">Runs</th>
-                    <th style="text-align: center">Position</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
+                    <span class="odds" id="jLayBtn">LAY</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-  
-  <ng-template #fancyBookTemp>
-    <div class="modal-blue modal-header">
-      <button
-        type="button"
-        class="close pull-right"
-        aria-label="Close"
-        (click)="modalRef.hide()"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h4 class="modal-title" id="fancyBookLabel">
-        {{ selectedFancyName }}
-      </h4>
-    </div>
-    <div class="modal-body" style="padding: 0px; overflow: scroll">
-      <div class="labels-container" id="fancy-position-multi" style="">
-        <table class="table table table-bordered table-condensed">
+  <div class="col-xs-12">
+    <div class="dashboard-box">
+      <div class="overlay" style="display: none">
+        <span id="mktstatus"> </span>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="box-header">
+            <div class="betdelay" style="display: none">
+              Bet Delay: <span id="betDelay">NaN</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="box-header">
+              <div class="betnotallow hide" id="betStatus">
+             
+            </div>
+            <div class="inplay" id="inplay" data-ng-show="inPlay===1">
+              <span class="blink_me">IN-PLAY</span>
+            </div>
+            <div class="market-rules">
+              <a href="#" data-toggle="modal" data-target="#myModal"
+                >Rules</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table
+          class="marketview table-hover"
+          border="0"
+          *ngFor="
+            let market of currentMatchData;
+            let $index = index;
+            trackBy: trackByFnMO
+          "
+        >
           <thead>
             <tr>
-              <th style="text-align: center">Runs</th>
-              <th style="text-align: center">Position</th>
+              <th scope="col" colspan="1">
+                <span
+                  style="display: none"
+                  id="marketid"
+                  onclick=" loadgrid(); "
+                  >1.175451196</span
+                >
+                <span id="totalMatched"
+                  >Total Matched:
+                  {{ currentMatchData[0].totalMatched }}</span
+                >
+              </th>
+              <th
+                style="text-align: center"
+                class="hidden-xs hidden-sm totalmatch"
+                scope="col"
+              >
+                <span style="font-size: 9px">Last Price /</span>
+                <br />
+                <span style="font-size: 9px">Total Match</span>
+              </th>
+              <th class="rules-heading hidden-xs impli" scope="col"></th>
+              <th class="rules-heading hidden-xs impli" scope="col"></th>
+              <th class="rules-heading" scope="col">
+                <span>Back</span>
+                <br />
+                <span
+                  ><i class="back-color fa fa-arrow-circle-down"></i
+                ></span>
+              </th>
+              <th class="lay-rules-heading" scope="col">
+                <span>Lay</span>
+                <br />
+                <span
+                  ><i class="lay-color fa fa-arrow-circle-down"></i
+                ></span>
+              </th>
+              <th class="lay-rules-heading hidden-xs impli"></th>
+              <th class="lay-rules-heading hidden-xs impli"></th>
             </tr>
           </thead>
+
           <tbody>
             <tr
-              [ngClass]="
-                book[1] > 0 ? 'book-gredient-plus' : 'book-gredient-minus'
+              *ngFor="
+                let runnerData of market.runners;
+                let $index = index;
+                trackBy: trackByFnRunner
               "
-              *ngFor="let book of fancyDatabookList"
             >
-              <td>{{ book[0] }}</td>
-              <td>{{ book[1] }}</td>
+              <td class="runner-name" onclick="jB(this); return false;">
+                <span style="display: none" id="BetingType">ODDS</span>
+                <span style="display: none" id="StartTimeSecs">-92</span>
+                <span style="display: none" id="StartedTime"
+                  >Fri 13 Nov, 15:00</span
+                >
+                <div class="runner-wrapper">
+                  <div class="runner-wrapper">
+                    <div class="graph">
+                      <a
+                        href="#"
+                        onclick=" getgraph('7445660','Christopher Eubanks');return false; "
+                      >
+                        <i class="fa fa-bar-chart-o"></i>
+                      </a>
+                    </div>
+                    <div class="runner-cloth-info" style="display: none">
+                      <img
+                        src=" "
+                        class="img-responsive"
+                        id="img7445660"
+                        alt="&nbsp;"
+                      />
+                      <div
+                        id="saddle-7445660"
+                        style="display: none"
+                      ></div>
+                      <span
+                        class="tooltip-carbon"
+                        style="font-weight: bold"
+                        data-toggle="tooltip"
+                        id="cloth-7445660"
+                        data-original-title=""
+                        title=""
+                      ></span>
+                      <span id="stall-7445660"></span>
+                    </div>
+                    <div class="runner-named">
+                      <span style="display: none" id="handiCap-7445660"
+                        >0.000000</span
+                      >
+                      <span
+                        class="tooltip-carbon"
+                        id="runnername-7445660"
+                        style="font-weight: bold; cursor: pointer"
+                        data-toggle="tooltip"
+                        data-html="true"
+                        data-original-title=""
+                        title=""
+                      >
+                        <!-- <tr id="8860646">  -->
+                        {{ runnerData.runnerName }}
+                        <span
+                          id="result-7445660"
+                          style="display: none"
+                        ></span>
+                      </span>
+                      <span style="display: none" id="jokey-7445660"
+                        >Jockey Name</span
+                      >
+                    </div>
+                    <div class="pull-right">
+                      <span
+                        style="display: block; font-size: 10.5px"
+                        class="actualPnl"
+                        id="exposure_{{ runnerData.selectionId }}"
+                      ></span>
+                      <span
+                        style="display: block; font-size: 10.5px"
+                        class="actualPnl"
+                        id="exposureAfter_{{ runnerData.selectionId }}"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="hidden-xs hidden-sm">
+                <button style="background-color: #e3e8e8">
+                  <span class="odds">{{
+                    runnerData.ex.availableToBack
+                      ? runnerData.ex.availableToBack[2]?.price
+                      : "-"
+                  }}</span>
+                  <span class="ammount" style="font-size: 9px">
+                    {{
+                      runnerData.ex.availableToBack &&
+                      (runnerData.ex.availableToBack[2]?.size !== null ||
+                        runnerData.ex.availableToBack[2]?.size !== "")
+                        ? (runnerData.ex.availableToBack[2]?.size *
+                            volMultiplier | number: "0.2")
+                        : "-"
+                    }}
+                  </span>
+                </button>
+              </td>
+              <td class="hidden-xs impli">
+                <button
+                  (click)="
+                    runnerData.ex.availableToBack &&
+                    (runnerData.ex.availableToBack[2]?.price == null ||
+                      runnerData.ex.availableToBack[2]?.price ==
+                        undefined)
+                      ? ''
+                      : betSlip(
+                          bfId,
+                          'back',
+                          'runner' + $index + 'back3',
+                          runnerData.runnerName,
+                          runnerData.selectionId,
+                          matchName,
+                          runnerData.ex.availableToBack[2]?.price,
+                          matchid,
+                          market.marketId,
+                          0,
+                          0,
+                          market.sport,
+                          market.eventId
+                        )
+                  "
+                  id="runner{{ $index }}back3"
+                  data-side="back"
+                >
+                  <span class="odds">{{
+                    runnerData.ex.availableToBack
+                      ? runnerData.ex.availableToBack[2]?.price
+                      : "-"
+                  }}</span>
+                  <span class="ammount" style="font-size: 9px">
+                    {{
+                      runnerData.ex.availableToBack &&
+                      (runnerData.ex.availableToBack[2]?.size !== null ||
+                        runnerData.ex.availableToBack[2]?.size !== "")
+                        ? (runnerData.ex.availableToBack[2]?.size *
+                            volMultiplier | number: "0.2")
+                        : "-"
+                    }}
+                  </span>
+                </button>
+              </td>
+              <td class="hidden-xs impli">
+                <button
+                  (click)="
+                    runnerData.ex.availableToBack &&
+                    (runnerData.ex.availableToBack[1]?.price == null ||
+                      runnerData.ex.availableToBack[1]?.price ==
+                        undefined)
+                      ? ''
+                      : betSlip(
+                          bfId,
+                          'back',
+                          'runner' + $index + 'back2',
+                          runnerData.runnerName,
+                          runnerData.selectionId,
+                          matchName,
+                          runnerData.ex.availableToBack[1]?.price,
+                          matchid,
+                          market.marketId,
+                          0,
+                          0,
+                          market.sport,
+                          market.eventId
+                        )
+                  "
+                  id="runner{{ $index }}back2"
+                  data-side="back"
+                >
+                  <span class="odds">{{
+                    runnerData.ex.availableToBack
+                      ? runnerData.ex.availableToBack[1]?.price
+                      : "-"
+                  }}</span>
+                  <span class="ammount">
+                    {{
+                      runnerData.ex.availableToBack &&
+                      (runnerData.ex.availableToBack[1]?.size !== null ||
+                        runnerData.ex.availableToBack[1]?.size !== "")
+                        ? (runnerData.ex.availableToBack[1]?.size *
+                            volMultiplier | number: "0.2")
+                        : "-"
+                    }}</span
+                  >
+                </button>
+              </td>
+              <td>
+                <div class="back" style="">
+                  <button
+                    (click)="
+                      runnerData.ex.availableToBack &&
+                      (runnerData.ex.availableToBack[0]?.price == null ||
+                        runnerData.ex.availableToBack[0]?.price ==
+                          undefined)
+                        ? ''
+                        : betSlip(
+                            bfId,
+                            'back',
+                            'runner' + $index + 'back1',
+                            runnerData.runnerName,
+                            runnerData.selectionId,
+                            matchName,
+                            runnerData.ex.availableToBack[0]?.price,
+                            matchid,
+                            market.marketId,
+                            0,
+                            0,
+                            market.sport,
+                            market.eventId
+                          )
+                    "
+                    id="runner{{ $index }}back1"
+                    data-side="back"
+                  >
+                    <span class="odds">{{
+                      runnerData.ex.availableToBack
+                        ? runnerData.ex.availableToBack[0]?.price
+                        : "-"
+                    }}</span>
+                    <span class="ammount">
+                      {{
+                        runnerData.ex.availableToBack &&
+                        (runnerData.ex.availableToBack[0]?.size !==
+                          null ||
+                          runnerData.ex.availableToBack[0]?.size) !== ""
+                          ? (runnerData.ex.availableToBack[0]?.size *
+                              volMultiplier | number: "0.2")
+                          : "-"
+                      }}
+                    </span>
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="lay" style="">
+                  <button
+                    (click)="
+                      runnerData.ex.availableToLay &&
+                      (runnerData.ex.availableToLay[0]?.price == null ||
+                        runnerData.ex.availableToLay[0]?.price == '')
+                        ? ''
+                        : betSlip(
+                            bfId,
+                            'lay',
+                            'runner' + $index + 'lay1',
+                            runnerData.runnerName,
+                            runnerData.selectionId,
+                            matchName,
+                            runnerData.ex.availableToLay[0]?.price,
+                            matchid,
+                            market.marketId,
+                            0,
+                            0,
+                            market.sport,
+                            market.eventId
+                          )
+                    "
+                    id="runner{{ $index }}lay1"
+                    data-side="lay"
+                  >
+                    <span class="odds">{{
+                      runnerData.ex.availableToLay
+                        ? runnerData.ex.availableToLay[0]?.price
+                        : "-"
+                    }}</span>
+                    <span class="ammount">
+                      {{
+                        runnerData.ex.availableToLay &&
+                        (runnerData.ex.availableToLay[0]?.size !== null ||
+                          runnerData.ex.availableToLay[0]?.size !== "")
+                          ? (runnerData.ex.availableToLay[0]?.size *
+                              volMultiplier | number: "0.2")
+                          : "-"
+                      }}
+                    </span>
+                  </button>
+                </div>
+              </td>
+              <td class="hidden-xs impli">
+                <button
+                  (click)="
+                    runnerData.ex.availableToLay &&
+                    (runnerData.ex.availableToLay[1]?.price == null ||
+                      runnerData.ex.availableToLay[1]?.price == '')
+                      ? ''
+                      : betSlip(
+                          bfId,
+                          'lay',
+                          'runner' + $index + 'lay2',
+                          runnerData.runnerName,
+                          runnerData.selectionId,
+                          matchName,
+                          runnerData.ex.availableToLay[1]?.price,
+                          matchid,
+                          market.marketId,
+                          0,
+                          0,
+                          market.sport,
+                          market.eventId
+                        )
+                  "
+                  id="runner{{ $index }}lay2"
+                  data-side="lay"
+                >
+                  <span class="odds">{{
+                    runnerData.ex.availableToLay
+                      ? runnerData.ex.availableToLay[1]?.price
+                      : "-"
+                  }}</span>
+                  <span class="ammount">
+                    {{
+                      runnerData.ex.availableToLay &&
+                      (runnerData.ex.availableToLay[1]?.size !== null ||
+                        runnerData.ex.availableToLay[1]?.size !== "")
+                        ? (runnerData.ex.availableToLay[1]?.size *
+                            volMultiplier | number: "0.2")
+                        : "-"
+                    }}
+                  </span>
+                </button>
+              </td>
+              <td class="hidden-xs impli">
+                <button
+                  (click)="
+                    runnerData.ex.availableToLay &&
+                    (runnerData.ex.availableToLay[2]?.price == null ||
+                      runnerData.ex.availableToLay[2]?.price == '')
+                      ? ''
+                      : betSlip(
+                          bfId,
+                          'lay',
+                          'runner' + $index + 'lay3',
+                          runnerData.runnerName,
+                          runnerData.selectionId,
+                          matchName,
+                          runnerData.ex.availableToLay[2]?.price,
+                          matchid,
+                          market.marketId,
+                          0,
+                          0,
+                          market.sport,
+                          market.eventId
+                        )
+                  "
+                  id="runner{{ $index }}lay3"
+                  data-side="lay"
+                >
+                  <span class="odds">{{
+                    runnerData.ex.availableToLay
+                      ? runnerData.ex.availableToLay[2]?.price
+                      : "-"
+                  }}</span>
+                  <span class="ammount">
+                    {{
+                      runnerData.ex.availableToLay &&
+                      (runnerData.ex.availableToLay[2]?.size !== null ||
+                        runnerData.ex.availableToLay[2]?.size !== "")
+                        ? (runnerData.ex.availableToLay[2]?.size *
+                            volMultiplier | number: "0.2")
+                        : "-"
+                    }}
+                  </span>
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </ng-template>
-  <router-outlet></router-outlet>
+       
+
+
+
+
+
+     

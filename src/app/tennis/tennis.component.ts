@@ -26,6 +26,7 @@ export class TennisComponent implements OnInit {
  
 
   constructor( private _location: Location, private activatedRoute: ActivatedRoute,
+    private gamesService: GamesService,
     private dataformatService: DataFormatService,
     private oddsService: OddsServiceService) { }
 
@@ -47,7 +48,7 @@ export class TennisComponent implements OnInit {
       this.dataformatService.sportsData$.subscribe(() => {
         this.Highlightlist = this.dataformatService.highlightwisedata(2);
         //console.log('High Light list', this.Highlightlist);
-        console.log(' Football highlight list', this.Highlightlist);
+        console.log(' Tennis highlight list', this.Highlightlist);
         var ids = [];
         this.Highlightlist.forEach((match, index) => {
           if (this.selectedSportId === +match.SportbfId) {

@@ -716,7 +716,7 @@ div#liveCommentary{float:left;text-align:center;padding:0 1%;color:green;font-we
 #cssmenu{background:#53555b;box-shadow:1px 3px 5.58px 0.42px rgba(0,0,0,.51);width: 100%;}
 .marquee.hidden-xs{width:35%;color:#fff;float:left;padding: 5px 20px 5px 45px;font-weight: 500;font-size: 12px;margin:13px;border-radius:30px;position: relative;overflow: hidden;border: solid 2px #52555b;background:#43444a;}
 .marquee marquee{display:block;}
-.notifi_ico{background:#fff;padding:4px;width:40px;display:inline-block;position:absolute;left:0;top: 0;height:100%;line-height:18px;padding-left:8px;}
+.notifi_ico{background:#fff;padding: 9px;width:40px;display:inline-block;position:absolute;left:0;top: 0;height:100%;line-height:18px;padding-left:8px;}
 .notifi_ico img{width:90%;}
 .title_popup{width:100%;display:inline-block;background:#232323;padding:5px 10px;color:#fff;float: left;}
 .modal .blue_button{background:#c5201b;color:#fff;border:transparent;padding:10px 20px;border-radius: 3px;}
@@ -1031,6 +1031,9 @@ td.home-runner {padding: 10px 10px;border-bottom:1px solid #454545;border-right:
 .custom-check{display:flex;}
 .custom-check .form-group{margin:0px 5px;}
 .table-scroll {overflow: scroll;}
+
+
+
 /*mobile-responsive-start*/
 @media (max-width: 992px) {
 .fade.in{opacity:1;margin:0px!important;width:100%!important;}
@@ -1046,6 +1049,7 @@ div#changeUserPassword{margin:0!important;}
 div#UpCommingData{padding:0px;}
 .col-sm-12{padding:0px;}
 .searchbtnn{display:none;}
+.footer{display: none;}
 .modal-backdrop.in{filter:alpha(opacity=50);opacity:.7!important;}
 #accountView .col-md-12.col-sm-12.col-xs-12{padding:0 15px!important;}
 .session_content td span{padding-left:10px;font-weight:500;font-size:11px;text-transform:uppercase;float:left;width:85%;}
@@ -2297,3 +2301,7 @@ div#leftSide.left_col.sidenav{
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    
   /*# sourceMappingURL=bootstrap.min.css.map */
+
+
+  
+  

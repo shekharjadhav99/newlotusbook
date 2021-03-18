@@ -27,6 +27,7 @@ export class SoccerComponent implements OnInit {
 
   constructor( private _location: Location, private activatedRoute: ActivatedRoute,
     private dataformatService: DataFormatService,
+    private gamesService:GamesService,
     private oddsService: OddsServiceService) { }
 
     backClicked() {

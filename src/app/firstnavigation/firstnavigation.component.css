@@ -57,7 +57,7 @@ ul.nav
    
     
     ul.nav > * {
-        padding: 8px 3px;
+        padding: 8px 4px;
         margin: 0.7px;
         font-size-adjust: inherit;
 
@@ -99,7 +99,7 @@ ul.nav
     color: #fff;
     padding: 0px 10px;
     text-decoration: none;
-    margin-left: 200px;
+    
 }
 .fa-android:before {
     content: "\f17b";
@@ -118,6 +118,9 @@ ul.nav
 }
 img {
     vertical-align: middle;
+    
+        margin-top: -4px;
+    
 }
 img {
     border: 0;
@@ -191,11 +194,13 @@ button.dropbtn {
     background: #2b2f35;
 }
 
-.top_nav .navbar-right li {
-    display: inline-block;
-    position: relative;
-}
 
+.top_nav .navbar-right li {
+    color: white;
+    display: inline-flex;
+    position: fixed;
+    padding-left: 48px;
+}
 .belance-top {
     border-radius: 5px;
     padding: 2px;
@@ -241,4 +246,18 @@ ul.nav[_ngcontent-xai-c78] {
 .white-color {
     color:white;
     font-size: 18px;
+    }
+
+
+
+    .left {
+        float: right;
+    }
+    
+    .right {
+        float: right;
+    }
+    .right{
+        float: right;
+        color: white;
     }
